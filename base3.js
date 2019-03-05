@@ -12,7 +12,7 @@ for(let i = 0 ; i <= 1000 ; i++) {
     $centralButton.click(function () {
     if ( (i % 2) == 0) {
         $('#touch-center-button').css('color' , 'red');
-        $('.phone-hour').show();
+       $('.phone-hour').show();
         i++;
 } else if((i % 2) == 1) {
     $('#touch-center-button').css('color' , 'blue');

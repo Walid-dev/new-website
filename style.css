@@ -203,7 +203,7 @@
 
 
 
-/** Ecran Active Desactive étapes **/
+/** Ecran Active Desactive Etape **/
 
 .screen.active img{
     opacity: 1;
@@ -221,7 +221,7 @@
 }
 
 .screen.desactive .phone-hour,  .screen.desactive .phone-date, .screen.desactive #champ-google , .screen.desactive .phone-app-container , .screen.desactive .gallery img,
-.screen.desactive .phone-network-desactive{
+.screen.desactive  .phone-network-container{
     opacity: 0;
     transition-delay: 0.4s;
 }
