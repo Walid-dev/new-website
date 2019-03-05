@@ -11,21 +11,30 @@
 </head>
 <body>
     <section class="phone-section container-fluid">
-        <div class="container">
+        <div id="container-secondaire" class="container-fluid">
             <div class="row">
                 <div class="phone-container col-md-12 d-flex justify-content-center mx-auto">
                     <div class="samsung">
                         <div id="screen" class="screen">
-                            <img src="images/galaxy-parallax-sky5-min.jpg">
+                            <img id="image-fond-screen" src="images/galaxy-parallax-sky5-min.jpg">
 
-                            <div class="phone-network-container container d-flex">
+                            <div class="phone-network-container container-fluid d-flex">
                                     <div class="col-md-4 text-left"><i class="fab fa-telegram"></i><i id="i-whatsapp" class="fab fa-whatsapp"></i><i id="i-mail" class="far fa-envelope"></i></div>
                                     <div class="col-md-4 justify-content-around text-center"><i class="fas fa-battery-full"></i></div>
                                     <div class="col-md-4 text-right"><i class="fas fa-wifi"></i></div>
                             </div>
                               
                             <div class="screen-content">
-                            <div class="screen-content-child">
+                                <div id="screen-content-child1" class="screen-content-hidden"></div>
+                                <div id="screen-content-child2" class="screen-content-hidden"></div>
+                                <div id="screen-content-child3" class="screen-content-hidden"></div>
+                                <div id="screen-content-child4" class="screen-content-hidden"></div>
+                                <div id="screen-content-child5" class="screen-content-hidden"></div>
+                                <div id="screen-content-child6" class="screen-content-hidden"></div>
+                                <div id="screen-content-child7" class="screen-content-hidden"></div>
+                                <div id="screen-content-child8" class="screen-content-hidden"></div>
+        
+                            <div id="screen-content-child" class="screen-content-child">
                               
                               <div class="phone-time col-md-12"> 
                                 <h2 class="text-center col-md-12"><div class="phone-hour"><div>10</div><div>40</div></div><span class="phone-date">24 Fevrier, 2019</span></h2>
@@ -36,29 +45,29 @@
                               </div>
                               
                           
-                                <div class="phone-app-container container">
+                                <div class="phone-app-container container-fluid">
                               <div class="col-md-12">
 
                               <div class="gallery col-xs-12 d-flex flex-row">
                                       <figure class="col-md-3 col-xs-4">
-                                              <a href="#willsee">
-                                                <img alt="picture" src="images/phone-icone-image.png" class="img-fluid">
+                                              <a href="#">
+                                                <img id="btn-icon1" alt="picture" src="images/phone-icone-image.png" class="img-fluid">
                                               </a>
                               
                                             </figure>
                                             <figure class="col-md-3 col-xs-4">
-                                                  <a class="test" >
-                                                    <img alt="picture" src="images/phone-icone-image.png" class="img-fluid">
+                                                  <a href="#" >
+                                                    <img id="btn-icon2" alt="picture" src="images/phone-icone-image.png" class="img-fluid">
                                                   </a>
                                                 </figure>
                                                 <figure class="col-md-3 col-xs-4">
-                                                      <a href="#willsee">
-                                                        <img alt="picture" src="images/phone-icone-image.png" class="img-fluid">
+                                                      <a href="#">
+                                                        <img id="btn-icon3" alt="picture" src="images/phone-icone-image.png" class="img-fluid">
                                                       </a>
                                                     </figure>
                                                     <figure class="col-md-3 col-xs-4">
-                                                          <a href="#willsee">
-                                                            <img alt="picture" src="images/phone-icone-image.png" class="img-fluid">
+                                                          <a href="#">
+                                                            <img id="btn-icon4" alt="picture" src="images/phone-icone-image.png" class="img-fluid">
                                                           </a>
                                                         </figure>
                                               
@@ -69,23 +78,23 @@
 
                               <div class="phone-app-gallery gallery col-xs-12 d-flex flex-row">
                                       <figure class="col-md-3 col-xs-4">
-                                              <a href="#willsee">
-                                                <img alt="picture" src="images/phone-icone-image.png" class="img-fluid">
+                                              <a href="">
+                                                <img id="btn-icon5" alt="picture" src="images/phone-icone-image.png" class="img-fluid">
                                               </a>
                                             </figure>
                                             <figure class="col-md-3 col-xs-4">
-                                                  <a href="#willsee">
-                                                    <img alt="picture" src="images/phone-icone-image.png" class="img-fluid">
+                                                  <a href="#">
+                                                    <img id="btn-icon6" alt="picture" src="images/phone-icone-image.png" class="img-fluid">
                                                   </a>
                                                 </figure>
                                                 <figure class="col-md-3 col-xs-4">
-                                                      <a href="#willsee">
-                                                        <img alt="picture" src="images/phone-icone-image.png" class="img-fluid">
+                                                      <a>
+                                                        <img id="btn-icon7" alt="picture" src="images/phone-icone-image.png" class="img-fluid">
                                                       </a>
                                                     </figure>
                                                     <figure class="col-md-3 col-xs-4">
-                                                          <a href="#willsee">
-                                                            <img alt="picture" src="images/phone-icon-gallery.png" class="img-fluid">
+                                                          <a>
+                                                            <img id="btn-icon8" alt="picture" src="images/phone-icon-gallery.png" class="img-fluid">
                                                           </a>
                                                         </figure>
                                                       
@@ -116,6 +125,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="base3.js"></script>
 </body>
 </html>

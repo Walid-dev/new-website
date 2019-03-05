@@ -1,7 +1,22 @@
+
+/** Propriétés Ecran Principal **/
+
+.phone-container{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#container-secondaire{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 .phone-section{
     border: 1px solid black;
     min-height: 99vh;
     background: black;
+    padding-right: 10px;
+    padding-left: 10px;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -10,8 +25,8 @@
 
 .samsung{
     position: relative;
-    width: 850px;
-    height: 775px;
+    width: 100%;
+    min-height: 99vh;
     background: #121212;
     border-radius: 30px;
     -webkit-border-radius: 30px;
@@ -57,6 +72,8 @@
     -o-border-radius:;
 }
 
+/** Image de fond d'écran **/
+
 .screen img{
     position: absolute;
     top: 0;
@@ -65,14 +82,47 @@
     height: 100%;
     object-fit: cover;
     background-position: top center;
-    opacity: 0;
+    opacity: 1;
+    border-radius:30px;
     transition: 0.7s;
     -webkit-transition: 0.7s;
     -moz-transition: 0.7s;
     -ms-transition: 0.7s;
     -o-transition: 0.7s;
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    -ms-border-radius:30px;
+    -o-border-radius:30px;
 }
 
+/** Barre Haute notifications Ecran **/
+
+.phone-network-container{
+    position: absolute;
+    top: 0;
+    height: 40px;
+    background: rgb(13, 13, 13, .3);
+    padding-top: 6px;
+    opacity: 1;
+}
+
+.phone-network-container i {
+    font-size: 16px;
+    line-height: 28px;
+    color: grey;
+    transform: rotateX(360deg);
+    -webkit-transform: rotateX(360deg);
+    -moz-transform: rotateX(360deg);
+    -ms-transform: rotateX(360deg);
+    -o-transform: rotateX(360deg);
+}
+
+#i-whatsapp, #i-mail{
+    margin-left: 8px;
+}
+
+
+/** Heure et date **/
 
 .phone-time{
     color: #fff;
@@ -91,21 +141,22 @@
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
     text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
-    opacity: 0.02;
+    opacity: 1;
 }
 
 .phone-date {
     font-size: 0.5em;
-    opacity: 0;
+    opacity: 1;
     
 }
 
 
+/** Champ de recherche Google **/
 
 #champ-google{
-   position: absolute;
-   top: 50%;
-    opacity: 0;
+    position: absolute;
+    top: 50%;
+    opacity: 1;
 }
 
 #champ-google span{
@@ -122,6 +173,8 @@
     color: grey;
 }
 
+/** Bouton navigation Pad **/
+
 .phone-menu-buttons{
     position: absolute;
     bottom: 0px;
@@ -130,12 +183,18 @@
     padding-top: 2px;
     padding-bottom: 2px;
     height: 70px;
-    border-radius: 30px;
+    border-radius: 0px 0px 30px 30px;
+    -webkit-border-radius: 0px 0px 30px 30px;
+    -moz-border-radius: 0px 0px 30px 30px;
+    -ms-border-radius: 0px 0px 30px 30px;
+    -o-border-radius: 0px 0px 30px 30px;
 }
 
+/** Applications Pad **/
+
 .gallery img{
-    width: 60px;
-    height: 60px;
+    width: 42px;
+    height: 42px;
     margin-left: 50%;
     transform: translateX(-50%);
 }
@@ -149,42 +208,19 @@
     top: 64%;
     padding-right: 0px;
     padding-left: 0px;
-    opacity: 0;
+    opacity: 1;
 }
 
-.phone-network-container{
-    position: absolute;
-    top: 0;
-    height: 40px;
-    background: rgb(13, 13, 13, .3);
-    padding-top: 6px;
-    opacity: 0;
-}
-
-.phone-network-container i {
-    font-size: 16px;
-    line-height: 28px;
-    color: grey;
-    transform: rotateX(360deg);
-    -webkit-transform: rotateX(360deg);
-    -moz-transform: rotateX(360deg);
-    -ms-transform: rotateX(360deg);
-    -o-transform: rotateX(360deg);
-}
-
-#i-whatsapp, #i-mail{
-    margin-left: 8px;
-}
 
 .test{
     z-index: 2000;
 }
 
-/** Contenu Ecran Navigation **/
+/** Contenu Enfant Principal Navigation **/
+
 
 .screen-content{
     width: 100%;
-    border: 1px solid red;
     position: absolute;
     top: 40px;
     bottom: 70px;
@@ -193,45 +229,19 @@
 .screen-content-child{
     width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
     top: 0;
     bottom: 0;
-    border: 1px solid yellow;
-    
 }
 
+/** Contenu de Remplacement enfant Section du Site **/
 
-
-
-/** Ecran Active Desactive Etape **/
-
-.screen.active img{
-    opacity: 1;
-    transition-delay: 0.4s;
-}
-
-.screen.active .phone-menu-buttons{
-    background: transparent;
-}
-
-.screen.active .phone-hour,  .screen.active .phone-date, .screen.active #champ-google , .screen.active .phone-app-container , .screen.active .gallery img,
-.screen.active .phone-network-container{
-    opacity: 1;
-    transition-delay: 0.4s;
-}
-
-.screen.desactive .phone-hour,  .screen.desactive .phone-date, .screen.desactive #champ-google , .screen.desactive .phone-app-container , .screen.desactive .gallery img,
-.screen.desactive  .phone-network-container{
-    opacity: 0;
-    transition-delay: 0.4s;
-}
-
-.screen.desactive img{
-    opacity: 0;
-    transition-delay: 0.4s;
-}
-
-.screen.desactive .phone-menu-buttons{
-    background: transparent;
+.screen-content-hidden{
+    border: 1px solid lime;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
 }
 
