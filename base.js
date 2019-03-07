@@ -8,6 +8,10 @@ $newChildHidden = $('.screen-content-hidden');
 $screenBasicChild = $('.screen-content-child');
 $imageFondScreen = $('#image-fond-screen');
 $samsung = $('.samsung');
+$whatsappIcon = $('#i-whatsapp');
+$telegramIcon = $('#i-telegram');
+$wifiIcon = $('#i-wifi');
+$batteryIcon = $('#battery-icon');
 
 
 // Contenu masqué écran off
@@ -32,19 +36,28 @@ $leftButton.prop( "disabled", true );
 
 $centralButton.click(function() {
 $centralButton.each(function( i ) {
-if ( this.style.color !== "blue" ) {
-this.style.color = "blue";
-$imageFondScreen.show(900);
-$screenBasicChild.show(1100);
+if ( this.style.color !== "lime" ) {
+this.style.color = "lime";
+$imageFondScreen.show(1000);
+$screenBasicChild.fadeIn(1500);
 $leftButton.prop( "disabled", false );
+$whatsappIcon.fadeTo(800 , 1);
+$telegramIcon.fadeTo(800 , 1);
+$wifiIcon.css('color', '#2da2ff');
+$batteryIcon.fadeTo(1000 , 1);
+$wifiIcon.fadeTo(1000 , 1);
 
 } else {
-this.style.color = "blue";
-this.style.color = "red";
-$newChildHidden.fadeOut(600);
-$imageFondScreen.fadeOut(1200);
-$screenBasicChild.fadeOut(900);
+
+this.style.color = "#00ff0080";
+$newChildHidden.fadeOut(1000);
+$imageFondScreen.fadeOut(1500);
+$screenBasicChild.fadeOut(1000);
 $leftButton.prop( "disabled", true );
+$whatsappIcon.fadeTo(800 , 0);
+$telegramIcon.fadeTo(800 , 0);
+$batteryIcon.fadeTo(1000 , .4);
+$wifiIcon.fadeTo(800 , .4);
 }
 });
 });
