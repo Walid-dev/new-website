@@ -7,6 +7,7 @@ $screen = $('.screen');
 $newChildHidden = $('.screen-content-hidden');
 $screenBasicChild = $('.screen-content-child');
 $imageFondScreen = $('#image-fond-screen');
+$samsung = $('.samsung');
 
 
 // Contenu masqué écran off
@@ -23,31 +24,30 @@ $('#screen-content-child7').hide();
 $('#screen-content-child8').hide();
 $imageFondScreen.hide();
 
+// Bouton désactivés Ecran Off
 
 $leftButton.prop( "disabled", true );
 
+// Bouton principal du Pad
 
+$centralButton.click(function() {
+$centralButton.each(function( i ) {
+if ( this.style.color !== "blue" ) {
+this.style.color = "blue";
+$imageFondScreen.show(900);
+$screenBasicChild.show(1100);
+$leftButton.prop( "disabled", false );
 
-for(let i = 0 ; i <= 1000 ; i++) {
-$centralButton.click(function () {
-        if ( (i % 2) == 0) {
-                $centralButton.css('color' , 'red');
-                $screenBasicChild.show();
-                $imageFondScreen.show();
-                $leftButton.prop( "disabled", false );
-                i++;
-        } else if((i % 2) == 1) {
-                $newChildHidden.hide();
-                $screenBasicChild.hide();
-                $imageFondScreen.hide();
-                $centralButton.css('color' , 'blue');
-                $leftButton.css('color' , 'unset');
-                $leftButton.prop( "disabled", true );
-                $rightButton.css('color' , 'unset');
-                i++;
-        }
+} else {
+this.style.color = "blue";
+this.style.color = "red";
+$imageFondScreen.hide(1200);
+$screenBasicChild.fadeOut(900);
+$newChildHidden.hide(600);
+$leftButton.prop( "disabled", true );
+}
 });
-}; 
+});
 
 
 
@@ -60,30 +60,15 @@ $centralButton.click(function () {
 
 
 
-
-
-
-// $('#maj-slider-btn').click(function() {
- //       $('#screen-content-child').load('test.html', function() {             
-  //      });
-  //      });
-
-// $leftButton.click(function() {
- //       $('#screen-content-child').load('main.html', function() {   
- //               $('#maj-slider-btn').click(function() {
- //                       $('#screen-content-child').load('test.html', function() {             
-  //                      });
-  //                      });
-  //      });
-  //      });
-
-
+// Bouttons Applications
 
 $('#btn-icon1').click(function (e) { 
         e.preventDefault();
         $screenBasicChild.hide();
         $('#screen-content-child1').show();
         $leftButton.css('color' , 'lime');
+        $('.phone-menu-buttons').css('background' , 'black');
+        $('.phone-network-container').css('background' , 'black');
 });
 
 $('#btn-icon2').click(function (e) { 
@@ -135,9 +120,33 @@ $('#btn-icon8').click(function (e) {
         $leftButton.css('color' , 'lime');
 });
 
+
+
+// Boutton retour
+
 $leftButton.click(function (e) { 
         e.preventDefault();
         $newChildHidden.hide();
         $screenBasicChild.show();
-        $leftButton.css('color' , 'unset');               
+        $leftButton.css('color' , 'unset');     
+        $('.phone-menu-buttons').css('background' , 'rgb(13, 13, 13, .2)'); 
+        $('.phone-network-container').css('background' , 'rgb(13, 13, 13, .2)');         
+});
+
+
+
+
+// Fonction Affichage Heure
+
+$(function() {
+function Horloge() {
+        var laDate = new Date();
+        var h = laDate.getHours();
+        var m = laDate.getMinutes();
+        var s = laDate.getSeconds();
+        $('#heure').text(h);
+        $('#minutes').text(m);
+        $('#secondes').text(s);
+}
+setInterval(Horloge, 1000);
 });
