@@ -12,7 +12,7 @@ $whatsappIcon = $('#i-whatsapp');
 $telegramIcon = $('#i-telegram');
 $wifiIcon = $('#i-wifi');
 $batteryIcon = $('#battery-icon');
-
+$phonePage = $('.phone-section');
 
 // Contenu masqué écran off
 
@@ -38,26 +38,27 @@ $centralButton.click(function() {
 $centralButton.each(function( i ) {
 if ( this.style.color !== "lime" ) {
 this.style.color = "lime";
-$imageFondScreen.show(1000);
-$screenBasicChild.fadeIn(1500);
+$imageFondScreen.show(800);
+$screenBasicChild.fadeIn(1000);
 $leftButton.prop( "disabled", false );
-$whatsappIcon.fadeTo(800 , 1);
-$telegramIcon.fadeTo(800 , 1);
-$wifiIcon.css('color', '#2da2ff');
+$whatsappIcon.fadeTo(1000 , 1);
+$telegramIcon.fadeTo(1000 , 1);
+$wifiIcon.css('color', '#0f0');
 $batteryIcon.fadeTo(1000 , 1);
 $wifiIcon.fadeTo(1000 , 1);
 
 } else {
 
 this.style.color = "#00ff0080";
-$newChildHidden.fadeOut(1000);
-$imageFondScreen.fadeOut(1500);
-$screenBasicChild.fadeOut(1000);
+$newChildHidden.fadeOut(900);
+$imageFondScreen.fadeOut(1000);
+$screenBasicChild.fadeOut(900);
 $leftButton.prop( "disabled", true );
 $whatsappIcon.fadeTo(800 , 0);
 $telegramIcon.fadeTo(800 , 0);
-$batteryIcon.fadeTo(1000 , .4);
-$wifiIcon.fadeTo(800 , .4);
+$batteryIcon.fadeTo(800 , .4);
+$wifiIcon.fadeTo(800 , .1);
+$leftButton.css('color' , 'unset');  
 }
 });
 });
