@@ -54,7 +54,7 @@
     cursor: pointer;
 }
 
-.screen::before{
+.screen:before{
     content: '';
     position: absolute;
     top: 0;
