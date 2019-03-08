@@ -99,7 +99,6 @@ $('#btn-icon2').click(function (e) {
 $('#btn-icon3').click(function (e) { 
         e.preventDefault();
         $screenBasicChild.fadeTo(300 , 0);
-        $imageFondScreen.fadeTo(500 , 0);
         $('#screen-content-child3').fadeTo(300 , 1);
         $leftButton.css('color' , 'lime');
         $('.phone-menu-buttons').css('background' , 'black');
@@ -149,7 +148,6 @@ $leftButton.click(function (e) {
         e.preventDefault();
         $newChildHidden.fadeTo(300 , 0);
         $screenBasicChild.fadeTo(300 , 1);
-        $imageFondScreen.fadeTo(500 , 1);
         $leftButton.css('color' , 'unset');     
         $('.phone-menu-buttons').css('background' , 'rgb(13, 13, 13, .2)'); 
         $('.phone-network-container').css('background' , 'rgb(13, 13, 13, .2)');         
@@ -160,18 +158,20 @@ $leftButton.click(function (e) {
 
 // Fonction Affichage Heure
 
-$(function() {
-function Horloge() {
-        var laDate = new Date();
-        var h = laDate.getHours();
-        var m = laDate.getMinutes();
-        var s = laDate.getSeconds();
-        $('#heure').text(h);
-        $('#minutes').text(m);
-        $('#secondes').text(s);
-}
-setInterval(Horloge, 1000);
-});
+var now = new Date();
+var annee   = now.getFullYear();
+var mois    = ('0'+(now.getMonth()+1)).slice(-2);
+var jour    = ('0'+now.getDate()   ).slice(-2);
+var heure   = ('0'+now.getHours()  ).slice(-2);
+var minute  = ('0'+now.getMinutes()).slice(-2);
+var seconde = ('0'+now.getSeconds()).slice(-2);
+
+$('#heure').text(heure);
+$('#minute').text(minute);
+$('#seconde').text(seconde);
+$('#jour').text(jour);
+$('#mois').text(mois);
+
 
 
 
