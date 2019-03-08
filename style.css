@@ -397,7 +397,7 @@ header video {
 /** Jumbotron Child3 **/
 
 .jumbotron {
-    background-image: url('../images/screen-icons/app-coding-icon.gif');
+    background-image: url('images/screen-icons/app-coding-icon.gif');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
