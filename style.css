@@ -4,6 +4,7 @@
 .phone-container{
     padding-left: 0px;
     padding-right: 0px;
+    margin-bottom: 70px;
 }
 
 #container-secondaire{
@@ -14,7 +15,7 @@
 .phone-section{
     border: 1px solid black;
     min-height: 99vh;
-    background:  grey;
+    background: #6d003a;
     padding-right: 10px;
     padding-left: 10px;
     background-position: center;
@@ -38,12 +39,13 @@
 
 .screen{
     position: absolute;
-    top: 4px;
-    bottom: 4px;
-    right: 4px;
-    left: 4px;
+    height: 100%;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
     background: #000;
-    border-radius: 30px;
+    border-radius: 0px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
@@ -65,12 +67,11 @@
     -moz-transform: skew(-15deg);
     -ms-transform: skew(-15deg);
     -o-transform: skew(-15deg);
-    
     border-radius: 20px;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 /** Image de fond d'écran **/
@@ -84,16 +85,12 @@
     object-fit: fill;
     background-position: top center;
     opacity: 1;
-    border-radius:30px;
+    border-radius:0px;
     transition: 0.7s;
     -webkit-transition: 0.7s;
     -moz-transition: 0.7s;
     -ms-transition: 0.7s;
     -o-transition: 0.7s;
-    -webkit-border-radius:30px;
-    -moz-border-radius:30px;
-    -ms-border-radius:30px;
-    -o-border-radius:30px;
 }
 
 /** Barre Haute notifications Ecran **/
@@ -175,7 +172,7 @@
 
 #champ-google{
     position: absolute;
-    top: 2%;
+    top: 7%;
     opacity: 1;
 }
 
@@ -200,24 +197,22 @@
     bottom: 0px;
     padding: 0px;
     background: rgb(13, 13, 13, .2);
-    padding-top: 2px;
-    padding-bottom: 2px;
     height: 70px;
-    border-radius: 0px 0px 30px 30px;
-    -webkit-border-radius: 0px 0px 30px 30px;
-    -moz-border-radius: 0px 0px 30px 30px;
-    -ms-border-radius: 0px 0px 30px 30px;
-    -o-border-radius: 0px 0px 30px 30px;
+    border-radius: 0px 0px 25px 25px;
+    -webkit-border-radius: 0px 0px 25px 25px;
+    -moz-border-radius: 0px 0px 25px 25px;
+    -ms-border-radius: 0px 0px 25px 25px;
+    -o-border-radius: 0px 0px 25px 25px;
 }
 
 /** Applications Pad **/
 
 .gallery img{
-    width: 65px;
+    width: 110px;
     height: 65px;
     margin-left: 50%;
-    background: #8080804d;
-    padding: 2px;
+    background: #1a1a1a;
+    padding: 1px;
     border-radius:50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
@@ -230,13 +225,14 @@
     -o-border-radius:50%;
 }
 
+
 .gallery{
     height: 100px;
 }
 
 .phone-app-container{
     position: absolute;
-    top: 55%;
+    top: 52%;
     padding-right: 0px;
     padding-left: 0px;
     opacity: 1;
@@ -250,6 +246,12 @@
 
 .test{
     z-index: 2000;
+}
+
+.phone-app-gallery figcaption{
+    margin-top: 68px;
+    font-size: 0.75em;
+    color: #fff;
 }
 
 /** Contenu Enfant Principal Navigation **/
@@ -276,17 +278,15 @@
 .screen-content-hidden{
     width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
+    top: 0;
+    bottom: 0;
     top: 0;
     bottom: 0;
 }
 
 /** CSS section enfant app 1 **/
 
-.cl{
-    height: 100%;
-    position: absolute;
-}
 
 .rl{
     height: 800px;
@@ -301,15 +301,117 @@
 
 /*************************************/
 
-#screen-content-child2{
+
+
+
+
+/** Slider Content-Child1 **/
+
+#myCarousel{
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-inner{
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    background: white;
 }
 
-#screen-content-child1{
-    overflow-y: scroll;
+.carousel-inner-item{
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item{
+    width: 100%;
+    height: 100%;
+}
+
+#container-fluid-carousel{
+    padding-right: 0px;
+    padding-left: 0px;
+    height: 100%;
+    position: absolute;
+}
+
+#container-fluid-background-video{
+padding-right: 0px;
+padding-left: 0px;
+height: 100%;
+position: absolute;
+}
+
+
+/** Background Video Content-Child2 **/
+
+header {
+position: relative;
+background-color: black;
+height: 100%;
+min-height: 25rem;
+width: 100%;
+}
+
+header video {
+position: absolute;
+top: 50%;
+left: 50%;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: 0;
+-ms-transform: translateX(-50%) translateY(-50%);
+-moz-transform: translateX(-50%) translateY(-50%);
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+position: relative;
+z-index: 2;
+}
+
+header .overlay {
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+background-color: black;
+opacity: 0;
+z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+header {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+}
+header video {
+    display: none;
+}
+}
+
+
+/** Jumbotron Child3 **/
+
+.jumbotron {
+    background-image: url('../images/screen-icons/app-coding-icon.gif');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    margin-bottom: 0px;
+}
+
+#jumbotron-inside-child3{
+margin-top: 95px;
+padding: 10px;
+}
+
+#jumbotron-mirror{
+        background: rgba(0, 0, 0, 0.25);
+        height: 100%;
+        width: 100%;
 }
