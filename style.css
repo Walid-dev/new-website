@@ -205,6 +205,10 @@
     -o-border-radius: 0px 0px 25px 25px;
 }
 
+#touch-right-button{
+    color: #c33c71;
+}
+
 /** Applications Pad **/
 
 .gallery img{

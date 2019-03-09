@@ -40,6 +40,7 @@ $centralButton.each(function( i ) {
 if ( this.style.color !== "lime" ) {
 this.style.color = "lime";
 $imageFondScreen.fadeIn(1000);
+$screenBefore.show();
 $screenBasicChild.fadeIn(1000);
 $leftButton.prop( "disabled", false );
 $whatsappIcon.fadeIn(1200);
@@ -52,6 +53,7 @@ $wifiIcon.fadeIn(1200);
 
 this.style.color = "#00ff0080";
 $newChildHidden.fadeOut(1000);
+$screenBefore.hide();
 $imageFondScreen.fadeOut(1000);
 $screenBasicChild.fadeOut(1000);
 $leftButton.prop( "disabled", true );
@@ -151,9 +153,9 @@ $('#btn-icon8').click(function (e) {
 
 $leftButton.click(function (e) { 
         e.preventDefault();
-        $newChildHidden.fadeOut(300);
-        $screenBasicChild.fadeIn(300);
-        $imageFondScreen.fadeIn(300);
+        $newChildHidden.fadeOut(400);
+        $screenBasicChild.fadeIn(400);
+        $imageFondScreen.fadeIn(400);
         $leftButton.css('color' , 'unset');     
         $('.phone-menu-buttons').css('background' , 'rgb(13, 13, 13, .2)'); 
         $('.phone-network-container').css('background' , 'rgb(13, 13, 13, .2)');         
@@ -181,13 +183,36 @@ $('#mois').text(mois);
 
 
 
-//
-
-        
+// Hover sur Applications       
 
 $('.phone-app-gallery img').mouseover(function() {
 $( this ).css( 'padding' , '3px' );
 })
 .mouseout(function() {
 $( this ).css( 'padding' , '1px' );
+});
+
+
+// Boutton Droit Pad dimensions écranc
+
+
+$rightButton.click(function() {
+$rightButton.each(function( i ) {
+        if ( this.style.color !== "blue" && this.style.color !== "#c33c71" && this.style.color !== "red" ) {
+        this.style.color = "blue";
+        alert("hello");
+        } else if (this.style.color == "blue") {
+        this.style.color = "red";
+        alert("hi");
+        }
+
+        else if (this.style.color == "red"){
+                alert("yess");
+                this.style.color = "#c33c71";
+        }
+
+        else{
+                this.style.color = "";
+        }
+});
 });
