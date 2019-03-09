@@ -14,6 +14,8 @@ $wifiIcon = $('#i-wifi');
 $batteryIcon = $('#battery-icon');
 $phonePage = $('.phone-section');
 $screenBefore = $('.screen:before');
+$imageApp = $('.gallery img');
+$phoneBackground = $('.phone-container');
 
 // Contenu masqué écran off
 
@@ -43,11 +45,11 @@ $imageFondScreen.fadeIn(1000);
 $screenBefore.show();
 $screenBasicChild.fadeIn(1000);
 $leftButton.prop( "disabled", false );
-$whatsappIcon.fadeIn(1200);
-$telegramIcon.fadeIn(1200);
+$whatsappIcon.fadeTo(800 , 1);
+$telegramIcon.fadeTo(800 , 1);
 $wifiIcon.css('color', '#0f0');
-$batteryIcon.fadeIn(1200);
-$wifiIcon.fadeIn(1200);
+$batteryIcon.fadeTo(800 , 1);
+$wifiIcon.fadeTo(800 , 1);
 
 } else {
 
@@ -57,10 +59,10 @@ $screenBefore.hide();
 $imageFondScreen.fadeOut(1000);
 $screenBasicChild.fadeOut(1000);
 $leftButton.prop( "disabled", true );
-$whatsappIcon.fadeOut(800);
-$telegramIcon.fadeOut(800);
-$batteryIcon.fadeOut(800);
-$wifiIcon.fadeOut(800);
+$whatsappIcon.fadeTo(800 , 0);
+$telegramIcon.fadeTo(800 , 0);
+$batteryIcon.fadeTo(800 , .4);
+$wifiIcon.fadeTo(800 , .1);
 $leftButton.css('color' , 'unset');
 $('.phone-network-container').css('background' , 'rgb(13, 13, 13, .2)'); 
 }
@@ -193,26 +195,46 @@ $( this ).css( 'padding' , '1px' );
 });
 
 
-// Boutton Droit Pad dimensions écranc
+// Boutton Droit Pad dimensions écran
 
 
 $rightButton.click(function() {
 $rightButton.each(function( i ) {
-        if ( this.style.color !== "blue" && this.style.color !== "#c33c71" && this.style.color !== "red" ) {
+
+if ( this.style.color !== "blue" && this.style.color !== "#c33c71" && this.style.color !== "red" ) {
         this.style.color = "blue";
-        alert("hello");
-        } else if (this.style.color == "blue") {
+        $samsung.animate({ 'width': '100%' , 'height' : '99vh'}, 1000 )
+        .animate({ 'width': '-=5'}, 150);
+        $phoneBackground.css('background' , 'black');
+        $imageApp.css('width' , '95px');
+        $imageApp.css('height' , '50px');
+        $('.phone-app-gallery figcaption').css('margin-top', '58px')
+
+} else if (this.style.color == "blue") {
         this.style.color = "red";
-        alert("hi");
-        }
+        $samsung.animate({ 'width': '460px'}, 1000 )
+        .animate({ 'width': '-=10'}, 200);
+        $phoneBackground.css('background' , '#00fff6');
+        $imageApp.css('width' , '60px');
+        $imageApp.css('height' , '45px');
+        $('.phone-app-gallery figcaption').css('margin-top', '32px')
 
-        else if (this.style.color == "red"){
-                alert("yess");
-                this.style.color = "#c33c71";
-        }
+} else if (this.style.color == "red"){
+        $samsung.animate({ 'width': '85%'}, 1000 )
+        this.style.color = "#c33c71";
+        $phoneBackground.css('background' , '#ffff00');
 
-        else{
-                this.style.color = "";
-        }
+} else{
+        this.style.color = "";
+}
 });
 });
+
+
+// Fonction taille image
+
+
+
+
+// expected output: 3
+
