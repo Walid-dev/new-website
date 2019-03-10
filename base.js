@@ -16,6 +16,9 @@ $phonePage = $('.phone-section');
 $screenBefore = $('.screen:before');
 $imageApp = $('.gallery img');
 $phoneBackground = $('.phone-container');
+$desktopIcon = $('<i class="fas fa-desktop"></i>');
+$phoneIcon = $('<i class="fas fa-mobile-alt"></i>');
+$tabletIcon = $('<i class="fas fa-tablet-alt"></i>');
 
 // Contenu masqué écran off
 
@@ -205,6 +208,7 @@ if ( this.style.color !== "blue" && this.style.color !== "#c33c71" && this.style
         this.style.color = "blue";
         $samsung.animate({ 'width': '100%' , 'height' : '99vh'}, 1000 )
         .animate({ 'width': '-=5'}, 150);
+        $('.fa-tablet-alt').replaceWith($desktopIcon);
         $phoneBackground.css('background' , 'black');
         $imageApp.css('width' , '95px');
         $imageApp.css('height' , '50px');
@@ -214,15 +218,18 @@ if ( this.style.color !== "blue" && this.style.color !== "#c33c71" && this.style
         this.style.color = "red";
         $samsung.animate({ 'width': '460px'}, 1000 )
         .animate({ 'width': '-=10'}, 200);
+        $desktopIcon.replaceWith($phoneIcon);
         $phoneBackground.css('background' , '#00fff6');
         $imageApp.css('width' , '60px');
         $imageApp.css('height' , '45px');
         $('.phone-app-gallery figcaption').css('margin-top', '32px')
 
 } else if (this.style.color == "red"){
-        $samsung.animate({ 'width': '85%'}, 1000 )
+        $samsung.animate({ 'width': '85%'}, 1000 );
+        $desktopIcon.replaceWith($tabletIcon);
         this.style.color = "#c33c71";
         $phoneBackground.css('background' , '#ffff00');
+        
 
 } else{
         this.style.color = "";

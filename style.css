@@ -15,7 +15,7 @@
 .phone-section{
     border: 1px solid black;
     min-height: 99vh;
-    background: #6d003a;
+    background: #40317E;
     padding-right: 10px;
     padding-left: 10px;
     background-position: center;
@@ -56,7 +56,7 @@
     cursor: pointer;
 }
 
-.screen:before{
+/** .screen:before{
     content: '';
     position: absolute;
     top: 0;
@@ -75,6 +75,7 @@
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
 }
+**/
 
 /** Image de fond d'écran **/
 
@@ -231,9 +232,14 @@
     -o-border-radius:50%;
 }
 
+.figure{
+    background: transparent;
+}
+
 
 .gallery{
     height: 100px;
+    background: transparent;
 }
 
 .phone-app-container{
@@ -249,15 +255,15 @@
     margin-top: 20px;
 }
 
-
-.test{
-    z-index: 2000;
-}
-
 .phone-app-gallery figcaption{
-    margin-top: 58px;
     font-size: 0.75em;
     color: #fff;
+    position: relative;
+    top: 6px;
+}
+
+.figure img{
+    position: relative;
 }
 
 /** Contenu Enfant Principal Navigation **/
@@ -412,7 +418,6 @@ header video {
 }
 
 #jumbotron-inside-child3{
-margin-top: 95px;
 padding: 10px;
 }
 
@@ -421,3 +426,4 @@ padding: 10px;
         height: 100%;
         width: 100%;
 }
+
