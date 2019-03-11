@@ -102,7 +102,6 @@ $('#btn-icon2').click(function (e) {
         $imageFondScreen.fadeOut(300);
         $screenBasicChild.fadeOut(300);
         $leftButton.css('color' , 'lime');
-        $('#video-app').play();
 });
 
 $('#btn-icon3').click(function (e) { 
@@ -221,7 +220,7 @@ if ( this.style.color !== "blue" && this.style.color !== "#c33c71" && this.style
         $samsung.animate({ 'width': '460px'}, 1000 )
         .animate({ 'width': '-=10'}, 200);
         $desktopIcon.replaceWith($phoneIcon);
-        $phoneBackground.css('background' , '#00fff6');
+        $phoneBackground.css('background' , 'black');
         $imageApp.css('width' , '60px');
         $imageApp.css('height' , '45px');
 
@@ -229,7 +228,7 @@ if ( this.style.color !== "blue" && this.style.color !== "#c33c71" && this.style
         $samsung.animate({ 'width': '85%'}, 1000 );
         $phoneIcon.replaceWith($tabletIcon);
         this.style.color = "#c33c71";
-        $phoneBackground.css('background' , '#ffff00');
+        $phoneBackground.css('background' , 'grey');
         
 
 } else{
@@ -244,5 +243,19 @@ if ( this.style.color !== "blue" && this.style.color !== "#c33c71" && this.style
 
 
 
-// expected output: 3
+// Hover Image Header
+
+
+$(function() {
+$('#image-titre').mouseover(function() {
+        $(this).fadeOut(1300);
+        $('#image-titre-hover').fadeIn(1300);
+});
+$('#image-titre-hover').mouseout(function() {
+        $(this).fadeOut(1300);
+        $('#image-titre').fadeIn(1300);
+});
+});
+
+
 
