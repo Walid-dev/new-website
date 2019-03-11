@@ -102,6 +102,7 @@ $('#btn-icon2').click(function (e) {
         $imageFondScreen.fadeOut(300);
         $screenBasicChild.fadeOut(300);
         $leftButton.css('color' , 'lime');
+        $('#video-app').play();
 });
 
 $('#btn-icon3').click(function (e) { 
