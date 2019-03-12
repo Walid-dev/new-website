@@ -300,6 +300,10 @@
     bottom: 0;
 }
 
+#screen-content-child8{
+    overflow-y: scroll;
+}
+
 /** CSS section enfant app 1 **/
 
 
@@ -468,4 +472,9 @@ height: 470px;
 
 #image-titre-container{
    position: relative;
+}
+
+.rowY{
+    border: 1px solid lime;
+    height: 500px;
 }
