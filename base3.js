@@ -193,9 +193,11 @@ $('#mois').text(mois);
 
 $('.phone-app-gallery img').mouseover(function() {
 $( this ).css( 'padding' , '3px' );
+$(this).css('background' , '#823aa8');
 })
 .mouseout(function() {
 $( this ).css( 'padding' , '1px' );
+$(this).css('background' , 'black');
 });
 
 
