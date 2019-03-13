@@ -43,8 +43,8 @@ $leftButton.prop( "disabled", true );
 
 $centralButton.click(function() {
 $centralButton.each(function( i ) {
-if ( this.style.color !== "lime" ) {
-this.style.color = "lime";
+if ( this.style.color !== "aqua" ) {
+this.style.color = "aqua";
 $imageFondScreen.fadeIn(400);
 $screenContent.fadeIn(400);
 $screenBasicChild.fadeIn(400);
@@ -54,10 +54,11 @@ $telegramIcon.fadeTo(600 , 1);
 $wifiIcon.css('color', '#0f0');
 $batteryIcon.fadeTo(600 , 1);
 $wifiIcon.fadeTo(400 , 1);
+$screen.css('box-shadow' , '0 0 25px white, 0 0 3px blue');
 
 } else {
 
-this.style.color = "#00ff0080";
+this.style.color = "blue";
 $imageFondScreen.fadeOut(300);
 $screenContent.fadeOut(300);
 $newChildHidden.fadeOut(300);
@@ -68,7 +69,8 @@ $telegramIcon.fadeTo(600 , 0);
 $batteryIcon.fadeTo(600 , .4);
 $wifiIcon.fadeTo(600 , .1);
 $leftButton.css('color' , 'unset');
-$('.phone-network-container').css('background' , 'rgb(13, 13, 13, .2)'); 
+$('.phone-network-container').css('background' , 'rgb(13, 13, 13, .2)');
+$screen.css('box-shadow' , 'none');
 }
 });
 });
@@ -192,12 +194,14 @@ $('#mois').text(mois);
 // Hover sur Applications       
 
 $('.phone-app-gallery img').mouseover(function() {
-$( this ).css( 'padding' , '3px' );
-$(this).css('background' , '#823aa8');
+$( this ).css( 'padding' , '2px' );
+$(this).css('transition' , '.7s');
+$(this).css('background' , '#4f4f4f')
 })
 .mouseout(function() {
 $( this ).css( 'padding' , '1px' );
-$(this).css('background' , 'black');
+$(this).css('transition' , '0.7s');
+$(this).css('background' , '#1a1a1a')
 });
 
 
@@ -212,7 +216,6 @@ if ( this.style.color !== "blue" && this.style.color !== "#c33c71" && this.style
         $samsung.animate({ 'width': '100%' , 'height' : '98vh'}, 1000 )
         .animate({ 'width': '-=5'}, 150);
         $('.fa-tablet-alt').replaceWith($desktopIcon);
-        $phoneBackground.css('background' , 'black');
         $imageApp.css('width' , '95px');
         $imageApp.css('height' , '50px');
         $ph
@@ -222,7 +225,6 @@ if ( this.style.color !== "blue" && this.style.color !== "#c33c71" && this.style
         $samsung.animate({ 'width': '460px'}, 1000 )
         .animate({ 'width': '-=10'}, 200);
         $desktopIcon.replaceWith($phoneIcon);
-        $phoneBackground.css('background' , 'black');
         $imageApp.css('width' , '60px');
         $imageApp.css('height' , '45px');
 
@@ -230,7 +232,6 @@ if ( this.style.color !== "blue" && this.style.color !== "#c33c71" && this.style
         $samsung.animate({ 'width': '85%'}, 1000 );
         $phoneIcon.replaceWith($tabletIcon);
         this.style.color = "#c33c71";
-        $phoneBackground.css('background' , 'grey');
         
 
 } else{
@@ -260,22 +261,27 @@ $('#image-titre-hover').mouseout(function() {
 });
 
 
-
 // Parallax Header Effect
 
 $(window).scroll(function(){
         let wScroll = $(this).scrollTop();
         $('.logo').css({
-                'transform' : 'translate(0px , '+ wScroll /2+'%)'
+                'transform' : 'translate(0px , '+ wScroll /5+'%)'
         });
 
         $('.back-bird').css({
-                'transform' : 'translate(0px , '+ wScroll /4+'%)'
+                'transform' : 'translate(0px , '+ wScroll /3+'%)'
         });
 
         $('.fore-bird').css({
-                'transform' : 'translate(0px , -'+ wScroll /30+'%)'
+                'transform' : 'translate(0px , -'+ wScroll /17+'%)'
         });
-})
+
+        $samsung.css({
+                'transform' : 'translate(0px , -'+ wScroll /28+'%)'
+        });
+});
+
+
 
 

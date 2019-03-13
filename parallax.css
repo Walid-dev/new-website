@@ -4,28 +4,28 @@
 }
 
 .site-wrapper{
-    height: 2000px;
+    height: 200vh;
 }
 
 article{
-    padding: 100px 0;
+    padding: 80px 0;
 }
 
 .bird-box{
     position: relative;
     height: 600px;
-    background-image: url('images/backgrounds/sky-bkg.jpg');
+    background-image: url('images/backgrounds/stars-sky.png');
     background-size: cover;
-    position: top center;
+    position: bottom center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow: hidden;
 }
 
 .logo{
-    height: 250px;
     width: 100%;
-    background-image: url('images/backgrounds/titre1.png');
+    height: 250px;
+    background-image: url('images/backgrounds/titre-walid-without-shadow.png');
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
@@ -34,28 +34,37 @@ article{
 }
 
 .fore-bird{
-    width: 960px;
-    margin-left: -480px;
-    height: 723px;
-    background: rgba(255, 192, 203, 0.411);
-    background-image: url('../new-website/spacex-transparent\ -\ copie.png');
+    width: 250px;
+    height: 470px;
+    background-image: url('images/backgrounds/tree-cartoon.png');
     background-repeat: no-repeat;
     position: right bottom;
     position: absolute;
-    left: 80%;
-    top: 425px;
+    left: 73%;
+    bottom: -420px;
 }
 
+
 .back-bird{
-    width: 500px;
-    height: 360px;
+    width: 150px;
+    height: 200px;
     background-image: url('images/backgrounds/moon-transparent.png');
     background-repeat: no-repeat;
     background-position: top left;
     position: absolute;
-    left: 30%;
-    top: 5%;
-    margin-left: -250px;
+    left: 10%;
+    top: 12%;
+}
+
+.neptune{
+    width: 50px;
+    height: 50px;
+    background-image: url('images/');
+    background-repeat: no-repeat;
+    background-position: top left;
+    position: absolute;
+    left: 85%;
+    bottom: 5%;
 }
 
 .bird-box figure{
