@@ -1,0 +1,34 @@
+.btn-close-effect {
+    color: #e09291 ;
+    font-size: 14px;
+    border: 1px solid;
+    transition: 0.35s;
+    border: 1px solid;
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    -ms-transition: 0.35s;
+    -o-transition: 0.35s;
+}
+.btn-close-effect:hover, .btn-close-effect:focus {
+    border-color: #e09291;
+    color: white;
+    box-shadow: inset -5.5em 0 0 0 #e09291, inset 5.5em 0 0 0 #e09291;
+}
+
+.btn-close-effect2 {
+    color: #ff7f82 ;
+    padding: 8px 30px;
+    font-size: 14px;
+    border: 1px solid;
+    transition: 0.35s;
+    border: 1px solid;
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    -ms-transition: 0.35s;
+    -o-transition: 0.35s;
+}
+.btn-close-effect2:hover, .btn-close-effect2:focus {
+    border-color: #ff7f82;
+    color: white;
+    box-shadow: inset -5.5em 0 0 0 #ff7f82, inset 5.5em 0 0 0 #ff7f82;
+}

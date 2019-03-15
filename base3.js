@@ -54,7 +54,7 @@ $telegramIcon.fadeTo(600 , 1);
 $wifiIcon.css('color', '#0f0');
 $batteryIcon.fadeTo(600 , 1);
 $wifiIcon.fadeTo(400 , 1);
-$screen.css('box-shadow' , '0 0 25px white, 0 0 3px blue');
+$screen.css('box-shadow' , '#ffffffb3 0px 0px 25px, blue 0px 0px 5px');
 
 } else {
 
@@ -211,28 +211,27 @@ $(this).css('background' , '#1a1a1a')
 $rightButton.click(function() {
 $rightButton.each(function( i ) {
 
-if ( this.style.color !== "blue" && this.style.color !== "#c33c71" && this.style.color !== "red" ) {
+if ( this.style.color !== "blue" && this.style.color !== "green" && this.style.color !== "red" ) {
         this.style.color = "blue";
-        $samsung.animate({ 'width': '100%' , 'height' : '98vh'}, 1000 )
-        .animate({ 'width': '-=5'}, 150);
+        $samsung.animate({ 'width': '85%'}, 1000 );
         $('.fa-tablet-alt').replaceWith($desktopIcon);
-        $imageApp.css('width' , '95px');
-        $imageApp.css('height' , '50px');
-        $ph
+        
 
 } else if (this.style.color == "blue") {
         this.style.color = "red";
-        $samsung.animate({ 'width': '460px'}, 1000 )
-        .animate({ 'width': '-=10'}, 200);
-        $desktopIcon.replaceWith($phoneIcon);
-        $imageApp.css('width' , '60px');
+        $samsung.animate({ 'width': '100%' , 'height' : '98vh'}, 1000 )
+        .animate({ 'width': '-=5'}, 150);
+        $($desktopIcon).replaceWith($phoneIcon);
+        $imageApp.css('width' , '85px');
         $imageApp.css('height' , '45px');
 
 } else if (this.style.color == "red"){
-        $samsung.animate({ 'width': '85%'}, 1000 );
-        $phoneIcon.replaceWith($tabletIcon);
         this.style.color = "#c33c71";
-        
+        $samsung.animate({ 'width': '460px'}, 1000 )
+        .animate({ 'width': '-=10'}, 200);
+        $phoneIcon.replaceWith($tabletIcon);
+        $imageApp.css('width' , '55px');
+        $imageApp.css('height' , '35px');
 
 } else{
         this.style.color = "";
@@ -266,15 +265,23 @@ $('#image-titre-hover').mouseout(function() {
 $(window).scroll(function(){
         let wScroll = $(this).scrollTop();
         $('.logo').css({
-                'transform' : 'translate(0px , '+ wScroll /5+'%)'
+                'transform' : 'translate(0px , -'+ wScroll /24+'%)'
         });
 
-        $('.back-bird').css({
-                'transform' : 'translate(0px , '+ wScroll /3+'%)'
+        $('.moon').css({
+                'transform' : 'translate(0px , '+ wScroll /2.3+'%)'
         });
 
-        $('.fore-bird').css({
-                'transform' : 'translate(0px , -'+ wScroll /17+'%)'
+        $('.uranus').css({
+                'transform' : 'translate(0px , '+ wScroll *1.0005+'%)'
+        });
+
+        $('.kid-walking').css({
+                'transform' : 'translate('+wScroll /3+'% , 0px)'
+        });
+
+        $('.wolf').css({
+                'transform' : 'translate('+wScroll /2.2+'% , 0px)'
         });
 
         $samsung.css({

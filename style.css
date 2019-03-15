@@ -1,17 +1,12 @@
 
 /** Propriétés Ecran Principal **/
 
-.content-article{
-    background: #F8F8F8;
-}
-
 .phone-container{
     padding-top: 100px;
 }
 
 #container-secondaire{
-    padding-top: 200px;
-    margin-bottom: -150px;
+    padding-top: 120px;
     background: #020a18;
 }
 
@@ -33,7 +28,7 @@
     padding-top: 100px;
     background: #121212;
     border-radius: 30px;
-    border: 2px solid rgb(82, 82, 82);
+    border: 2px solid #4b4c4c;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
@@ -111,7 +106,7 @@
     position: absolute;
     top: 0;
     height: 42px;
-    background: black;
+    background: #101010;
     padding-top: 6px;
     opacity: 1;
 }
@@ -217,6 +212,10 @@
     -o-border-radius: 0px 0px 25px 25px;
 }
 
+.phone-menu-buttons i{
+    font-size: 22px;
+}
+
 #touch-right-button{
     color: #c33c71;
 }
@@ -224,8 +223,8 @@
 /** Applications Pad **/
 
 .gallery img{
-    width: 95px;
-    height: 50px;
+    width: 55px;
+    height: 35px;
     margin-left: 50%;
     background: #1a1a1a;
     padding: 1px;
@@ -321,7 +320,7 @@
 }
 
 .child-content-header{
-    padding: 40px 10px;
+    padding: 40px 15px;
 }
 
 /** CSS section enfant app 1 **/
@@ -385,6 +384,7 @@
 #myCarousel li.active{
     width: 18px;
     transition: 0.3s;
+    background-color: #ff7f82;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
@@ -490,29 +490,6 @@ header video {
 }
 
 
-/** Titre Test **/
-
-#image-titre{
-background: transparent;
-position: absolute;
-}
-
-#image-titre-hover{
-    background: transparent;
-    position: absolute;
-    display: none;
-}
-
-#background-header{
-background: #15031d;
-height: 470px;
-
-}
-
-#image-titre-container{
-   position: relative;
-}
-
 .rowY{
     border: 1px solid lime;
     height: 500px;
@@ -533,16 +510,21 @@ height: 470px;
 }
 
 .box-logiciels-bureautique img{
-    width: 70%;
+    width: 55%;
 }
 
 .logiciels-row{
     height: 200px;
-    padding-top: 40px;
 }
 
 .logiciels-container{
     padding-bottom: 40px;
+}
+
+.service-heading{
+    font-size: 15px;
+    color: white;
+    padding: 0 10px;
 }
 
 
@@ -554,7 +536,7 @@ height: 470px;
 /* Ul social Square effect */
 
 .row-social-icons{
-    background: #68a3ff;
+    background: #F8F8F8;
 }
 
 .ul-social-footer{
@@ -600,7 +582,7 @@ padding: 70px 0;
 {
     width: 100%;
     height: 1px;
-    background: #fff;
+    background: #000;
 }
 
 .ul-social-footer li a span:nth-child(1)
@@ -654,7 +636,7 @@ padding: 70px 0;
 {
     width: 1px;
     height: 100%;
-    background: #fff;
+    background: #000;
 }
 
 .ul-social-footer li a span:nth-child(2)
