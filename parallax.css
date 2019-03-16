@@ -9,13 +9,14 @@
 
 
 .content-article{
-    padding: 100px 0;
-    background: #fff;
+    padding: 80px 0;
+    color: #ffffff;
+    background-image: linear-gradient(to bottom, #030c1a, #040d1e, #040e21, #050f25, #061028, #061028, #061028, #061028, #050f25, #040e21, #040d1e, #030c1a);
 }
 
 .bird-box{
     position: relative;
-    height: 650px;
+    height: 680px;
     background-image: url('images/backgrounds/stars-sky.png');
     background-size: cover;
     position: bottom center;
@@ -79,7 +80,7 @@
     background-position: center;
     position: absolute;
     left: 19%;
-    bottom: -0.4%;
+    bottom: 0%;
     z-index: 2;
 }
 
@@ -103,7 +104,7 @@
     background-position: top left;
     position: absolute;
     left: -8%;
-    bottom: 0%;
+    bottom: 1%;
     z-index: 3;
 }
 
