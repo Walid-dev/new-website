@@ -70,6 +70,7 @@ $batteryIcon.fadeTo(600 , .4);
 $wifiIcon.fadeTo(600 , .1);
 $leftButton.css('color' , 'unset');
 $('.phone-network-container').css('background' , 'rgb(13, 13, 13, .2)');
+$('.phone-menu-buttons').css('background' , 'rgb(13, 13, 13, .2)'); 
 $screen.css('box-shadow' , 'none');
 }
 });
@@ -215,15 +216,17 @@ if ( this.style.color !== "blue" && this.style.color !== "green" && this.style.c
         this.style.color = "blue";
         $samsung.animate({ 'width': '85%'}, 1000 );
         $('.fa-tablet-alt').replaceWith($desktopIcon);
+        $imageApp.css('width' , '85px');
+        $imageApp.css('height' , '45px');
+        $('.phone-app-gallery figcaption').css('font-size' , '12px');
         
 
 } else if (this.style.color == "blue") {
         this.style.color = "red";
         $samsung.animate({ 'width': '100%' , 'height' : '98vh'}, 1000 )
-        .animate({ 'width': '-=5'}, 150);
+        .animate({ 'width': '-=2'}, 150);
         $($desktopIcon).replaceWith($phoneIcon);
-        $imageApp.css('width' , '85px');
-        $imageApp.css('height' , '45px');
+        $('.phone-app-gallery figcaption').css('font-size' , '13px');
 
 } else if (this.style.color == "red"){
         this.style.color = "#c33c71";
@@ -232,6 +235,7 @@ if ( this.style.color !== "blue" && this.style.color !== "green" && this.style.c
         $phoneIcon.replaceWith($tabletIcon);
         $imageApp.css('width' , '55px');
         $imageApp.css('height' , '35px');
+        $('.phone-app-gallery figcaption').css('font-size' , '11px');
 
 } else{
         this.style.color = "";
@@ -259,6 +263,7 @@ $('#image-titre-hover').mouseout(function() {
 });
 });
 
+// Remplacer Image On Scroll 
 
 // Parallax Header Effect
 
@@ -282,6 +287,10 @@ $(window).scroll(function(){
 
         $('.wolf').css({
                 'transform' : 'translate('+wScroll /2.2+'% , 0px)'
+        });
+
+        $('.astronaut').css({
+                'transform' : 'translate(0px , '+ wScroll /1.5+'%)'
         });
 
         $samsung.css({
