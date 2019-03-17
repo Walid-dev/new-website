@@ -1,0 +1,13 @@
+/** CSS Formulaire de Contact **/
+
+#form-container{
+    padding: 70px 30px;
+    color: white;
+}
+
+#btn-form{
+    background: white;
+    border-radius: 2px;
+    padding: 8px 14px;
+    font-size: 16px;
+}

@@ -270,7 +270,7 @@ $('#image-titre-hover').mouseout(function() {
 $(window).scroll(function(){
         let wScroll = $(this).scrollTop();
         $('.logo').css({
-                'transform' : 'translate(0px , -'+ wScroll /24+'%)'
+                'transform' : 'translate(0px , -'+ wScroll /40+'%)'
         });
 
         $('.moon').css({
@@ -292,6 +292,7 @@ $(window).scroll(function(){
         $('.astronaut').css({
                 'transform' : 'translate(0px , '+ wScroll /1.5+'%)'
         });
+
 
         $samsung.css({
                 'transform' : 'translate(0px , -'+ wScroll /28+'%)'

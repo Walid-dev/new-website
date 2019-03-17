@@ -96,6 +96,18 @@
     z-index: 2;
 }
 
+.ufo{
+    width: 120px;
+    height: 120px;
+    background-image: url('images/backgrounds/ufo-trans.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 38%;
+    top: 15%;
+    z-index: 2;
+}
+
 .wolf{
     width: 120px;
     height: 55px;

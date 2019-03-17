@@ -7,11 +7,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
 <link rel="stylesheet" href="parallax.css">
+<link rel="stylesheet" href="form.css">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="effects.css">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136253178-1"></script>
 <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-136253178-1'); </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="form.js"></script>
 
 <title>Title</title>
 </head>
@@ -375,12 +378,51 @@
               </div>
               
               <div id="screen-content-child8" class="screen-content-hidden">
-                <div class="mirror">
-                  <div class="rowY"></div>
-                  <div class="rowY"></div>
-                  <div class="rowY"></div>
-                  <div class="rowY"></div>
-                </div>
+
+                      <div class="col-md-12 " id="form-container">
+                          <h2>Contactez Moi</h2>
+                          <p>
+                            N'hésitez pas à m'écrire. Je vous répondrai le plus rapidement possible.
+                          </p>
+                          <form role="form" method="post" id="reused_form">
+                  
+                              <div class="row">
+                                  <div class="col-sm-12 form-group">
+                                      <label for="message">
+                                          Message :</label>
+                                      <textarea class="form-control" type="textarea" id="message" name="message" maxlength="6000" rows="7"></textarea>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-sm-6 mt-2 form-group">
+                                      <label for="name">
+                                          Votre Nom :</label>
+                                      <input type="text" class="form-control" id="name" name="name" required>
+                                  </div>
+                                  <div class="col-sm-6 mt-2 form-group">
+                                      <label for="email">
+                                          Votre Mail :</label>
+                                      <input type="email" class="form-control" id="email" name="email" required>
+                                  </div>
+                              </div>
+                  
+                              <div class="row">
+                                  <div class="col-sm-12 mt-2 form-group">
+                                      <button id="btn-form" type="submit" class="btn btn-default pull-right" >Envoyer →</button>
+                                  </div>
+                              </div>
+                  
+                          </form>
+                          <div id="success_message" style="width:100%; height:100%; display:none; ">
+                              <h3>Votre message à bien été envoyé!</h3>
+                          </div>
+                          <div id="error_message"
+                                  style="width:100%; height:100%; display:none; ">
+                                      <h3>Error</h3>
+                                      Désolé mais il semble y avoir une erreur.
+                  
+                          </div>
+                      </div>
               </div>
 
           <div id="screen-content-child" class="screen-content-child">

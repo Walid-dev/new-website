@@ -1,7 +1,7 @@
 
 /** Propriétés Ecran Principal **/
 
-button:focus {
+button:focus , button:active {
     outline:0;
 }
 
@@ -357,6 +357,7 @@ button:focus {
 
 #touch-center-button{
     color: blue;
+    border: none;
 }
 
 /*************************************/
