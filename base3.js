@@ -8,8 +8,7 @@ $newChildHidden = $('.screen-content-hidden');
 $screenBasicChild = $('.screen-content-child');
 $imageFondScreen = $('#image-fond-screen');
 $samsung = $('.samsung');
-$whatsappIcon = $('#i-whatsapp');
-$telegramIcon = $('#i-telegram');
+$powerIcon = $('#power-icon');
 $wifiIcon = $('#i-wifi');
 $batteryIcon = $('#battery-icon');
 $phonePage = $('.phone-section');
@@ -49,8 +48,7 @@ $imageFondScreen.fadeIn(400);
 $screenContent.fadeIn(400);
 $screenBasicChild.fadeIn(400);
 $leftButton.prop( "disabled", false );
-$whatsappIcon.fadeTo(600 , 1);
-$telegramIcon.fadeTo(600 , 1);
+$powerIcon.fadeTo(600 , 1);
 $wifiIcon.css('color', '#0f0');
 $batteryIcon.fadeTo(600 , 1);
 $wifiIcon.fadeTo(400 , 1);
@@ -64,8 +62,7 @@ $screenContent.fadeOut(300);
 $newChildHidden.fadeOut(300);
 $screenBasicChild.fadeOut(300);
 $leftButton.prop( "disabled", true );
-$whatsappIcon.fadeTo(600 , 0);
-$telegramIcon.fadeTo(600 , 0);
+$powerIcon.fadeTo(600 , 0);
 $batteryIcon.fadeTo(600 , .4);
 $wifiIcon.fadeTo(600 , .1);
 $leftButton.css('color' , 'unset');
@@ -151,7 +148,6 @@ $('#btn-icon7').click(function (e) {
 $('#btn-icon8').click(function (e) { 
         e.preventDefault();
         $('#screen-content-child8').fadeIn(300);
-        $imageFondScreen.fadeOut(300);
         $screenBasicChild.fadeOut(300);
         $leftButton.css('color' , 'lime');
 });
@@ -167,7 +163,7 @@ $leftButton.click(function (e) {
         $newChildHidden.fadeOut(300);
         $leftButton.css('color' , 'unset');     
         $('.phone-menu-buttons').css('background' , 'rgb(13, 13, 13, .2)'); 
-        $('.phone-network-container').css('background' , 'rgb(13, 13, 13, .2)');         
+        $('.phone-network-container').css('background' , 'rgb(13, 13, 13, .2)');     
 });
 
 

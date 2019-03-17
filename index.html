@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,15 +19,6 @@
 <title>Title</title>
 </head>
 <body>
-  <!-- <section class="container-fluid"> 
-    <div class="row">
-      <div id="background-header" class="col-md-12">
-        <div id="image-titre-container" class="col-md-5 mx-auto"><div id="image-titre"><img class="img-fluid" src="images/backgrounds/titre1.png"></div><div id="image-titre-hover"><img class="img-fluid" src="images/backgrounds/titre-hover.png"></div></div>
-      </div>
-      </div> 
-    -->
-
-  </section>
 <div class="header-container container-fluid">
 <header class="bird-box">
   <div id="kid-walking" class="kid-walking"></div>
@@ -43,9 +34,9 @@
 
   <section class="content-article">
     <article id="article-scroll" class="col-md-6 mx-auto text-center">
-      <h2>Navigation</h2>
+      <h1>Navigation</h1>
       <hr>
-      <p>Pour visiter les différentes parties du site, activer le téléphone à l'aide de la <strong>touche centrale</strong>. Utiliser les applications et les touches de ce dernier pour naviguer.<br>Vous disposez aussi de la touche screen size de droite qui vous permettra de choisir entre les formats <strong>smartphone</strong>, <strong>tablette</strong>, et <strong>plein écran</strong>.<br>Bonne visite.</p>
+      <p>Pour visiter les différentes parties du site, activer le téléphone à l'aide de la <strong>touche centrale</strong>. Utiliser les applications et les touches du bas de ce dernier pour naviguer.<br>Vous disposez aussi de la touche screen size de droite qui vous permettra de choisir entre les formats <strong>smartphone</strong>, <strong>tablette</strong>, et <strong>plein écran</strong> (Le site est toujours en construction, merci de votre compréhension)<br>Bonne visite.</p>
     </article>
   </section>
 
@@ -57,10 +48,10 @@
       <div class="samsung fp-auto-height">
         <div id="screen" class="screen">
           
-          <div id="image-fond-screen"><img class="img-fluid" id="image-fond" src="images/backgrounds/stars-sky.png"></div>
+          <div id="image-fond-screen"><img class="img-fluid" id="image-fond" src="images/backgrounds/stars-sky.png" alt=""></div>
 
           <div class="phone-network-container container-fluid d-flex">
-                  <div class="col-md-5 text-left"><i id="i-telegram" class="fab fa-telegram"></i><i id="i-whatsapp" class="fab fa-whatsapp"></i><i id="i-telegram" class="fab fa-telegram"></i><i id="i-whatsapp" class="fab fa-whatsapp"></i></div>
+                  <div class="col-md-5 text-left"><i id="power-icon" class="fas fa-power-off"></i><i id="app-icon" class="fa fa-images ml-3"></i></div>
                   <div class="col-md-2 justify-content-around text-center"><i id="battery-icon" class="fas fa-battery-full"></i></div>
                   <div class="col-md-5 text-right"><i id="i-wifi" class="fas fa-wifi"></i></div>
           </div>
@@ -83,9 +74,11 @@
                       <img class="first-slide" src="images/porftfolio/galaxysurfing-slider.jpg" alt="First slide">
                       <div class="container">
                         <div class="carousel-caption text-left">
-                          <h3>Mon dernier Porfolio.</h3>
-                          <p>Pour mon dernier portfolio j'ai utilisé HTML5, Bootsrap, un peu de Javascript et jQuery, mais j'ai surtout mis l'accent sur la création et l'amélioration d'effets en CSS3 dans le but de pousser mes compétences dans ce language.</p>
-                          <p><a class="btn btn-md btn-close-effect2" href="#" role="button">Visiter</a></p>
+                          <div class="carousel-text">
+                            <h3>Mon dernier Porfolio.</h3>
+                            <p>Pour mon dernier portfolio j'ai utilisé HTML5, Bootsrap, un peu de Javascript et jQuery, mais j'ai surtout mis l'accent sur la création et l'amélioration d'effets en CSS3 dans le but de pousser mes compétences dans ce language.</p>
+                          <p><a class="btn btn-md mt-1 btn-close-effect2" href="#" role="button">Visiter</a></p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -94,9 +87,11 @@
                       <img class="second-slide" src="images/porftfolio/custom-stranger.jpg" alt="Third slide">
                       <div class="container">
                         <div class="carousel-caption text-center">
+                          <div class="carousel-text">
                           <h3>Custom Post Types et Taximonies sur Wordpress.</h3>
-                          <p>Custom post types et taximonies sont des mots qui revenaient souvent lorsqu'il s'agissait de Wordpress. J'ai alors décidé pour m'exercer, de créer des fiches de series-tv informatives en utilisant ces derniers. J'ai utiliser pour cela la méthode manuelle mais aussi la méthode utilisant des plugins.</p>
-                          <p><a class="btn btn-md btn-close-effect2" href="#" role="button">Visiter</a></p>
+                            <p>Custom post types et taximonies sont des mots qui revenaient souvent lorsqu'il s'agissait de Wordpress. J'ai alors décidé pour m'exercer, de créer des fiches de series-tv informatives en utilisant ces derniers. J'ai utiliser pour cela la méthode manuelle mais aussi la méthode utilisant des plugins.</p>
+                            <p><a class="btn btn-md mt-1 btn-close-effect2" href="#" role="button">Visiter</a></p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -105,9 +100,11 @@
                       <img class="third-slide" src="images/porftfolio/avisgo-img-min.jpg" alt="Third slide">
                       <div class="container">
                         <div class="carousel-caption text-right">
-                          <h3>Mon premier site Bootstrap (version 3.3).</h3>
-                          <p>Après la validation du module Bootstrap, j'ai souhaité pratiquer Bootstrap. J'ai donc codé ce site pour m'exercer à partir d'une maquette Photoshop.</p>
-                          <p><a class="btn btn-md btn-close-effect2" href="#" role="button">Visiter</a></p>
+                          <div class="carousel-text">
+                            <h3>Mon premier site Bootstrap (version 3.3).</h3>
+                            <p>Après la validation du module Bootstrap, j'ai souhaité pratiquer Bootstrap. J'ai donc codé ce site pour m'exercer à partir d'une maquette Photoshop.</p>
+                            <p><a class="btn btn-md mt-1 btn-close-effect2" href="#" role="button">Visiter</a></p>
+                         </div>
                         </div>
                       </div>
                     </div>
@@ -116,9 +113,11 @@
                       <img class="fourth-slide" src="images/porftfolio/office-strasbourg-img.jpg" alt="Fourth slide">
                       <div class="container">
                         <div class="carousel-caption text-center">
-                          <h3>Mon premier site wordpress.</h3>
-                          <p>C'est mon premier site Wordpress les consignes étaient de répondre à une liste de demande bien précise pour le compte des administrateurs de l'office du tourisme de Strasbourg. L'utilisation de builder n'était pas autorisée et l'implémentation d'un slider en CSS pur demandée.</p>
-                          <p><a class="btn btn-md btn-close-effect2" href="#" role="button">Non hébergé</a></p>
+                          <div class="carousel-text">
+                            <h3>Mon premier site wordpress.</h3>
+                            <p>C'est mon premier site Wordpress les consignes étaient de répondre à une liste de demande bien précise pour le compte des administrateurs de l'office du tourisme de Strasbourg. L'utilisation de builder n'était pas autorisée et l'implémentation d'un slider en CSS pur demandée.</p>
+                            <p><a class="btn btn-md mt-1 btn-close-effect2" href="#" role="button">Non hébergé</a></p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -127,9 +126,11 @@
                       <img class="fifth-slide" src="images/porftfolio/mon-site-img-min.jpg" alt="Fifth slide">
                       <div class="container">
                         <div class="carousel-caption text-left">
-                          <h3>Mon premier portfolio (Wordpress).</h3>
-                          <p>J'ai crée ce site avec Wordpress et j'y ai apporté des modifications avec HTML5 et CSS3.</p>
-                          <p><a class="btn btn-md btn-close-effect2" href="#" role="button">Visiter</a></p>
+                          <div class="carousel-text">
+                            <h3>Mon premier portfolio (Wordpress).</h3>
+                            <p>J'ai crée ce site avec Wordpress et j'y ai apporté des modifications avec HTML5 et CSS3.</p>
+                            <p><a class="btn btn-md mt-1 btn-close-effect2" href="#" role="button">Visiter</a></p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -138,9 +139,11 @@
                         <img class="sixth-slide" src="images/porftfolio/autour-dun-cafe-img-min.jpg" alt="Sixth slide">
                         <div class="container">
                           <div class="carousel-caption text-left">
-                            <h3>Mon premier site Wordpress avec utilisation Builder (Elementor).</h3>
-                            <p>Création d'un blog simpliste sur Wordpress en m'initiant à l'utilisation du builder Elementor.</p>
-                            <p><a class="btn btn-md btn-close-effect2" href="#" role="button">Visiter</a></p>
+                            <div class="carousel-text">
+                              <h3>Mon premier site Wordpress avec utilisation Builder (Elementor).</h3>
+                              <p>Création d'un blog simpliste sur Wordpress en m'initiant à l'utilisation du builder Elementor.</p>
+                              <p><a class="btn btn-md mt-1 btn-close-effect2" href="#" role="button">Visiter</a></p>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -149,9 +152,11 @@
                         <img class="sixth-slide" src="images/porftfolio/webagency-def.jpg" alt="Seventh slide">
                         <div class="container">
                           <div class="carousel-caption text-left">
-                            <h3>Mon premier site codé uniquement en HTML5 et CSS3</h3>
-                            <p>C'est mon premier vrai projet de site. Celui-ci est écrit uniquement en HTML5 et CSS3. Pour une meilleure acquisition des compétences de bases, l'utilisation de Javascript, Php ou Bootstrap n'était pas autorisée.</p>
-                            <p><a class="btn btn-md btn-close-effect2" href="#" role="button">Visiter</a></p>
+                            <div class="carousel-text">
+                              <h3>Mon premier site codé uniquement en HTML5 et CSS3</h3>
+                              <p>C'est mon premier vrai projet de site. Celui-ci est écrit uniquement en HTML5 et CSS3. Pour une meilleure acquisition des compétences de bases, l'utilisation de Javascript, Php ou Bootstrap n'était pas autorisée.</p>
+                              <p><a class="btn btn-md mt-1 btn-close-effect2" href="#" role="button">Visiter</a></p>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -390,7 +395,7 @@
                                   <div class="col-sm-12 form-group">
                                       <label for="message">
                                           Message :</label>
-                                      <textarea class="form-control" type="textarea" id="message" name="message" maxlength="6000" rows="7"></textarea>
+                                      <textarea class="form-control" id="message" name="message" maxlength="6000" rows="7"></textarea>
                                   </div>
                               </div>
                               <div class="row">
@@ -428,11 +433,11 @@
           <div id="screen-content-child" class="screen-content-child">
             
             <div class="phone-time col-md-12"> 
-              <h2 class="text-center col-md-12"><div class="phone-hour heure"><span id="heure"></span>:<span id="minute"></span></div><div class=""><span id="jour"></span>/<span id="mois"></span></div></h2>
+              <h2 class="text-center col-md-12"><span class="phone-hour heure"><span id="heure"></span>:<span id="minute"></span></span><span class="date" style="display: block;"><span id="jour"></span>/<span id="mois"></span></span></h2>
             </div>  
             
             <div id="champ-google" class="input-group-sm col-md-12">
-              <span class="input-group-text col-md-6 mx-auto" placeholder="Recherche" aria-label="Recherche" id="basic-addon1"><i class="fab fa-google"></i></span>   
+              <span class="input-group-text col-md-6 mx-auto"><i class="fab fa-google"></i></span>   
             </div>
             
               <div class="phone-app-container container-fluid">
@@ -537,6 +542,7 @@
 
 <div class="footer-copyright text-center">
   <span class="text-center">© 2018 galaxysurfing.com </span>
+</div>
 </div>
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>

@@ -152,12 +152,11 @@ button:focus , button:active {
     opacity: .4;
 }
 
-#i-whatsapp{
-    color: #3bbf2b;
-    opacity: 0;
+#app-icon{
+    color: blue;
 }
 
-#i-telegram{
+#power-icon{
     color: #32aade;
     opacity: 0;
 }
@@ -429,6 +428,12 @@ padding-right: 0px;
 padding-left: 0px;
 height: 100%;
 position: absolute;
+}
+
+.carousel-text{
+    background: #6f5d3954;
+    padding: 10px 15px;
+    border-radius: 10px;
 }
 
 
