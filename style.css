@@ -276,6 +276,7 @@ p {
     -moz-border-radius: 0px 0px 25px 25px;
     -ms-border-radius: 0px 0px 25px 25px;
     -o-border-radius: 0px 0px 25px 25px;
+    z-index: 2;
 }
 
 .phone-menu-buttons i{
@@ -295,9 +296,9 @@ p {
 
 .gallery img{
     width: 55px;
-    height: 35px;
+    height: 45px;
     margin-left: 50%;
-    background: #1a1a1a;
+    background: transparent;
     padding: 1px;
     border-radius:50%;
     transform: translateX(-50%);
@@ -354,6 +355,15 @@ p {
     -moz-transition: 0.5s;
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
+}
+
+#btn7{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 50%;
+    transform: translate(-50%);
+    width: 100%;
 }
 
 /** Contenu Enfant Principal Navigation **/
@@ -484,7 +494,7 @@ position: absolute;
 }
 
 .carousel-text{
-    background: #60ff0040;
+    background: #5F00FF80;
     padding: 10px 15px;
     border-radius: 10px;
 }
@@ -558,10 +568,11 @@ header video {
     background-size: cover;
     height: 100%;
     margin-bottom: 0px;
+    overflow-y: scroll;
 }
 
 #jumbotron-inside-child3{
-    background: #D894971A;
+    background: #5F00FF80;
     padding: 1em;
     border-radius: 5px;
     color: white;
@@ -780,7 +791,7 @@ padding: 70px 0;
 }
 
 .row-social-icons{
-    margin-top: -200px;
+    margin-top: -250px;
 }
 
 .facebook {
@@ -806,6 +817,10 @@ padding: 70px 0;
 
 .empty-part-text{
     top: 50%;
-    color: #00ff9b;
-    font-size: 24px;
+    color: #dfff00;
+    background: black;
+    font-size: 26px;
+    font-family: 'Varela Round', sans-serif;
+    position: absolute;
+    z-index: 2;
 }

@@ -223,14 +223,10 @@ $('#mois').text(mois);
 // Hover sur Applications       
 
 $('.phone-app-gallery img').mouseover(function() {
-$( this ).css( 'padding' , '2px' );
-$(this).css('transition' , '.7s');
-$(this).css('background' , '#4f4f4f')
+
 })
 .mouseout(function() {
-$( this ).css( 'padding' , '1px' );
-$(this).css('transition' , '0.7s');
-$(this).css('background' , '#1a1a1a')
+
 });
 
 
@@ -244,10 +240,11 @@ if ( this.style.color !== "springgreen" && this.style.color !== "green" && this.
         this.style.color = "springgreen";
         $samsung.animate({ 'width': '85%'}, 1000 );
         $('.fa-tablet-alt').replaceWith($desktopIcon);
-        $imageApp.css('width' , '85px');
-        $imageApp.css('height' , '45px');
+        $imageApp.css('width' , '60px');
+        $imageApp.css('height' , '55px');
         $('.phone-app-gallery figcaption').css('font-size' , '15px');
         $('.box-logiciels-bureautique img').css('width' , '45%');
+        $('#btn7').css('width' , 'auto');
         
 
 } else if (this.style.color == "springgreen") {
@@ -257,16 +254,18 @@ if ( this.style.color !== "springgreen" && this.style.color !== "green" && this.
         $($desktopIcon).replaceWith($phoneIcon);
         $('.phone-app-gallery figcaption').css('font-size' , '16px');
         $('.box-logiciels-bureautique img').css('width' , '52%');
+        $('#btn7').css('width' , 'auto');
 
 } else if (this.style.color == "chartreuse"){
         this.style.color = "#00ffff";
         $samsung.animate({ 'width': '460px'}, 1000 )
-        .animate({ 'width': '-=10'}, 200);
+        .animate({ 'width': '-=5'}, 200);
         $phoneIcon.replaceWith($tabletIcon);
         $imageApp.css('width' , '55px');
-        $imageApp.css('height' , '35px');
+        $imageApp.css('height' , '45px');
         $('.phone-app-gallery figcaption').css('font-size' , '13px');
         $('.box-logiciels-bureautique img').css('width' , '40%');
+        $('#btn7').css('width' , '100%');
 
 } else{
         this.style.color = "";

@@ -17,6 +17,10 @@
     font-size: 2rem;
 }
 
+article strong{
+    color: #00ffff;
+}
+
 
 .bird-box{
     position: relative;
