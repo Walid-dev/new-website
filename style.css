@@ -1,4 +1,21 @@
 
+/** Font Sizes and Families **/
+
+h1 , h2 , h3{
+    font-family: 'Varela Round', sans-serif;
+}
+
+p {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+body{
+    background-image: linear-gradient(to bottom, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
+}
+
+
+
+
 /** Propriétés Ecran Principal **/
 
 button:focus , button:active {
@@ -12,12 +29,10 @@ button:focus , button:active {
 
 #container-secondaire{
     padding-top: 100px;
-    background: #020a18;
 }
 
 .phone-section{
     min-height: 99vh;
-    background: #fff;
     padding-right: 0px;
     padding-left: 0px;
     background-position: center;
@@ -31,17 +46,17 @@ button:focus , button:active {
     width: 450px;
     min-height: 95vh;
     padding-top: 100px;
-    background: #121212;
+    background: #0c0c0c;
     border-radius: 30px;
-    border: 2px solid #4b4c4c;
+    border: 2px solid #E7E7E5;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
 }
 
-.samsung p {
-    font-size: 15px;
+p {
+    font-size: 17px;
 }
 
 .samsung h3{
@@ -64,7 +79,7 @@ button:focus , button:active {
     right: 0px;
     left: 0px;
     background:transparent;
-    border-radius: 0px;
+    border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
@@ -85,7 +100,7 @@ button:focus , button:active {
     left: -50%;
     width: 100%;
     height: 100%;
-    background: rgba(169, 170, 170, 0.02);
+    background: rgba(92, 92, 92, 0.02);
     transform: skew(-15deg);
     -webkit-transform: skew(-15deg);
     -moz-transform: skew(-15deg);
@@ -109,7 +124,7 @@ button:focus , button:active {
     object-fit: fill;
     background-position: top center;
     opacity: 1;
-    border-radius:0px;
+    border-radius:px;
     transition: 0.7s;
     -webkit-transition: 0.7s;
     -moz-transition: 0.7s;
@@ -127,13 +142,14 @@ button:focus , button:active {
     position: absolute;
     top: 0;
     height: 42px;
-    background: #101010;
+    background: rgb(13, 13, 13, .2);
     padding-top: 6px;
     opacity: 1;
+    z-index: 2;
 }
 
 .phone-network-container i {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 28px;
     color: transparent;
     transform: rotateX(360deg);
@@ -143,28 +159,54 @@ button:focus , button:active {
     -o-transform: rotateX(360deg);
 }
 
-#i-whatsapp, #i-mail{
-    margin-left: 8px;
-}
+/** Led applications **/ 
 
 #battery-icon{
     color: lime;
-    opacity: .4;
+    opacity: .2;
 }
 
-#app-icon{
-    color: blue;
-}
 
 #power-icon{
-    color: #32aade;
-    opacity: 0;
+    color: #00ffff;
+    opacity: .2;
 }
 
 #i-wifi{
-    color : #2da2ff;
-    opacity: .4;
+    color : #00ffff;
+    opacity: .2;
 }
+
+.app-led-box .fa-home{
+    color:#fff;
+}
+
+.app-led-box .fa-images{
+    color: gold;
+}
+
+.app-led-box .fa-user-circle{
+    color:#f006ff;
+}
+
+.app-led-box .fa-code{
+    color: #e8ff00;
+}
+
+.app-led-box .fa-gamepad{
+    color: #00ff9b;
+}
+
+.app-led-box .fa-comments{
+    color: #fff;
+}
+
+
+
+
+
+
+
 
 /** Heure et date **/
 
@@ -177,8 +219,10 @@ button:focus , button:active {
 }
 
 .phone-hour{
-    font-size: 1.4em;
+    font-size: 3em;
+    font-family: 'Titillium Web', sans-serif;
     line-height: 1.2em;
+    letter-spacing: 1px;
     transition: 0.5s;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
@@ -188,10 +232,11 @@ button:focus , button:active {
     opacity: 1;
 }
 
-.phone-date {
-    font-size: 0.5em;
+.date {
+    font-size: 26px;
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: 2px;
     opacity: 1;
-    
 }
 
 
@@ -201,6 +246,7 @@ button:focus , button:active {
     position: absolute;
     top: 7%;
     opacity: 1;
+    z-index: 2;
 }
 
 #champ-google span{
@@ -237,7 +283,12 @@ button:focus , button:active {
 }
 
 #touch-right-button{
-    color: #c33c71;
+    color: #00ffff;
+    opacity: .3;
+}
+
+#touch-right-button i {
+    font-size: 18px;
 }
 
 /** Applications Pad **/
@@ -289,7 +340,8 @@ button:focus , button:active {
 }
 
 .phone-app-gallery figcaption{
-    font-size: 11px;
+    font-size: 13px;
+    font-family: 'Titillium Web', sans-serif;
     color: #fff;
     position: relative;
     top: 6px;
@@ -336,12 +388,13 @@ button:focus , button:active {
 }
 
 #screen-content-child8{
-    overflow-y: scroll;
+   
 }
 
 .child-content-header{
     padding: 60px 15px;
     color: white;
+    z-index: 2;
 }
 
 /** CSS section enfant app 1 **/
@@ -407,7 +460,7 @@ button:focus , button:active {
 #myCarousel li.active{
     width: 18px;
     transition: 0.3s;
-    background-color: #ff7f82;
+    background-color: lime;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
@@ -431,7 +484,7 @@ position: absolute;
 }
 
 .carousel-text{
-    background: #6f5d3954;
+    background: #60ff0040;
     padding: 10px 15px;
     border-radius: 10px;
 }
@@ -538,16 +591,16 @@ header video {
 
 #screen-content-child4{
     overflow-y: scroll;
-    background: #0003;
 }
 
 .box-logiciels-bureautique{
     padding-right: 0px;
     padding-left: 0px;
+    z-index: 2;
 }
 
 .box-logiciels-bureautique img{
-    width: 55%;
+    width: 40%;
 }
 
 .logiciels-row{
@@ -571,10 +624,6 @@ header video {
 
 
 /* Ul social Square effect */
-
-.row-social-icons{
-    background-image: linear-gradient(to bottom, #030c1a, #040d1e, #040e21, #050f25, #061028, #061028, #061028, #061028, #050f25, #040e21, #040d1e, #030c1a);
-}
 
 .ul-social-footer{
 padding: 70px 0;
@@ -730,6 +779,10 @@ padding: 70px 0;
     -o-transition: transform .5s ;
 }
 
+.row-social-icons{
+    margin-top: -200px;
+}
+
 .facebook {
     color: #1C56CF;
 }
@@ -746,8 +799,13 @@ padding: 70px 0;
 /** Footer Copyright **/
 
 .footer-copyright{
-    background: #020a18;
     color: #4dbaba;
     font-size: 12px;
     line-height: 3.5em;
+}
+
+.empty-part-text{
+    top: 50%;
+    color: #00ff9b;
+    font-size: 24px;
 }

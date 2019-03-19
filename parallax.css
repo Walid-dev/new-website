@@ -11,8 +11,12 @@
 .content-article{
     padding: 80px 0;
     color: #ffffff;
-    background-image: linear-gradient(to bottom, #030c1a, #040d1e, #040e21, #050f25, #061028, #061028, #061028, #061028, #050f25, #040e21, #040d1e, #030c1a);
 }
+
+.content-article h1{
+    font-size: 2rem;
+}
+
 
 .bird-box{
     position: relative;
@@ -118,6 +122,18 @@
     left: -8%;
     bottom: 1%;
     z-index: 3;
+}
+
+.ufo{
+    width: 80px;
+    height: 60px;
+    background-image: url('images/backgrounds/ufo-trans.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 70%;
+    top: -35%;
+    z-index: 1;
 }
 
 
