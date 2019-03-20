@@ -21,6 +21,14 @@ article strong{
     color: #00ffff;
 }
 
+.colored-word-hobbies{
+    color: aqua;
+}
+
+.colored-word-lime{
+    color: #00ff41;
+}
+
 
 .bird-box{
     position: relative;
@@ -140,8 +148,21 @@ article strong{
     z-index: 1;
 }
 
-
-.bird-box figure{
+.tap-here{
+    width: 40px;
+    height: 40px;
+    background-image: url('images/backgrounds/tap-here-min3.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top:85%;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+{
     margin: auto;
 }
 

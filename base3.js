@@ -50,6 +50,7 @@ $centralButton.click(function() {
 $centralButton.each(function( i ) {
 if ( this.style.color !== "aqua" ) {
 this.style.color = "aqua";
+$('.tap-here').hide(300);
 $samsung.css('border' , '2px solid white');
 $screenContent.fadeIn(800);
 $imageFondScreen.fadeIn(100);
@@ -86,6 +87,7 @@ $('#bb').fadeOut(400);
 $('.phone-network-container').css('background' , '#101010');
 $('.phone-menu-buttons').css('background' , '#101010');
 $('.ufo').hide();
+$('.tap-here').show(1200);
 }
 });
 });
@@ -282,16 +284,7 @@ if ( this.style.color !== "springgreen" && this.style.color !== "green" && this.
 // Hover Image Header
 
 
-$(function() {
-$('#image-titre').mouseover(function() {
-        $(this).fadeOut(1300);
-        $('#image-titre-hover').fadeIn(1300);
-});
-$('#image-titre-hover').mouseout(function() {
-        $(this).fadeOut(1300);
-        $('#image-titre').fadeIn(1300);
-});
-});
+
 
 // Remplacer Image On Scroll 
 
@@ -328,6 +321,10 @@ $(window).scroll(function(){
                 'transform' : 'translate(0px , -'+ wScroll /28+'%)'
         });
 });
+
+
+
+// Hover Icones Applications UFO Moving
 
 
 

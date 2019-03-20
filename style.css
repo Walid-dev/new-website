@@ -13,14 +13,13 @@ body{
     background-image: linear-gradient(to bottom, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
 }
 
+button:focus , button:active {
+    outline:0;
+}
 
 
 
 /** Propriétés Ecran Principal **/
-
-button:focus , button:active {
-    outline:0;
-}
 
 
 .phone-container{
@@ -397,9 +396,6 @@ p {
     bottom: 0;
 }
 
-#screen-content-child8{
-   
-}
 
 .child-content-header{
     padding: 60px 15px;
@@ -410,10 +406,6 @@ p {
 /** CSS section enfant app 1 **/
 
 
-.rl{
-    height: 800px;
-    
-}
 
 /******************* Style Buttons Pad pour fonction allumage **************/
 
@@ -423,8 +415,6 @@ p {
 }
 
 /*************************************/
-
-
 
 
 
@@ -497,6 +487,10 @@ position: absolute;
     background: #5F00FF80;
     padding: 10px 15px;
     border-radius: 10px;
+}
+
+.carousel-caption{
+    bottom: 25px;
 }
 
 
@@ -627,10 +621,6 @@ header video {
     color: white;
     padding: 0 10px;
 }
-
-
-
-
 
 
 
@@ -824,3 +814,43 @@ padding: 70px 0;
     position: absolute;
     z-index: 2;
 }
+
+
+/** Media Queries **/
+
+@media screen and (max-width: 720px) {
+    
+    .gallery img{
+        width: 35px !important;
+        height: 30px !important;
+    }
+
+    .phone-app-container{
+        padding: 0 30px;
+    }
+
+    .wolf{
+        left: -20%;
+    }
+
+    .uranus{
+        top: 5%;
+        left: 5%;
+    }
+
+    #btn7{
+        width: 100% !important;
+    }
+
+    #form-container{
+        padding: 30px 20px;
+    }
+
+    textarea .form-control{
+        height: 120px;
+    }
+
+    .phone-app-gallery figcaption{
+        font-size: 11px !important;
+    }
+  }
