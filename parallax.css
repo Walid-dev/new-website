@@ -155,15 +155,13 @@ article strong{
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    top:85%;
+    top:82%;
     left: 50%;
     transform: translate(-50%);
     -webkit-transform: translate(-50%);
     -moz-transform: translate(-50%);
     -ms-transform: translate(-50%);
     -o-transform: translate(-50%);
-{
-    margin: auto;
 }
 
 .bird-box img{
