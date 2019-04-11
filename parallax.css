@@ -53,18 +53,6 @@ article strong{
     z-index: 3;
 }
 
-.tree{
-    width: 250px;
-    height: 215px;
-    background-image: url('images/backgrounds/tree-cartoon.png');
-    background-repeat: no-repeat;
-    position: right bottom;
-    position: absolute;
-    left: 66%;
-    bottom: 0%;
-    z-index: 1;
-}
-
 
 .moon{
     width: 150px;
@@ -86,56 +74,21 @@ article strong{
     position: absolute;
     left: 10%;
     top: 10%;
-    display: none;
 }
 
-.kid-walking{
-    width: 22%;
-    height: 100px;
-    background-image: url('images/backgrounds/boy-walking2min.gif');
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    left: 19%;
-    bottom: 0%;
-    z-index: 2;
-}
 
-.sheep{
-    width: 90px;
-    height: 80px;
-    background-image: url('images/backgrounds/sheep-min.gif');
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    left: 82%;
-    bottom: -2.4%;
-    z-index: 2;
-}
-
-.ufo{
+.astronaut{
     width: 120px;
     height: 120px;
-    background-image: url('images/backgrounds/ufo-trans.gif');
+    background-image: url('images/backgrounds/gif-astronaut-min.gif');
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    left: 38%;
-    top: 15%;
-    z-index: 2;
+    left: 46%;
+    top: 11%;
+    z-index: 1;
 }
 
-.wolf{
-    width: 120px;
-    height: 55px;
-    background-image: url('images/backgrounds/wolf-min.gif');
-    background-repeat: no-repeat;
-    background-position: top left;
-    position: absolute;
-    left: -8%;
-    bottom: 1%;
-    z-index: 3;
-}
 
 .ufo{
     width: 80px;
@@ -149,36 +102,118 @@ article strong{
     z-index: 1;
 }
 
+/** Parallax 2 **/
+
+.parallax2-section{
+    margin-top: 200px;
+}
+
+.parallax2{
+    position: relative;
+    height: 320px;
+    background-image: url('images/backgrounds/stars-sky.png');
+    background-size: cover;
+    position: bottom center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.tree2{
+    width: 250px;
+    height: 215px;
+    background-image: url('images/backgrounds/tree-cartoon.png');
+    background-repeat: no-repeat;
+    position: right bottom;
+    position: absolute;
+    left: 66%;
+    bottom: 0%;
+    z-index: 1;
+}
+
+.sheep2{
+    width: 90px;
+    height: 80px;
+    background-image: url('images/backgrounds/sheep-min.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 82%;
+    bottom: -2.4%;
+    z-index: 2;
+}
+
+.wolf2{
+    width: 120px;
+    height: 55px;
+    background-image: url('images/backgrounds/wolf-min.gif');
+    background-repeat: no-repeat;
+    background-position: top left;
+    position: absolute;
+    left: -65%;
+    bottom: 1%;
+    z-index: 3;
+}
+
+.kid-running{
+    width: 22%;
+    height: 100px;
+    background-image: url('images/backgrounds/boy-walking2min.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: -110%;
+    bottom: 0%;
+    z-index: 2;
+}
+
+.moon2{
+    width: 150px;
+    height: 160px;
+    background-image: url('images/backgrounds/moon-transparent.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+    position: absolute;
+    left: 45%;
+    top: 0%;
+}
+
+
+
+
+
+
+
+
 .tap-here{
-    width: 40px;
-    height: 40px;
-    background-image: url('images/backgrounds/tap-here-min3.gif');
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
     top:85%;
-    left: 50%;
+    left: 48.6%;
+    font-size: 1.3em;
+    transform: rotate(180deg) !important;
+    -webkit-transform: rotate(180deg) !important;
     transform: translate(-50% , -50%);
     -webkit-transform: translate(-50% , -50%);
-    -moz-transform: translate(-50% , -50%);
-    -ms-transform: translate(-50% , -50%);
-    -o-transform: translate(-50% , -50%);
+    -moz-transform: rotate(180deg) !important;
+    -ms-transform: rotate(180deg) !important;
+    -o-transform: rotate(180deg) !important;
 }
 
 .tap-here2{
-    width: 40px;
-    height: 40px;
-    background-image: url('images/backgrounds/tap-here-min3.gif');
+    font-size: 1.3em;
+    transform: rotate(180deg);
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    top:87%;
-    left: 83.15%;
+    top: 86% !important;
+    left: 82%;
     transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
 }
 
 .bird-box img{

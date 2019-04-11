@@ -43,6 +43,32 @@
 }
 
 .btn-close-effect3:hover, .btn-close-effect3:focus {
-    color: black !important;
-    box-shadow: inset -5.5em 0 0 0 #fff, inset 5.5em 0 0 0 #fff;
+    color: #fff !important;
+    box-shadow: inset -5.5em 0 0 0 #ff03b5, inset 5.5em 0 0 0 #ff03b5;
 }
+
+.shining-effect{
+    position: relative;
+    color: rgb(255, 0, 255);
+    overflow: hidden;
+    background: linear-gradient(90deg, rgb(234, 0, 255), rgb(21, 255, 0), rgb(0, 255, 255), rgb(251, 255, 0), rgb(0, 140, 255));
+    background-repeat: no-repeat;
+    background-size: 85%;
+    animation: shining 500ms linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255,255,255,.2);
+    -webkit-animation: shining 500ms linear infinite;
+}
+
+@keyframes shining  {
+    0%{
+        background-position: -500%;
+    }
+
+    100%{
+        background-position: 500%;
+    }
+
+}
+
+/** Fill Link On Hover **/

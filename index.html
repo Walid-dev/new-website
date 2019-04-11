@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="form.css">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="effects.css">
+<link rel="stylesheet" href="slider2.css">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136253178-1"></script>
 <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-136253178-1'); </script>
@@ -22,27 +23,24 @@
 <meta name="description" content="Mon Portfolio dans le cadre de ma recherche d'un contrat en alternance en tant que développeur web."/>
 </head>
 <body>
+    
+    <div class="astronaut"></div>
+
 <div class="header-container container-fluid">
-<header class="bird-box">
-  <div id="kid-walking" class="kid-walking"></div>
-  <div class="moon"></div>
-  <div class="logo offset-md-4 col-md-4 offset-md-4"></div>
-  <div class="tree"></div>
-  <div class="uranus"></div>
-  <div class="sheep"></div>
-  <div class="wolf"></div>
-</header>
+  <header class="bird-box">
+    <div class="moon"></div>
+    <div class="logo offset-md-3 col-md-6 offset-md-3"></div>
+    <div class="wolf d-none d-sm-block"></div>
+  </header>
 
-
-
-  <section class="content-article">
-    <article id="article-scroll" class="col-md-6 mx-auto text-center">
-      <h1>Navigation</h1>
-      <hr>
-      <p>Pour visiter les différentes parties du site, activer le téléphone à l'aide de la <strong>touche centrale</strong>. Utiliser les différentes <strong>applications</strong> et les touches du bas de ce dernier pour naviguer.<br>Vous disposez aussi de la touche screen size de droite qui vous permettra de choisir entre les formats <strong>smartphone</strong>, <strong>tablette</strong>, et <strong>plein écran</strong> (Site en construction).<br>Bonne visite.</p>
-    </article>
-  </section>
-
+<section class="content-article">
+  <article id="article-scroll" class="col-md-6 mx-auto text-center">
+    <h1 class="text-center">Navigation</h1>
+    <hr>
+    <p>Pour visiter les différentes parties du site, activer le téléphone à l'aide de la <strong>touche centrale</strong>. Utiliser les différentes <strong>applications</strong> et les touches du bas de ce dernier pour naviguer.<br>Vous disposez aussi de la touche screen size de droite qui vous permettra de choisir entre les formats <strong>smartphone</strong>, <strong>tablette</strong>, et <strong>plein écran</strong> (Site en construction).<br>Bonne visite.</p>
+  </article>
+</section>
+</div>
 
 <section class="phone-section container-fluid">
 <div id="container-secondaire" class="container-fluid">
@@ -61,121 +59,85 @@
               
           <div class="screen-content">
             <div id="screen-content-child1" class="screen-content-hidden">
-              <div id="container-fluid-carousel" class="container-fluid">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                  <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-                    <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-                    <li data-target="#myCarousel" data-slide-to="3" class=""></li>
-                    <li data-target="#myCarousel" data-slide-to="4" class=""></li>
-                    <li data-target="#myCarousel" data-slide-to="5" class=""></li>
-                    <li data-target="#myCarousel" data-slide-to="6" class=""></li>
-                  </ol>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img class="first-slide" src="images/porftfolio/galaxysurfing-slider.jpg" alt="First slide">
-                      <div class="container">
-                        <div class="carousel-caption text-center">
-                          <div class="carousel-text">
-                            <h3>Mon dernier Porfolio.</h3>
-                            <p>Pour mon dernier portfolio j'ai utilisé <span class="colored-word-lime">HTML5</span>,  <span class="colored-word-lime">Bootsrap</span>, un peu de  <span class="colored-word-lime">Javascript</span> et <span class="colored-word-lime">jQuery</span>, mais j'ai surtout mis l'accent sur la création et l'amélioration d'effets en  <span class="colored-word-lime">CSS3</span> dans le but de pousser mes compétences dans ce language.</p>
-                          <p><a class="btn btn-md mt-1 btn-close-effect2" href="https://myportfolio.galaxysurfing.com/" target="blank" role="button">Visiter</a></p>
+              <div id="container-fluid-carousel" class="container-fluid">    
+                <div class="slider-container">
+                    <div class="slider-box">
+                      <div class="slider-control left inactive"></div>
+                      <div class="slider-control right"></div>
+                      <ul class="slider-pagi"></ul>
+                      <div class="slider">
+                        <div class="slide slide-0 active">
+                          <div class="slide__bg"></div>
+                          <div class="slide__content">
+                            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                              <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                            </svg>
+                            <div class="slide__text">
+                              <h2 class="slide__text-heading" style="font-family: 'Open Sans Condensed', sans-serif;">Big Data. Realtime Insight.</h2>
+                              <p class="slide__text-desc" style="font-family: 'Open Sans Condensed', sans-serif;"> Content is automatically generated, sales emails, customer retention emails, and custom landing pages are generated based on site content using natural language processing to create relevant marketing content and distribute it across multiple channels.</p>
+                              <a class="slide__text-link" style="font-family: 'Open Sans Condensed', sans-serif;">Learn More</a>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                
-                    <div class="carousel-item">
-                      <img class="second-slide" src="images/porftfolio/custom-stranger.jpg" alt="Third slide">
-                      <div class="container">
-                        <div class="carousel-caption text-right">
-                          <div class="carousel-text">
-                          <h3>Custom Post Types et Taximonies sur Wordpress.</h3>
-                            <p><span class="colored-word-lime">Custom post types</span> et <span class="colored-word-lime">taximonies</span> sont des mots qui revenaient souvent lorsqu'il s'agissait de <span class="colored-word-lime">Wordpress</span>. J'ai alors décidé pour m'exercer, de créer des fiches de series-tv informatives en utilisant ces derniers. J'ai utiliser pour cela la méthode <span class="colored-word-lime">manuelle</span> mais aussi la méthode utilisant des <span class="colored-word-lime">plugins</span>.</p>
-                            <p><a class="btn btn-md mt-1 btn-close-effect2" href="https://customtest.galaxysurfing.com/series-tv/stranger/" target="blanks" role="button">Visiter</a></p>
+                        <div class="slide slide-1 ">
+                          <div class="slide__bg"></div>
+                          <div class="slide__content">
+                            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                              <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                            </svg>
+                            <div class="slide__text">
+                              <h2 class="slide__text-heading" style="font-family: 'Open Sans Condensed', sans-serif;">Disrupting Industries</h2>
+                              <p class="slide__text-desc" style="font-family: 'Open Sans Condensed', sans-serif;">WebCorpCo is all about making sure your marketing stack is in alignment with your company as well as the customers you serve. There is no 'one size fits all' approach to marketing. Every business is unique, customers are unique, and your marketing should be as well.</p>
+                              <a class="slide__text-link" style="font-family: 'Open Sans Condensed', sans-serif;">Learn More</a>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-
-                    <div class="carousel-item">
-                      <img class="third-slide" src="images/porftfolio/avisgo-img-min.jpg" alt="Third slide">
-                      <div class="container">
-                        <div class="carousel-caption text-center">
-                          <div class="carousel-text">
-                            <h3>Mon premier site Bootstrap (version 3.3).</h3>
-                            <p>Après la validation du module <span class="colored-word-lime">Bootstrap</span>, j'ai souhaité pratiquer. J'ai donc codé ce site pour m'exercer à partir d'une maquette <span class="colored-word-lime">Photoshop</span>.</p>
-                            <p><a class="btn btn-md mt-1 btn-close-effect2" href="https://avis-go.galaxysurfing.com/" target="blank" role="button">Visiter</a></p>
-                         </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                      <img class="fourth-slide" src="images/porftfolio/office-strasbourg-img.jpg" alt="Fourth slide">
-                      <div class="container">
-                        <div class="carousel-caption text-right">
-                          <div class="carousel-text">
-                            <h3>Mon premier site wordpress.</h3>
-                            <p>C'est mon premier site <span class="colored-word-lime">Wordpress</span> les consignes étaient de répondre à une liste de demande bien précise pour le compte des <span class="colored-word-lime">administrateurs</span> de l'office du tourisme de Strasbourg. L'utilisation de <span class="colored-word-lime">builder</span> n'était pas autorisée et l'implémentation d'un slider en pur <span class="colored-word-lime">CSS</span> demandée.</p>
-                            <p><a class="btn btn-md mt-1 btn-close-effect2" href="https://galaxysurfing.com/" target="blank" role="button">Non hébergé</a></p>
+                        <div class="slide slide-2">
+                          <div class="slide__bg"></div>
+                          <div class="slide__content">
+                            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                              <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                            </svg>
+                            <div class="slide__text">
+                              <h2 class="slide__text-heading" style="font-family: 'Open Sans Condensed', sans-serif;">Moving Business Forward</h2>
+                              <p class="slide__text-desc" style="font-family: 'Open Sans Condensed', sans-serif;">Sales is the direct result of marketing and sales data is sometimes even more important than the sales themselves. Why did they buy? What did they buy? When? Who bought? How much did it cost? Then a comparison of sales YTD or Year over Year. This analysis can optimize your ability to sell with WebCorpCo Analytics.</p>
+                              <a class="slide__text-link" style="font-family: 'Open Sans Condensed', sans-serif;">Learn More</a>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-
-                    <div class="carousel-item">
-                      <img class="fifth-slide" src="images/porftfolio/mon-site-img-min.jpg" alt="Fifth slide">
-                      <div class="container">
-                        <div class="carousel-caption text-center">
-                          <div class="carousel-text">
-                            <h3>Mon premier portfolio (Wordpress).</h3>
-                            <p>J'ai crée ce site avec <span class="colored-word-lime">Wordpress</span> et j'y ai apporté des modifications avec <span class="colored-word-lime">HTML5</span> et <span class="colored-word-lime">CSS3</span>.</p>
-                            <p><a class="btn btn-md mt-1 btn-close-effect2" href="https://walidhlali.galaxysurfing.com/" target="blank" role="button">Visiter</a></p>
+                        <div class="slide slide-3">
+                          <div class="slide__bg"></div>
+                          <div class="slide__content">
+                            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                              <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                            </svg>
+                            <div class="slide__text">
+                              <h2 class="slide__text-heading" style="font-family: 'Open Sans Condensed', sans-serif;">Moving Business Forward</h2>
+                              <p class="slide__text-desc" style="font-family: 'Open Sans Condensed', sans-serif;">Sales is the direct result of marketing and sales data is sometimes even more important than the sales themselves. Why did they buy? What did they buy? When? Who bought? How much did it cost? Then a comparison of sales YTD or Year over Year. This analysis can optimize your ability to sell with WebCorpCo Analytics.</p>
+                              <a class="slide__text-link" style="font-family: 'Open Sans Condensed', sans-serif;">Learn More</a>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <img class="sixth-slide" src="images/porftfolio/autour-dun-cafe-img-min.jpg" alt="Sixth slide">
-                        <div class="container">
-                          <div class="carousel-caption text-left">
-                            <div class="carousel-text">
-                              <h3>Mon premier site Wordpress avec utilisation d'un Builder (Elementor).</h3>
-                              <p>Création d'un blog simpliste sur <span class="colored-word-lime">Wordpress</span> en m'initiant à l'utilisation d'un <span class="colored-word-lime">builder</span>, ici <span class="colored-word-lime">Elementor</span>.</p>
-                              <p><a class="btn btn-md mt-1 btn-close-effect2" target="blank" href="http://sabria-bouallaga.com/" role="button">Visiter</a></p>
+                        <div class="slide slide-4">
+                          <div class="slide__bg"></div>
+                          <div class="slide__content">
+                            <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+                              <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+                            </svg>
+                            <div class="slide__text">
+                              <h2 class="slide__text-heading" style="font-family: 'Open Sans Condensed', sans-serif;">Moving Business Forward</h2>
+                              <p class="slide__text-desc" style="font-family: 'Open Sans Condensed', sans-serif;">Sales is the direct result of marketing and sales data is sometimes even more important than the sales themselves. Why did they buy? What did they buy? When? Who bought? How much did it cost? Then a comparison of sales YTD or Year over Year. This analysis can optimize your ability to sell with WebCorpCo Analytics.</p>
+                              <a class="slide__text-link" style="font-family: 'Open Sans Condensed', sans-serif;">Learn More</a>
                             </div>
                           </div>
                         </div>
                       </div>
-
-                      <div class="carousel-item">
-                        <img class="sixth-slide" src="images/porftfolio/webagency-def.jpg" alt="Seventh slide">
-                        <div class="container">
-                          <div class="carousel-caption text-right">
-                            <div class="carousel-text">
-                              <h3>Mon premier site codé uniquement en HTML5 et CSS3</h3>
-                              <p>C'est mon premier vrai projet de site. Celui-ci est écrit uniquement en <span class="colored-word-lime">HTML5</span> et <span class="colored-word-lime">CSS3</span>. Pour une meilleure acquisition des compétences de bases, l'utilisation de <span class="colored-word-lime">Javascript</span>, <span class="colored-word-lime">jQuery</span> ou <span class="colored-word-lime">Bootstrap</span> n'était pas autorisée.</p>
-                              <p><a class="btn btn-md mt-1 btn-close-effect2" href="https://webagency.galaxysurfing.com/" target="blank" role="button">Visiter</a></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                    </div>
                   </div>
-
-                  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
                 </div>
-                    </div>
+              </div>
             </div>
+
               
             <div id="screen-content-child2" class="screen-content-hidden">
                 <div id="container-fluid-background-video" class="container-fluid">
@@ -188,7 +150,7 @@
                           <div class="d-flex text-center">
                             <div class="text-on-video col-md-10 text-left text-white">
                               <h2 class="">Mes Hobbies</h2>
-                              <p class="lead mb-0">J'ai différents centres d'intérêt en dehors du code. Comme il est remarquable dans mes différents sites internet j'aime beaucoup tout ce qui touche les <span class="colored-word-hobbies">sciences</span> et <span class="colored-word-hobbies">explorations spatiales</span>. Je suis aussi un amateur de <span class="colored-word-hobbies">crypto monnaies</span>.<br>Je fais aussi beaucoup de <span class="colored-word-hobbies">vélo</span> et je gravis même des sommets lors de <span class="colored-word-hobbies">randonnée</span> lorsque je suis motivé :)</p>
+                              <p class="mb-0">J'ai différents centres d'intérêt en dehors du code. Comme il est remarquable dans mes différents sites internet j'aime beaucoup tout ce qui touche les <span class="colored-word-hobbies">sciences</span> et <span class="colored-word-hobbies">explorations spatiales</span>. Je suis aussi un amateur de <span class="colored-word-hobbies">crypto monnaies</span>.<br>Je fais aussi beaucoup de <span class="colored-word-hobbies">vélo</span> et je gravis même des sommets lors de <span class="colored-word-hobbies">randonnée</span> lorsque je suis motivé :)</p>
                             </div>
                           </div>
                         </div>
@@ -200,9 +162,9 @@
                 <div id="jumbotron-mirror">
                   <div id="jumbotron3" class="jumbotron">
                     <div id="jumbotron-inside-child3" class="container for-about col-md-10 float-left">
-                      <h2>A propos de moi.</h2>
+                      <h2 class="text-uppercase">A propos de moi.</h2>
                       <p>Après quelques années et diverses expériences professionnelles notamment à l'étranger je suis revenu à la passion qui m'animait depuis mon plus jeune âge. L'informatique. Tout a commencé lorsque pendant mon temps libre j'apprenais et codais mes premières pages en <span class="colored-word-hobbies">Htlm</span> et <span class="colored-word-hobbies">Css</span>. J'ai ensuite après validation de ma candidature par <span class="colored-word-hobbies">Udacity</span> via <span class="colored-word-hobbies">Google</span> commencé une formation à distance sur <span class="colored-word-hobbies">Udacity</span> (Création d'applications <span class="colored-word-hobbies">Android</span> avec <span class="colored-word-hobbies">XML</span> et <span class="colored-word-hobbies">Java</span> sur <span class="colored-word-hobbies">Android Studio</span>).<br> J'étais alors déterminé à en faire mon métier. En attendant de trouver le moyen de financer et me former à mon futur métier j'ai souscrit à un abonnement sur <span class="colored-word-hobbies">Openclassroom</span> pour continuer mon apprentissage en <span class="colored-word-hobbies">autodidacte</span>.<br>Et c'est quelques moi plus tard que l'occasion de la formation avec <span class="colored-word-hobbies">Opendeclick</span> se présenta. J'ai donc tout fait pour faire partie de l'aventure, et après la validation de la première partie de celle-ci je suis aujourd'hui à la recherche d'un contrat en <span class="colored-word-hobbies">alternance</span>.<br>Je n'ai cessé d'apprendre en <span class="colored-word-hobbies">autodidacte</span> et pendant mon apprentissage et je ne cesse de continuer d'apprendre tous les jours. N'hésitez pas à m'écrire via l'application <span class="colored-word-hobbies">Mail</span> ou via <span class="colored-word-hobbies">le formulaire de contact</span> pour plus d'informations.</p>
-                        <div class="jumbotron3-buttons-container d-flex flex-row col-md-12 pink">
+                      <div class="jumbotron3-buttons-container d-flex flex-row col-md-12 pink">
                             <p><a class="btn btn-xs btn-close-effect" href="documents/walid-hlali-resume19.pdf" target="blank" role="button">Curriculum Vitae</a></p>
                             <p><a class="btn btn-xs ml-3 btn-close-effect" href="documents/Alternance-documentation.pdf" target="blank" role="button">Infos Alternance</a></p>
                         </div> 
@@ -215,7 +177,7 @@
                 <div class="container-fluid logiciels-container">
                     <div class="row">
                         <div class="col-lg-12 child-content-header text-center page-header">
-                          <h3 class="section-heading text-uppercase" data-aos="fade-right"  data-aos-duration="800" data-aos-delay="0"><span class="shining-effect">Logiciels et Bureautique</span></h3>
+                          <h3 class="section-heading text-uppercase" data-aos="fade-right"  data-aos-duration="800" data-aos-delay="0"><span class="">Logiciels et Bureautique</span></h3>
                           <h4>Les outils que j'utilise le plus souvent.</h4>
                         </div>
                       </div>
@@ -322,10 +284,9 @@
                               </div>
                               <h4 class="service-heading">jQuery</h4>
                             </div>
-                    </div>
-
+                </div>
               </div>
-              </div>
+            </div>
               
               
               <div id="screen-content-child5" class="screen-content-hidden">
@@ -333,9 +294,126 @@
                 <div class="img-empty-part col-md-12 mx-auto"><img class="img-fluid col-md-12" src="images/screen-icons/app-coding.gif" alt=""></div>
               </div>
               <div id="screen-content-child6" class="screen-content-hidden">
-                <div class=" empty-part-text col-md-12 text-center">Je code actuellement ce jeu en javaScript</div>
-                <div class="img-empty-part col-md-12 mx-auto"><img class="img-fluid col-md-12" src="images/screen-icons/app-gear.gif" alt=""></div>
+                  <div class="slider-container">
+                      <div class="slider-box">
+                  <div id="container-fluid-carousel" class="container-fluid">
+                     
+                                      <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                                        <ol class="carousel-indicators">
+                                          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                          <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                                          <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+                                          <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+                                          <li data-target="#myCarousel" data-slide-to="4" class=""></li>
+                                          <li data-target="#myCarousel" data-slide-to="5" class=""></li>
+                                          <li data-target="#myCarousel" data-slide-to="6" class=""></li>
+                                        </ol>
+                                        <div class="carousel-inner">
+                                          <div class="carousel-item active">
+                                            <img class="first-slide" src="images/porftfolio/galaxysurfing-slider.jpg" alt="First slide">
+                                            <div class="container">
+                                              <div class="carousel-caption text-center">
+                                                <div class="carousel-text">
+                                                  <h3>Mon dernier Porfolio.</h3>
+                                                  <p>Pour mon dernier portfolio j'ai utilisé <span class="colored-word-lime">HTML5</span>,  <span class="colored-word-lime">Bootsrap</span>, un peu de  <span class="colored-word-lime">Javascript</span> et <span class="colored-word-lime">jQuery</span>, mais j'ai surtout mis l'accent sur la création et l'amélioration d'effets en  <span class="colored-word-lime">CSS3</span> dans le but de pousser mes compétences dans ce language.</p>
+                                                <p><a class="btn btn-md mt-1 btn-close-effect2" href="https://myportfolio.galaxysurfing.com/" target="blank" role="button">Visiter</a></p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                      
+                                          <div class="carousel-item">
+                                            <img class="second-slide" src="images/porftfolio/custom-stranger.jpg" alt="Third slide">
+                                            <div class="container">
+                                              <div class="carousel-caption text-right">
+                                                <div class="carousel-text">
+                                                <h3>Custom Post Types et Taximonies sur Wordpress.</h3>
+                                                  <p><span class="colored-word-lime">Custom post types</span> et <span class="colored-word-lime">taximonies</span> sont des mots qui revenaient souvent lorsqu'il s'agissait de <span class="colored-word-lime">Wordpress</span>. J'ai alors décidé pour m'exercer, de créer des fiches de series-tv informatives en utilisant ces derniers. J'ai utiliser pour cela la méthode <span class="colored-word-lime">manuelle</span> mais aussi la méthode utilisant des <span class="colored-word-lime">plugins</span>.</p>
+                                                  <p><a class="btn btn-md mt-1 btn-close-effect2" href="https://customtest.galaxysurfing.com/series-tv/stranger/" target="blanks" role="button">Visiter</a></p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                      
+                                          <div class="carousel-item">
+                                            <img class="third-slide" src="images/porftfolio/avisgo-img-min.jpg" alt="Third slide">
+                                            <div class="container">
+                                              <div class="carousel-caption text-center">
+                                                <div class="carousel-text">
+                                                  <h3>Mon premier site Bootstrap (version 3.3).</h3>
+                                                  <p>Après la validation du module <span class="colored-word-lime">Bootstrap</span>, j'ai souhaité pratiquer. J'ai donc codé ce site pour m'exercer à partir d'une maquette <span class="colored-word-lime">Photoshop</span>.</p>
+                                                  <p><a class="btn btn-md mt-1 btn-close-effect2" href="https://avis-go.galaxysurfing.com/" target="blank" role="button">Visiter</a></p>
+                                               </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          
+                                          <div class="carousel-item">
+                                            <img class="fourth-slide" src="images/porftfolio/office-strasbourg-img.jpg" alt="Fourth slide">
+                                            <div class="container">
+                                              <div class="carousel-caption text-right">
+                                                <div class="carousel-text">
+                                                  <h3>Mon premier site wordpress.</h3>
+                                                  <p>C'est mon premier site <span class="colored-word-lime">Wordpress</span> les consignes étaient de répondre à une liste de demande bien précise pour le compte des <span class="colored-word-lime">administrateurs</span> de l'office du tourisme de Strasbourg. L'utilisation de <span class="colored-word-lime">builder</span> n'était pas autorisée et l'implémentation d'un slider en pur <span class="colored-word-lime">CSS</span> demandée.</p>
+                                                  <p><a class="btn btn-md mt-1 btn-close-effect2" href="https://galaxysurfing.com/" target="blank" role="button">Non hébergé</a></p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                      
+                                          <div class="carousel-item">
+                                            <img class="fifth-slide" src="images/porftfolio/mon-site-img-min.jpg" alt="Fifth slide">
+                                            <div class="container">
+                                              <div class="carousel-caption text-center">
+                                                <div class="carousel-text">
+                                                  <h3>Mon premier portfolio (Wordpress).</h3>
+                                                  <p>J'ai crée ce site avec <span class="colored-word-lime">Wordpress</span> et j'y ai apporté des modifications avec <span class="colored-word-lime">HTML5</span> et <span class="colored-word-lime">CSS3</span>.</p>
+                                                  <p><a class="btn btn-md mt-1 btn-close-effect2" href="https://walidhlali.galaxysurfing.com/" target="blank" role="button">Visiter</a></p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                      
+                                          <div class="carousel-item">
+                                              <img class="sixth-slide" src="images/porftfolio/autour-dun-cafe-img-min.jpg" alt="Sixth slide">
+                                              <div class="container">
+                                                <div class="carousel-caption text-left">
+                                                  <div class="carousel-text">
+                                                    <h3>Mon premier site Wordpress avec utilisation d'un Builder (Elementor).</h3>
+                                                    <p>Création d'un blog simpliste sur <span class="colored-word-lime">Wordpress</span> en m'initiant à l'utilisation d'un <span class="colored-word-lime">builder</span>, ici <span class="colored-word-lime">Elementor</span>.</p>
+                                                    <p><a class="btn btn-md mt-1 btn-close-effect2" target="blank" href="http://sabria-bouallaga.com/" role="button">Visiter</a></p>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                      
+                                            <div class="carousel-item">
+                                              <img class="sixth-slide" src="images/porftfolio/webagency-def.jpg" alt="Seventh slide">
+                                              <div class="container">
+                                                <div class="carousel-caption text-right">
+                                                  <div class="carousel-text">
+                                                    <h3>Mon premier site codé uniquement en HTML5 et CSS3</h3>
+                                                    <p>C'est mon premier vrai projet de site. Celui-ci est écrit uniquement en <span class="colored-word-lime">HTML5</span> et <span class="colored-word-lime">CSS3</span>. Pour une meilleure acquisition des compétences de bases, l'utilisation de <span class="colored-word-lime">Javascript</span>, <span class="colored-word-lime">jQuery</span> ou <span class="colored-word-lime">Bootstrap</span> n'était pas autorisée.</p>
+                                                    <p><a class="btn btn-md mt-1 btn-close-effect2" href="https://webagency.galaxysurfing.com/" target="blank" role="button">Visiter</a></p>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        </div>
+                      
+                                        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                          <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                          <span class="sr-only">Next</span>
+                                        </a>
+                                      </div>
               </div>
+            </div>
+          </div>
+        </div>
               <div id="screen-content-child7" class="screen-content-hidden"><div class=" empty-part-text col-md-12 text-center">Partie en création</div></div>
               
               <div id="screen-content-child8" class="screen-content-hidden">
@@ -448,64 +526,105 @@
           </div>
   
         </div>
-        <div class="tap-here"></div>
-        <div class="tap-here2"></div>
+        <div class="tap-here"><i class="fas fa-hand-pointer shining-effect"></i></div>
+        <div class="tap-here2"><i class="fas fa-hand-pointer shining-effect"></i></div>
       </div>
     </div>
   </div>
 </div>
 </section>
 
-<div class="row-social-icons row col-md-12 mx-auto">
-  <ul class="ul-social-footer mx-auto d-flex col-md-4 col-sm-10 col-xs-12 flex-around-content">
-    <li>
-      <a href="https://www.linkedin.com/in/walid-hlali/">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <i class="linkedin fab fa-linkedin" aria-hidden="true"></i>
-      </a>
-    </li>
-    <li>
-      <a href="https://github.com/Walid-dev">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <i class="git-hub fab fa-github" aria-hidden="true"></i>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <i class="facebook fab fa-facebook" aria-hidden="true"></i>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <i class="twitter fab fa-twitter" aria-hidden="true"></i>
-      </a>
-    </li>
-    </ul>
+<section>
+  <div class="container-fluid header-container">
+    <div class="parallax2">
+      <div class="kid-running d-none d-sm-block"></div>
+      <div class="moon2"></div>
+      <div class="tree2"></div>
+      <div class="uranus2"></div>
+      <div class="sheep2"></div>
+      <div class="wolf2 d-none d-sm-block"></div>
     </div>
+  </div>
+</section>
+
+<section class="parallax2-section">
+  <div id="container">
+    <div class="col-md-5 col-sm-8 col-10 mx-auto d-none d-sm-block" id="monitor">
+      <div id="monitorscreen">
+          <div class="">
+              <div id="videoDiv" class=""> 
+                  <div id="videoBlock" class="">   
+                  <video preload="preload"  id="video" autoplay="autoplay" loop="loop">
+                  <source src="videos/4k-meteor-shower-animation-60fps-motion-background-2160p-aa-vfx.mp4" type="video/mp4"></source>
+                  </video> 
+                  <div id="videoMessage" style="position: absolute;">
+                      <h1 class="text-end text-center text-white text-uppercase text-bold font-weight-bold">Merci.</h1>
+                  
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="row-social-icons row col-md-12 mx-auto">
+          <ul class="ul-social-footer mx-auto d-flex col-md-4 col-sm-10 col-xs-12 flex-around-content">
+            <li>
+              <a href="https://www.linkedin.com/in/walid-hlali/">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <i class="linkedin fab fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Walid-dev">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <i class="git-hub fab fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <i class="facebook fab fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <i class="twitter fab fa-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+            </ul>
+            </div>
+    
+  </div>
+</div>
+
+
 
 <div class="footer-copyright text-center">
-  <span class="text-center">© 2018 galaxysurfing.com </span>
+  <img class="img-footer img-fluid" src="images/backgrounds/wh-shadow-non.png" alt="">
 </div>
 </div>
-    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="base.js"></script>
+<script src="slider2.js"></script>
 </body>
 </html>

@@ -17,6 +17,11 @@ body{
     background: linear-gradient #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
 }
 
+hr{
+    background: aqua;
+    width: 22%;
+}
+
 .btn.focus, .btn:focus {
     outline: 0;
     box-shadow: none!important;
@@ -53,6 +58,7 @@ body{
     background: #0c0c0c;
     border-radius: 30px;
     border: 2px solid #E7E7E5;
+    z-index: 2;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
@@ -61,6 +67,7 @@ body{
 
 p {
     font-size: 17px;
+    font-weight: lighter;
 }
 
 .samsung h3{
@@ -601,9 +608,15 @@ header video {
 
 
 
-/** Child8 Logiciels et Bureautique **/
+/** Child4 Logiciels et Bureautique **/
 
 #screen-content-child4{
+    background-image: url('images/backgrounds/code-min.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    margin-bottom: 0px;
     overflow-y: scroll;
 }
 
@@ -632,6 +645,18 @@ header video {
 }
 
 
+/** Child8 Logiciels et Bureautique **/
+
+#screen-content-child8{
+    background-image: url('images/backgrounds/keybord-rainbow-min.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    margin-bottom: 0px;
+}
+
+
 
 /* Ul social Square effect */
 
@@ -648,10 +673,10 @@ padding: 70px 0;
 {
     display: block;
     position: relative;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
     text-align: center;
     text-decoration: none;
     color: #fff;
@@ -790,7 +815,7 @@ padding: 70px 0;
 }
 
 .row-social-icons{
-    margin-top: -250px;
+   
 }
 
 .facebook {
@@ -808,10 +833,9 @@ padding: 70px 0;
 
 /** Footer Copyright **/
 
-.footer-copyright{
-    color: #4dbaba;
-    font-size: 12px;
-    line-height: 3.5em;
+.img-footer{
+width: 120px;
+padding: 10px 0;
 }
 
 .empty-part-text{
@@ -844,10 +868,6 @@ padding: 70px 0;
 
     .samsung h3 {
         font-size: 1.35em;
-    }
-
-    .lead{
-        font-size: 1rem;
     }
 
     .content-article h1{
@@ -916,4 +936,96 @@ padding: 70px 0;
         color: transparent !important;
         text-shadow: none !important;
     }
+
+    .astronaut{
+        top: 20%;
+    }
   }
+
+  /** End Video **/
+
+  #videoDiv {
+      width: 100%; 
+      height: 100%;
+    }
+
+    #videoBlock {
+        width: 100%; 
+        height: 100%;  
+        display: flex;  
+        justify-content: center; 
+        align-items: center;}
+
+
+/** Tv Screen **/
+
+#monitor {
+	background: #000; 
+	position: relative;
+	border-top: 3px solid #888; 
+	margin: 5%;
+	padding: 2% 2% 4% 2%; 
+	border-radius: 10px; 
+	border-bottom-left-radius: 50% 2%; 
+	border-bottom-right-radius: 50% 2%; 
+	transition: margin-right 1s;
+}
+
+#monitor:after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 3%;
+	left: 36%;
+	height: .5%; 
+	width: 28%;
+	background: #06a8ff; 
+	border-radius: 50%; 
+}
+
+#monitorscreen {
+	position: relative;
+  background-color: #777;
+	background-size: cover; 
+	background-position: top center;
+	height: 0; 
+	padding-bottom: 56.25%; 
+	position: relative;
+	overflow: hidden;
+}
+
+.tv{
+    width: 350px;
+    height: 400px;
+    background-image: url('images/backgrounds/command-tv.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+
+@media all and (min-width: 960px) {
+	#monitor {
+		-webkit-animation: tvflicker .2s infinite alternate; 
+		-moz-animation:    tvflicker .5s infinite alternate; 
+		-o-animation:      tvflicker .5s infinite alternate; 
+		animation:         tvflicker .5s infinite alternate; 
+	}
+
+	@-webkit-keyframes tvflicker {
+	  0%   { box-shadow: 0 0 100px 0 rgba(200,235,255,0.4); }
+	  100% { box-shadow: 0 0 95px 0 rgba(200,230,255,0.45); }
+	}
+	@-moz-keyframes tvflicker {
+	  0%   { box-shadow: 0 0 100px 0 rgba(225,235,255,0.4); }
+	  100% { box-shadow: 0 0 60px 0 rgba(200,220,255,0.6); }
+	}
+	@-o-keyframes tvflicker {
+	  0%   { box-shadow: 0 0 100px 0 rgba(225,235,255,0.4); }
+	  100% { box-shadow: 0 0 60px 0 rgba(200,220,255,0.6); }
+	}
+	@keyframes tvflicker {
+	  0%   { box-shadow: 0 0 100px 0 rgba(225,235,255,0.4); }
+	  100% { box-shadow: 0 0 60px 0 rgba(200,220,255,0.6); }
+	}
+}

@@ -126,9 +126,9 @@ $('#btn-icon1').click(function (e) {
 $('#btn-icon2').click(function (e) { 
         e.preventDefault();
         $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
-        $('#screen-content-child2').fadeIn(300);
-        $imageFondScreen.fadeOut(300);
-        $screenBasicChild.fadeOut(300);
+        $('#screen-content-child2').fadeIn(800);
+        
+        $screenBasicChild.fadeOut(200);
         $leftButton.css('color' , '#00ffff');
         $('.phone-menu-buttons').css('background' , 'rgb(13, 13, 13, .2)');
         $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon fas fa-rocket ml-3"></i></span>'));
@@ -137,9 +137,9 @@ $('#btn-icon2').click(function (e) {
 $('#btn-icon3').click(function (e) { 
         e.preventDefault();
         $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
-        $('#screen-content-child3').fadeIn(300);
-        $imageFondScreen.fadeOut(300);
-        $screenBasicChild.fadeOut(300);
+        $('#screen-content-child3').fadeIn(800);
+        $imageFondScreen.fadeOut(600);
+        $screenBasicChild.fadeOut(200);
         $leftButton.css('color' , '#00ffff');
         $('.phone-menu-buttons').css('background' , '#111010');
         $('.phone-network-container').css('background' , '#111010');
@@ -149,9 +149,12 @@ $('#btn-icon3').click(function (e) {
 $('#btn-icon4').click(function (e) { 
         e.preventDefault();
         $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
-        $('#screen-content-child4').fadeIn(300);
-        $screenBasicChild.fadeOut(300);
+        $('#screen-content-child4').fadeIn(800);
+        $imageFondScreen.fadeOut(600);
+        $screenBasicChild.fadeOut(200);
         $leftButton.css('color' , '#00ffff');
+        $('.phone-menu-buttons').css('background' , '#000');
+        $('.phone-network-container').css('background' , '#000');
         $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon fas fa-code ml-3"></i></span>'));
 });
 
@@ -159,9 +162,9 @@ $('#btn-icon5').click(function (e) {
         e.preventDefault();
         $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
         $centralButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
-        $('#screen-content-child5').fadeIn(300);
-        $imageFondScreen.fadeOut(300);
-        $screenBasicChild.fadeOut(300);
+        $('#screen-content-child5').fadeIn(800);
+        $imageFondScreen.fadeOut(600);
+        $screenBasicChild.fadeOut(200);
         $leftButton.css('color' , '#00ffff');
         $('.phone-menu-buttons').css('background' , '#000');
         $('.phone-network-container').css('background' , '#000');
@@ -171,9 +174,9 @@ $('#btn-icon5').click(function (e) {
 $('#btn-icon6').click(function (e) { 
         e.preventDefault();
         $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
-        $('#screen-content-child6').fadeIn(300);
-        $imageFondScreen.fadeOut(300);
-        $screenBasicChild.fadeOut(300);
+        $('#screen-content-child6').fadeIn(800);
+        $imageFondScreen.fadeOut(600);
+        $screenBasicChild.fadeOut(200);
         $leftButton.css('color' , '#00ffff');
         $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon fas fa-gamepad ml-3"></i></span>'));
         $('.phone-menu-buttons').css('background' , '#000');
@@ -183,9 +186,9 @@ $('#btn-icon6').click(function (e) {
 $('#btn-icon7').click(function (e) { 
         e.preventDefault();
         $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
-        $('#screen-content-child7').fadeIn(300);
-        $imageFondScreen.fadeOut(300);
-        $screenBasicChild.fadeOut(300);
+        $('#screen-content-child7').fadeIn(800);
+        $imageFondScreen.fadeOut(600);
+        $screenBasicChild.fadeOut(200);
         $leftButton.css('color' , '#00ffff');
         $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon  ml-3"></i></span>'));
         $('.phone-menu-buttons').css('background' , '#111010');
@@ -195,8 +198,9 @@ $('#btn-icon7').click(function (e) {
 $('#btn-icon8').click(function (e) { 
         e.preventDefault();
         $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
-        $('#screen-content-child8').fadeIn(300);
-        $screenBasicChild.fadeOut(300);
+        $('#screen-content-child8').fadeIn(800);
+        $imageFondScreen.fadeOut(600);
+        $screenBasicChild.fadeOut(200);
         $leftButton.css('color' , '#00ffff');
         $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon far fa-comments ml-3"></i></span>'));
         $('.phone-menu-buttons').css('background' , '#111010');
@@ -266,7 +270,6 @@ if ( this.style.color !== "springgreen" && this.style.color !== "green" && this.
         $('.phone-app-gallery figcaption').css('font-size' , '15px');
         $('.box-logiciels-bureautique img').css('width' , '45%');
         $('#btn7').css('width' , 'auto');
-        $('.tap-here2').hide(600);
         
 
 } else if (this.style.color == "springgreen") {
@@ -277,6 +280,7 @@ if ( this.style.color !== "springgreen" && this.style.color !== "green" && this.
         $('.phone-app-gallery figcaption').css('font-size' , '16px');
         $('.box-logiciels-bureautique img').css('width' , '52%');
         $('#btn7').css('width' , 'auto');
+        $('.tap-here2').hide(600);
 
 } else if (this.style.color == "chartreuse"){
         this.style.color = "#00ffff";
@@ -295,6 +299,16 @@ if ( this.style.color !== "springgreen" && this.style.color !== "green" && this.
 });
 });
 
+// Animation tap-here
+
+
+$(function() {
+        function bis() {
+                $('.tap-here').animate({top: '-=10'}, 'slow')
+                .animate({top: '+=10'}, 'slow' , bis);
+        };
+        bis();
+});
 
 // Fonction taille image
 
@@ -324,16 +338,20 @@ $(window).scroll(function(){
                 'transform' : 'translate(0px , '+ wScroll *1.0005+'%)'
         });
 
-        $('.kid-walking').css({
+        $('.kid-running').css({
                 'transform' : 'translate('+wScroll /3+'% , 0px)'
         });
 
-        $('.wolf').css({
+        $('.wolf2').css({
                 'transform' : 'translate('+wScroll /2.2+'% , 0px)'
         });
 
         $('.ufo').css({
                 'transform' : 'translate(0px , '+ wScroll /1.5+'%)'
+        });
+
+        $('.astronaut').css({
+                'transform' : 'translate(0px , '+ wScroll /1.1+'%)'
         });
 
 
@@ -345,7 +363,6 @@ $(window).scroll(function(){
 
 
 // Hover Icones Applications UFO Moving
-
 
 
 
