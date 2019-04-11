@@ -86,6 +86,7 @@ article strong{
     position: absolute;
     left: 10%;
     top: 10%;
+    display: none;
 }
 
 .kid-walking{
@@ -155,13 +156,29 @@ article strong{
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    top:82%;
+    top:85%;
     left: 50%;
-    transform: translate(-50%);
-    -webkit-transform: translate(-50%);
-    -moz-transform: translate(-50%);
-    -ms-transform: translate(-50%);
-    -o-transform: translate(-50%);
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%);
+}
+
+.tap-here2{
+    width: 40px;
+    height: 40px;
+    background-image: url('images/backgrounds/tap-here-min3.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top:87%;
+    left: 83.15%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
 }
 
 .bird-box img{

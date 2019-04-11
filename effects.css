@@ -32,8 +32,8 @@
 }
 
 .btn-close-effect3{
-    background: #fff;
-    color: #000;
+    background: transparent;
+    color: #fff;
     border: none;
     transition: 0.35s;
     -webkit-transition: 0.35s;
@@ -43,6 +43,6 @@
 }
 
 .btn-close-effect3:hover, .btn-close-effect3:focus {
-    color: white;
-    box-shadow: inset -5.5em 0 0 0 #020A18, inset 5.5em 0 0 0 #020A18;
+    color: black !important;
+    box-shadow: inset -5.5em 0 0 0 #fff, inset 5.5em 0 0 0 #fff;
 }
