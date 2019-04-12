@@ -1,5 +1,10 @@
 // Définition de mes variables
 
+$('.logo').hide();
+$('.astronaut').hide();
+$('.logo').fadeIn(3000);
+$('.astronaut').fadeIn(4000);
+
 $centralButton = $('#touch-center-button');
 $leftButton = $('#touch-left-button');
 $rightButton = $('#touch-right-button');

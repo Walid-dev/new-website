@@ -75,8 +75,8 @@ list-style-type: none;
 position: relative;
 display: inline-block;
 vertical-align: top;
-width: 1rem;
-height: 1rem;
+width: 0.8rem;
+height: .8rem;
 margin: 0 0.5rem;
 border-radius: 50%;
 border: 2px solid #fff;
@@ -183,7 +183,7 @@ left: 300%;
 }
 .slide:nth-child(4) .slide__bg {
 left: -150%;
-background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-4.jpg");
+background-image: url('images/porftfolio/custom-stranger.jpg');
 }
 .slide:nth-child(4) .slide__overlay-path {
 fill: #cbc6c3;
@@ -198,16 +198,18 @@ left: 400%;
 }
 .slide:nth-child(5) .slide__bg {
 left: -200%;
-background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-4.jpg");
+background-image: url('images/porftfolio/avisgo-img-min.jpg');
 }
 .slide:nth-child(5) .slide__overlay-path {
 fill: #cbc6c3;
 }
 @media (max-width: 991px) {
-.slide:nth-child(4) .slide__text {
+.slide:nth-child(5) .slide__text {
     background-color: rgba(203, 198, 195, 0.8);
 }
 }
+
+
 .slide__content {
 position: absolute;
 top: 0;
@@ -236,7 +238,7 @@ opacity: 0.8;
 }
 .slide__text {
 position: absolute;
-width: 25%;
+width: 35%;
 bottom: 15%;
 left: 12%;
 color: #fff;
