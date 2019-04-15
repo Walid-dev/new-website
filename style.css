@@ -2,11 +2,11 @@
 /** Font Sizes and Families **/
 
 h1 , h2 , h3{
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
-p {
-    font-family: 'Titillium Web', sans-serif;
+p , a {
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 body{
@@ -27,6 +27,10 @@ hr{
     box-shadow: none!important;
 }
 
+.page{
+    margin-bottom: 400px;
+    z-index: 3;
+}
 
 
 /** Propriétés Ecran Principal **/
@@ -60,14 +64,20 @@ hr{
     border-radius: 30px;
     border: 2px solid #E7E7E5;
     overflow: hidden;
+    z-index: 3;
+    transition: box-shadow .8s ease;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
+    -webkit-transition: box-shadow .8s ease;
+    -moz-transition: box-shadow .8s ease;
+    -ms-transition: box-shadow .8s ease;
+    -o-transition: box-shadow .8s ease;
 }
 
 p {
-    font-size: 17px;
+    font-size: 1.1rem;
     font-weight: lighter;
 }
 
@@ -80,7 +90,8 @@ p {
 }
 
 .samsung h4{
-    font-size: 15px;
+    font-size: 1.15rem;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .screen{
@@ -251,7 +262,7 @@ p {
 
 .date {
     font-size: 26px;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     letter-spacing: 2px;
     opacity: 1;
 }
@@ -331,6 +342,7 @@ p {
 
 .figure{
     background: transparent;
+    width: 140px;
 }
 
 
@@ -358,8 +370,8 @@ p {
 }
 
 .phone-app-gallery figcaption{
-    font-size: 13px;
-    font-family: 'Titillium Web', sans-serif;
+    font-size: 0.95rem;
+    font-family: 'Open Sans Condensed', sans-serif;
     color: #fff;
     position: relative;
     top: 6px;
@@ -367,6 +379,7 @@ p {
 
 .figure img{
     position: relative;
+    padding: 5px;
     transition: 0.5s;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
@@ -540,7 +553,7 @@ transform: translateX(-50%) translateY(-50%);
 header .container {
 position: absolute;
 left: 10%;
-bottom: 10%;
+bottom: 8%;
 z-index: 1;
 }
 
@@ -659,12 +672,13 @@ header video {
 }
 
 
+.sliding-footer{
+    background: #000;
+    z-index: 2
+}
 
 /* Ul social Square effect */
 
-.ul-social-footer{
-padding: 70px 0;
-}
 
 .ul-social-footer li {
     list-style: none;
@@ -845,7 +859,7 @@ padding: 10px 0;
     color: #dfff00;
     background: black;
     font-size: 20px;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     position: absolute;
     z-index: 2;
 }
@@ -885,8 +899,8 @@ padding: 10px 0;
         }
 
     .gallery img{
-        width: 35px !important;
-        height: 30px !important;
+        width: 45px !important;
+        height: 45px !important;
     }
 
     .phone-app-container{
@@ -931,12 +945,15 @@ padding: 10px 0;
     }
 
     #touch-right-button{
-        color: transparent !important;
-        text-shadow: none !important;
+        pointer-events: none;
     }
 
     .astronaut{
         top: 20%;
+    }
+
+    .tap-here2{
+        display: none !important;
     }
   }
 
@@ -1027,3 +1044,6 @@ padding: 10px 0;
 	  100% { box-shadow: 0 0 60px 0 rgba(200,220,255,0.6); }
 	}
 }
+
+/** Footer **/
+

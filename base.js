@@ -59,7 +59,7 @@ $centralButton.each(function( i ) {
 if ( this.style.color !== "aqua" ) {
 this.style.color = "aqua";
 $('.tap-here').hide();
-$('.tap-here2').fadeIn(1000);
+$('.tap-here2').fadeIn(600);
 $centralButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
 $rightButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
 $samsung.css('border' , '2px solid white');
@@ -276,11 +276,9 @@ if ( this.style.color !== "springgreen" && this.style.color !== "green" && this.
         $('.fa-tablet-alt').replaceWith($desktopIcon);
         $imageApp.css('width' , '60px');
         $imageApp.css('height' , '55px');
-        $('.phone-app-gallery figcaption').css('font-size' , '15px');
+        $('.phone-app-gallery figcaption').css('font-size' , '1.025rem');
         $('.box-logiciels-bureautique img').css('width' , '45%');
         $('#btn7').css('width' , 'auto');
-        $('.slide__text').css('width' , '30%');
-        $('.slide__overlay').css('display' , 'block');
         
 
 } else if (this.style.color == "springgreen") {
@@ -288,7 +286,7 @@ if ( this.style.color !== "springgreen" && this.style.color !== "green" && this.
         $samsung.animate({ 'width': '100%' , 'height' : '98vh'}, 1000 )
         .animate({ 'width': '-=2'}, 150);
         $($desktopIcon).replaceWith($phoneIcon);
-        $('.phone-app-gallery figcaption').css('font-size' , '16px');
+        $('.phone-app-gallery figcaption').css('font-size' , '1.075rem');
         $('.box-logiciels-bureautique img').css('width' , '52%');
         $('#btn7').css('width' , 'auto');
 
@@ -299,12 +297,10 @@ if ( this.style.color !== "springgreen" && this.style.color !== "green" && this.
         $phoneIcon.replaceWith($tabletIcon);
         $imageApp.css('width' , '55px');
         $imageApp.css('height' , '45px');
-        $('.phone-app-gallery figcaption').css('font-size' , '13px');
+        $('.phone-app-gallery figcaption').css('font-size' , '0.95rem');
         $('.box-logiciels-bureautique img').css('width' , '40%');
         $('#btn7').css('width' , '100%');
         $('.tap-here2').hide();
-        $('.slide__text').css('width' , '70%');
-        $('.slide__overlay').css('display' , 'none');
 
 } else{
         this.style.color = "";
@@ -359,7 +355,7 @@ $(window).scroll(function(){
         });
 
         $('.kid-running').css({
-                'transform' : 'translate('+wScroll /3+'% , 0px)'
+                'transform' : 'translate('+wScroll /4.2+'% , 0px)'
         });
 
         $('.wolf2').css({
@@ -374,8 +370,12 @@ $(window).scroll(function(){
                 'transform' : 'translate(0px , '+ wScroll /1.2+'%)'
         });
 
+        $('.ufo3').css({
+                'transform' : 'translate(0px , '+ wScroll /1.7+'%)'
+        });
+
         $('.astronaut').css({
-                'transform' : 'translate(0px , '+ wScroll /1.1+'%)'
+                'transform' : 'translate(0px , '+ wScroll /1.165+'%)'
         });
 
         $('.tap-here3').css({
@@ -386,6 +386,7 @@ $(window).scroll(function(){
         $samsung.css({
                 'transform' : 'translate(0px , -'+ wScroll /28+'%)'
         });
+
 });
 
 
@@ -410,8 +411,17 @@ $('.bird-box').mousemove(function(event){
         let moveX = (($(window).width() / 2)- event.pageX) *0.1;
         let moveY = (($(window).height() / 2)- event.pageY) *0.1;
 
-        $('.ufo2').css('margin-left' , moveX + 'px');
-        $('.ufo2').css('margin-top' , moveY + 'px');
+        $('.ufo2').css('margin-left' , moveX * 3 + 'px');
+        $('.ufo2').css('margin-top' , moveY * 3 + 'px');
+
+});
+
+$('.parallax2').mousemove(function(event){
+
+        let moveX = (($(window).width() / 2)- event.pageX) *0.1;
+        let moveY = (($(window).height() / 2)- event.pageY) *0.1;
+
+        $('.moon2').css('margin' , moveX * .07 + 'px');
 
 });
 
@@ -433,4 +443,36 @@ $(document).ready(function() {
         $('#nav-link2').on('click', function() { // Au clic sur un élément
                 $("html, body").animate({scrollTop : 0}, 1200);
         });
+});
+
+
+// Moon Movement
+
+
+$(function() {
+        function bis() {
+            $('').animate({left: '+=900'}, 72000, 'linear')
+                .animate({top: '+=50'}, 200000)
+                .animate({left: '-=600'}, 200000)
+                .animate({top: '-=50'}, 200000, bis);
+        };
+        bis();
+    });
+
+// Footer effect
+
+var logoElement = $('footer .effect-footer');
+$('.footer__inner').hide();
+$(window).scroll(function() {
+  
+   if($(window).scrollTop() + $(window).height() > $(document).height() -50) {
+     
+       $(logoElement).addClass('show');
+       $('.footer__inner').fadeIn(3000);
+     
+   } else if($(logoElement).hasClass('show') && $(window).scrollTop() + $(window).height() > $(document).height() - 50) {
+     
+      $(logoElement).removeClass('show');
+      $('.footer__inner').fadeOut(3000);
+   }
 });

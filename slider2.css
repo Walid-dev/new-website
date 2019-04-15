@@ -1,7 +1,3 @@
-@font-face {
-src: url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
-font-family: 'Open Sans Condensed', sans-serif;
-}
 
 svg {
 display: block;
@@ -116,9 +112,6 @@ height: 100%;
 overflow: hidden;
 }
 
-.slide__overlay{
-    display:none;
-}
 
 .slide.active .slide__overlay,
 .slide.active .slide__text { opacity: 1; transform: translateX(0); -webkit-transform: translateX(0); -moz-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0);
@@ -262,7 +255,7 @@ height: 100%;
 .slide__overlay path {
 opacity: 0.8;
 }
-.slide__text { position: absolute; width: 70%; bottom: 15%; left: 12%; color: #fff; transition: transform 0.5s 0.8s, opacity 0.5s 0.8s; will-change: transform, opacity; transform: translateY(-50%); opacity: 0; -webkit-transition: transform 0.5s 0.8s, opacity 0.5s 0.8s; -moz-transition: transform 0.5s 0.8s, opacity 0.5s 0.8s; -ms-transition: transform 0.5s 0.8s, opacity 0.5s 0.8s; -o-transition: transform 0.5s 0.8s, opacity 0.5s 0.8s;
+.slide__text { position: absolute; width: 40%; bottom: 15%; left: 12%; color: #fff; transition: transform 0.5s 0.8s, opacity 0.5s 0.8s; will-change: transform, opacity; transform: translateY(-50%); opacity: 0; -webkit-transition: transform 0.5s 0.8s, opacity 0.5s 0.8s; -moz-transition: transform 0.5s 0.8s, opacity 0.5s 0.8s; -ms-transition: transform 0.5s 0.8s, opacity 0.5s 0.8s; -o-transition: transform 0.5s 0.8s, opacity 0.5s 0.8s;
 }
 @media (max-width: 991px) {
 .slide__text {
@@ -285,7 +278,7 @@ opacity: 0.8;
 }
 }
 .slide__text-heading {
-font-family: "Polar", Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
 font-size: 3rem;
 margin-bottom: 2rem;
 }
@@ -296,7 +289,7 @@ margin-bottom: 2rem;
 }
 }
 .slide__text-desc {
-font-family: "Open Sans", Helvetica, Arial, sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
 margin-bottom: 1.5rem;
 }
 @media (max-width: 991px) {
@@ -310,8 +303,8 @@ display: inline-block;
 position: relative;
 padding: 0.5rem;
 cursor: pointer;
-font-family: "Open Sans", Helvetica, Arial, sans-serif;
-font-size: 1.8rem;
+font-family: 'Open Sans Condensed', sans-serif;
+font-size: 1.3rem;
 perspective: 1000px;
 }
 @media (max-width: 991px) {

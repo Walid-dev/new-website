@@ -7,14 +7,8 @@
     height: 200vh;
 }
 
-
-.content-article{
-    padding: 80px 0;
-    color: #ffffff;
-}
-
 .content-article h1{
-    font-size: 2rem;
+    font-size: 1.65rem;
 }
 
 article strong{
@@ -31,7 +25,6 @@ article strong{
 
 
 .bird-box{
-    position: relative;
     height: 90vh;
     background-image: url('images/backgrounds/stars-sky.png');
     background-size: cover;
@@ -47,27 +40,30 @@ article strong{
     background-image: url('images/backgrounds/titre-walid-without-shadow.png');
     background-position: center;
     background-repeat: no-repeat;
-    position: absolute;
-    top: 48%;
+    top: 49%;
     margin-top: -125px;
     z-index: 3;
+    transition: transform ease;
+    -webkit-transition: transform ease;
+    -moz-transition: transform ease;
+    -ms-transition: transform ease;
+    -o-transition: transform ease;
 }
 
 
 .moon{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     background-image: url('images/backgrounds/moon-transparent.png');
     background-repeat: no-repeat;
     background-position: top left;
-    position: absolute;
     left: 43%;
     top: 10%;
-    transition: transform ease-out;
-    -webkit-transition: transform ease-out;
-    -moz-transition: transform ease-out;
-    -ms-transition: transform ease-out;
-    -o-transition: transform ease-out;
+    transition: margin ease-in;
+    -webkit-transition: margin ease-in;
+    -moz-transition: margin ease-in;
+    -ms-transition: margin ease-in;
+    -o-transition: margin ease-in;
 }
 
 .uranus{
@@ -76,7 +72,6 @@ article strong{
     background-image: url('images/backgrounds/uranus-min2.gif');
     background-repeat: no-repeat;
     background-position: top left;
-    position: absolute;
     left: 10%;
     top: 10%;
 }
@@ -88,10 +83,20 @@ article strong{
     background-image: url('images/backgrounds/gif-astronaut-min.gif');
     background-repeat: no-repeat;
     background-position: center;
-    position: absolute;
-    left: 46%;
+    left: 45%;
     top: 14%;
     z-index: 2;
+}
+
+.rose{
+    width: 50px;
+    height: 50px;
+    background-image: url('images/backgrounds/rose-icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 55%;
+    bottom: 0%;
+    z-index: 1;
 }
 
 
@@ -101,7 +106,6 @@ article strong{
     background-image: url('images/backgrounds/ufo-trans.gif');
     background-repeat: no-repeat;
     background-position: center;
-    position: absolute;
     left: 55%;
     top: 30%;
     z-index: 1;
@@ -119,7 +123,7 @@ article strong{
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    left: 80%;
+    left: 75%;
     top: 20%;
     z-index: 1;
     transition: margin ease-in-out;
@@ -132,7 +136,7 @@ article strong{
 /** Parallax 2 **/
 
 .parallax2-section{
-    margin-top: 200px;
+    
 }
 
 .parallax2{
@@ -178,19 +182,19 @@ article strong{
     background-repeat: no-repeat;
     background-position: top left;
     position: absolute;
-    left: -65%;
+    left: -75%;
     bottom: 1%;
     z-index: 3;
 }
 
 .kid-running{
-    width: 22%;
+    width: 18%;
     height: 100px;
     background-image: url('images/backgrounds/boy-walking2min.gif');
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    left: -110%;
+    left: -80%;
     bottom: 0%;
     z-index: 2;
 }
@@ -204,6 +208,24 @@ article strong{
     position: absolute;
     left: 45%;
     top: 0%;
+    transition: margin ease-in-out;
+    -webkit-transition: margin ease-in-out;
+    -moz-transition: margin ease-in-out;
+    -ms-transition: margin ease-in-out;
+    -o-transition: margin ease-in-out;
+}
+
+.citation-block{
+    top: 32%;
+    transform: translateY(32%);
+    -webkit-transform: translateY(32%);
+    -moz-transform: translateY(32%);
+    -ms-transform: translateY(32%);
+    -o-transform: translateY(32%);
+}
+
+.blockquote-footer {
+    font-size: 70%;
 }
 
 
@@ -228,15 +250,8 @@ height: 20px;
 position: absolute;
 top: -40%;
 left: 82%;
+font-size: 1.2em;
 transform: rotate(180deg) !important;
-}
-
-.tap-here3{
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    height: 20px;
-    font-size: 1.5rem;
 }
 
 .bird-box img{

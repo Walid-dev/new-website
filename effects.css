@@ -75,8 +75,8 @@
 
 .loader{
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background: linear-gradient(aqua, #fff,aqua);
     animation: spin 1.7s linear infinite;
@@ -153,7 +153,7 @@
 
 /** Icone phone hover **/
 
-.figure:hover .figure-caption {
+figure:hover .figure-caption {
     -webkit-animation: blur-out-expand 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: blur-out-expand 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -185,8 +185,8 @@
 /** Image icon app effect **/
 
 figure:hover {
-	-webkit-animation: scale-down-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: scale-down-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-animation: scale-down-center .6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: scale-down-center .6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 

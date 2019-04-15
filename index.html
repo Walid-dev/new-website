@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
-<link href="https://fonts.googleapis.com/css?family=Poppins%7cTitillium+Web%7cVarela+Round" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Boogaloo|Open+Sans|Open+Sans+Condensed:300|Titillium+Web|Varela+Round" rel="stylesheet">
 <link rel="stylesheet" href="parallax.css">
 <link rel="stylesheet" href="form.css">
 <link rel="stylesheet" href="style.css">
@@ -24,17 +24,19 @@
 </head>
 <body>
     
-    <div class="astronaut"></div>
+    <div class="astronaut position-absolute"></div>
 
 <div class="header-container container-fluid">
-  <header class="bird-box">
-    <div class="moon"></div>
-    <div class="ufo2"></div>
-    <div class="logo offset-md-3 col-md-6 offset-md-3"></div>
+  <header class="bird-box position-relative">
+    <div class="moon position-absolute"></div>
+    <div class="ufo2 position-absolute"></div>
+    <div class="d-flex justify-content-center">
+      <div class="logo col-md-4 position-absolute"></div>
+    </div>
     <div class="wolf d-none d-sm-block"></div>
-    <div class="container">
-        <a id="nav-link1" class="nav-link col-md-1 mx-auto js-scroll-trigger" href="#phone-section">
-          <div class="loader mx-auto">
+    <div class="d-flex justify-content-center">
+        <a id="nav-link1" class="nav-link col-1 position-absolute" href="#phone-section" style="bottom:5%;">
+          <div class="loader mx-auto p-2">
             <span></span>
             <span></span>
             <span></span>
@@ -45,10 +47,10 @@
         </div>
   </header>
 
-<section class="content-article">
+<section class="content-article pb-5 pt-5 text-white">
   <article id="article-scroll" class="col-md-6 mx-auto text-center">
     <h1 class="text-center">Navigation</h1>
-    <hr class="mx-auto">
+    <hr class="col-1 mx-auto">
     <p>Pour visiter les différentes parties du site, activer le téléphone à l'aide de la <strong>touche centrale</strong>. Utiliser les différentes <strong>applications</strong> et les touches du bas de ce dernier pour naviguer.<br>Vous disposez aussi de la touche screen size de droite qui vous permettra de choisir entre les formats <strong>smartphone</strong>, <strong>tablette</strong>, et <strong>plein écran</strong> (Site en construction).<br>Bonne visite.</p>
   </article>
 </section>
@@ -84,9 +86,9 @@
                             <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
                           </svg>
                           <div class="slide__text">
-                            <h2 class="slide__text-heading" style="font-family: 'Open Sans Condensed', sans-serif;">Big Data. Realtime Insight.</h2>
-                            <p class="slide__text-desc" style="font-family: 'Open Sans Condensed', sans-serif;"> Content is automatically generated, sales emails, customer retention emails, and custom landing pages are generated based on site content using natural language processing to create relevant marketing content and distribute it across multiple channels.</p>
-                            <a class="slide__text-link" style="font-family: 'Open Sans Condensed', sans-serif;">Learn More</a>
+                            <h2 class="slide__text-heading">Mon dernier Portfolio.</h2>
+                            <p class="slide__text-desc">Pour mon dernier portfolio j'ai utilisé <span class="colored-word-lime">HTML5</span>,  <span class="colored-word-lime">Bootsrap</span>, un peu de  <span class="colored-word-lime">Javascript</span> et <span class="colored-word-lime">jQuery</span>, mais j'ai surtout mis l'accent sur la création et l'amélioration d'effets en  <span class="colored-word-lime">CSS3</span> dans le but de pousser mes compétences dans ce language.</p>
+                            <a class="slide__text-link">Visiter</a>
                           </div>
                         </div>
                       </div>
@@ -97,9 +99,9 @@
                             <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
                           </svg>
                           <div class="slide__text">
-                            <h2 class="slide__text-heading" style="font-family: 'Open Sans Condensed', sans-serif;">Disrupting Industries</h2>
-                            <p class="slide__text-desc" style="font-family: 'Open Sans Condensed', sans-serif;">WebCorpCo is all about making sure your marketing stack is in alignment with your company as well as the customers you serve. There is no 'one size fits all' approach to marketing. Every business is unique, customers are unique, and your marketing should be as well.</p>
-                            <a class="slide__text-link" style="font-family: 'Open Sans Condensed', sans-serif;">Learn More</a>
+                            <h2 class="slide__text-heading">Custom Post Types et Taximonies sur Wordpress.</h2>
+                            <p class="slide__text-desc" style="font-family: 'Open Sans Condensed', sans-serif;">Custom post types</span> et <span class="colored-word-lime">taximonies</span> sont des mots qui revenaient souvent lorsqu'il s'agissait de <span class="colored-word-lime">Wordpress</span>. J'ai alors décidé pour m'exercer, de créer des fiches de series-tv informatives en utilisant ces derniers. J'ai utiliser pour cela la méthode <span class="colored-word-lime">manuelle</span> mais aussi la méthode utilisant des <span class="colored-word-lime">plugins</span>.</p>
+                            <a class="slide__text-link">Visiter</a>
                           </div>
                         </div>
                       </div>
@@ -110,9 +112,9 @@
                             <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
                           </svg>
                           <div class="slide__text">
-                            <h2 class="slide__text-heading" style="font-family: 'Open Sans Condensed', sans-serif;">Moving Business Forward</h2>
-                            <p class="slide__text-desc" style="font-family: 'Open Sans Condensed', sans-serif;">Sales is the direct result of marketing and sales data is sometimes even more important than the sales themselves. Why did they buy? What did they buy? When? Who bought? How much did it cost? Then a comparison of sales YTD or Year over Year. This analysis can optimize your ability to sell with WebCorpCo Analytics.</p>
-                            <a class="slide__text-link" style="font-family: 'Open Sans Condensed', sans-serif;">Learn More</a>
+                            <h2 class="slide__text-heading">Mon premier site Bootstrap (version 3.3).</h2>
+                            <p class="slide__text-desc" style="font-family: 'Open Sans Condensed', sans-serif;">Après la validation du module <span class="colored-word-lime">Bootstrap</span>, j'ai souhaité pratiquer. J'ai donc codé ce site pour m'exercer à partir d'une maquette <span class="colored-word-lime">Photoshop</span>.</p>
+                            <a class="slide__text-link">Visiter</a>
                           </div>
                         </div>
                       </div>
@@ -123,9 +125,9 @@
                             <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
                           </svg>
                           <div class="slide__text">
-                            <h2 class="slide__text-heading" style="font-family: 'Open Sans Condensed', sans-serif;">Moving Business Forward</h2>
-                            <p class="slide__text-desc" style="font-family: 'Open Sans Condensed', sans-serif;">Sales is the direct result of marketing and sales data is sometimes even more important than the sales themselves. Why did they buy? What did they buy? When? Who bought? How much did it cost? Then a comparison of sales YTD or Year over Year. This analysis can optimize your ability to sell with WebCorpCo Analytics.</p>
-                            <a class="slide__text-link" style="font-family: 'Open Sans Condensed', sans-serif;">Learn More</a>
+                            <h2 class="slide__text-heading">Mon premier site Wordpress avec utilisation d'un Builder (Elementor).</h2>
+                            <p class="slide__text-desc">Création d'un blog simpliste sur <span class="colored-word-lime">Wordpress</span> en m'initiant à l'utilisation d'un <span class="colored-word-lime">builder</span>, ici <span class="colored-word-lime">Elementor</p>
+                            <a class="slide__text-link">Visiter</a>
                           </div>
                         </div>
                       </div>
@@ -136,9 +138,9 @@
                             <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
                           </svg>
                           <div class="slide__text">
-                            <h2 class="slide__text-heading" style="font-family: 'Open Sans Condensed', sans-serif;">Moving Business Forward</h2>
-                            <p class="slide__text-desc" style="font-family: 'Open Sans Condensed', sans-serif;">Sales is the direct result of marketing and sales data is sometimes even more important than the sales themselves. Why did they buy? What did they buy? When? Who bought? How much did it cost? Then a comparison of sales YTD or Year over Year. This analysis can optimize your ability to sell with WebCorpCo Analytics.</p>
-                            <a class="slide__text-link" style="font-family: 'Open Sans Condensed', sans-serif;">Learn More</a>
+                            <h2 class="slide__text-heading">Mon premier portfolio (Wordpress).</h2>
+                            <p class="slide__text-desc">J'ai crée ce site avec <span class="colored-word-lime">Wordpress</span> et j'y ai apporté des modifications avec <span class="colored-word-lime">HTML5</span> et <span class="colored-word-lime">CSS3</span>.</p>
+                            <a class="slide__text-link">Visiter</a>
                           </div>
                         </div>
                       </div>
@@ -149,9 +151,9 @@
                             <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
                           </svg>
                           <div class="slide__text">
-                            <h2 class="slide__text-heading" style="font-family: 'Open Sans Condensed', sans-serif;">Moving Business Forward</h2>
-                            <p class="slide__text-desc" style="font-family: 'Open Sans Condensed', sans-serif;">Sales is the direct result of marketing and sales data is sometimes even more important than the sales themselves. Why did they buy? What did they buy? When? Who bought? How much did it cost? Then a comparison of sales YTD or Year over Year. This analysis can optimize your ability to sell with WebCorpCo Analytics.</p>
-                            <a class="slide__text-link" style="font-family: 'Open Sans Condensed', sans-serif;">Learn More</a>
+                            <h2 class="slide__text-heading">Mon premier site codé uniquement en HTML5 et CSS3</h2>
+                            <p class="slide__text-desc">C'est mon premier vrai projet de site. Celui-ci est écrit uniquement en <span class="colored-word-lime">HTML5</span> et <span class="colored-word-lime">CSS3</span>. Pour une meilleure acquisition des compétences de bases, l'utilisation de <span class="colored-word-lime">Javascript</span>, <span class="colored-word-lime">jQuery</span> ou <span class="colored-word-lime">Bootstrap</span> n'était pas autorisée.</p>
+                            <a class="slide__text-link">Visiter</a>
                           </div>
                         </div>
                       </div>
@@ -162,9 +164,9 @@
                             <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
                           </svg>
                           <div class="slide__text">
-                            <h2 class="slide__text-heading" style="font-family: 'Open Sans Condensed', sans-serif;">Moving Business Forward</h2>
-                            <p class="slide__text-desc" style="font-family: 'Open Sans Condensed', sans-serif;">Sales is the direct result of marketing and sales data is sometimes even more important than the sales themselves. Why did they buy? What did they buy? When? Who bought? How much did it cost? Then a comparison of sales YTD or Year over Year. This analysis can optimize your ability to sell with WebCorpCo Analytics.</p>
-                            <a class="slide__text-link" style="font-family: 'Open Sans Condensed', sans-serif;">Learn More</a>
+                            <h2 class="slide__text-heading">Mon premier site wordpress.</h2>
+                            <p>C'est mon premier site <span class="colored-word-lime">Wordpress</span> les consignes étaient de répondre à une liste de demande bien précise pour le compte des <span class="colored-word-lime">administrateurs</span> de l'office du tourisme de Strasbourg. L'utilisation de <span class="colored-word-lime">builder</span> n'était pas autorisée et l'implémentation d'un slider en pur <span class="colored-word-lime">CSS</span> demandée.</p>
+                            <a class="slide__text-link">Visiter</a>
                           </div>
                         </div>
                       </div>
@@ -213,7 +215,8 @@
                 <div class="container-fluid logiciels-container">
                     <div class="row">
                         <div class="col-lg-12 child-content-header text-center page-header">
-                          <h3 class="section-heading text-uppercase" data-aos="fade-right"  data-aos-duration="800" data-aos-delay="0"><span class="">Logiciels et Bureautique</span></h3>
+                          <h3 class="section-heading text-uppercase">Logiciels et Bureautique</span></h3>
+                          <hr class="mx-auto col-1">
                           <h4>Les outils que j'utilise le plus souvent.</h4>
                         </div>
                       </div>
@@ -499,8 +502,8 @@
 
           <div id="screen-content-child" class="screen-content-child">
             
-            <div class="phone-time col-md-12"> 
-              <div class="text-center col-md-12"><span class="phone-hour heure"><span id="heure"></span>:<span id="minute"></span></span><span class="date" style="display: block;"><span id="jour"></span>/<span id="mois"></span></span></div>
+            <div class="phone-time col-md-12 p-3"> 
+              <div class="text-center"><span class="phone-hour heure m-2"><span id="heure"></span>:<span id="minute"></span></span><span class="date" style="display: block;"><span id="jour"></span>/<span id="mois"></span></span></div>
             </div>  
             
             <div id="champ-google" class="input-group-sm col-md-12">
@@ -509,20 +512,20 @@
             
               <div class="phone-app-container container-fluid">
                 <div class="row row-app">                             
-                  <div class="phone-app-gallery gallery col-md-10 mx-auto d-flex flex-row justify-content-around">
-                    <figure class="figure col-md-3 col-xs-4">
+                  <div class="phone-app-gallery gallery col-md-10 mx-auto d-flex flex-row justify-content-around p-4">
+                    <figure class="figure col-3">
                         <img id="btn-icon1" alt="picture" src="images/screen-icons/project2.png" class="img-fluid rounded">
                         <figcaption class="figure-caption text-center">Mes Projets</figcaption>
                     </figure>
-                    <figure class="figure col-md-3 col-xs-4">
+                    <figure class="figure col-3">
                         <img id="btn-icon2" alt="picture" src="images/screen-icons/hobbies.png" class="img-fluid rounded">
                         <figcaption class="figure-caption text-center">Hobbies</figcaption>
                     </figure>
-                    <figure class="figure col-md-3 col-xs-4">
+                    <figure class="figure col-3">
                         <img id="btn-icon3" alt="picture" src="images/screen-icons/aboutme.png" class="img-fluid rounded">
                         <figcaption class="figure-caption text-center">About me</figcaption>
                     </figure>
-                    <figure class="figure col-md-3 col-xs-4">
+                    <figure class="figure col-3">
                         <img id="btn-icon4" alt="picture" src="images/screen-icons/coding.png" class="img-fluid rounded">
                         <figcaption class="figure-caption text-center">Logiciels</figcaption>
                     </figure>                                 
@@ -530,20 +533,20 @@
                 </div>
         
             <div class="row row-app">
-              <div class="phone-app-gallery gallery col-md-10 mx-auto d-flex flex-row justify-content-around">
-                <figure class="figure col-md-3 col-xs-4">
+              <div class="phone-app-gallery gallery col-md-10 mx-auto d-flex flex-row justify-content-around p-4">
+                <figure class="figure col-3">
                     <img id="btn-icon5" alt="picture" src="images/screen-icons/tetris.png" class="img-fluid rounded">
                     <figcaption class="figure-caption text-center">Tetris</figcaption>
                 </figure>
-                <figure class="figure col-md-3 col-xs-4">
-                    <img id="btn-icon6" alt="picture" src="images/screen-icons/race-game.png" class="img-fluid rounded">
+                <figure class="figure col-3">
+                    <img id="btn-icon6" alt="picture" src="images/screen-icons/icon-photography.png" class="img-fluid rounded">
                     <figcaption class="figure-caption text-center">Photographie</figcaption>
                 </figure>
-                <figure class="figure col-md-3 col-xs-4">
+                <figure class="figure col-3">
                     <form method="get" action="mailto:hlaliwalid@gmail.com"><button id="btn7" class="img-fluid"><img alt="picture" src="images/screen-icons/mail.png" class="img-fluid rounded"></button></form>
                     <figcaption class="figure-caption text-center">Mail</figcaption>
                 </figure>
-                <figure class="figure col-md-3 col-xs-4">
+                <figure class="figure col-3">
                     <img id="btn-icon8" alt="picture" src="images/screen-icons/contact.png" class="img-fluid rounded">
                     <figcaption class="figure-caption text-center">Contact</figcaption>
                 </figure>                                     
@@ -568,14 +571,22 @@
 </div>
 </section>
 
-<section>
+
   <div class="container-fluid header-container">
     <div class="parallax2">
       <div class="kid-running d-none d-sm-block"></div>
       <div class="moon2"></div>
+      <div class="rose position-absolute"></div>
       <div class="tree2"></div>
+      <div class="citation-block position-absolute col-md-12 text-center">
+        <blockquote class="blockquote">
+          <p class="mb-0 text-white">C'est le temps que tu as perdu pour ta rose qui rend ta rose importante.</p>
+          <footer class="blockquote-footer">Antoine de Saint-Exupéry<cite class="ml-1" title="Source Title">Le Petit Prince</cite></footer>
+        </blockquote>
+      </div>
       <div class="uranus2"></div>
       <div class="sheep2"></div>
+      <div class="ufo3"></div>
       <div class="wolf2 d-none d-sm-block"></div>
     </div>
   </div>
@@ -593,7 +604,7 @@
                   </video> 
                   <div id="videoMessage" style="position: absolute;">
                       <h1 class="text-end text-center text-white text-uppercase text-bold font-weight-bold">Merci.</h1>
-                  
+                      <hr class="col-1 mx-auto">
                   </div>
               </div>
             </div>
@@ -603,10 +614,11 @@
     </div>
   </section>
 
-<div class="container-fluid">
+
+<footer class="container-fluid sliding-footer">
   <div class="row">
       <div class="row-social-icons row col-md-12 mx-auto">
-          <ul class="ul-social-footer mx-auto d-flex col-md-4 col-sm-10 col-xs-12 flex-around-content">
+          <ul class="ul-social-footer mx-auto p-2 mt-5 mb-4 d-flex col-md-4 col-sm-10 col-xs-12 flex-around-content">
             <li>
               <a href="https://www.linkedin.com/in/walid-hlali/">
                 <span></span>
@@ -647,11 +659,10 @@
             </div>
     
   </div>
-</div>
 
-<div class="container">
-    <a id="nav-link2" class="nav-link col-md-1 mx-auto js-scroll-trigger" href="#article-scroll">
-      <div id="loader2" class="loader mx-auto mb-1">
+<div class="row">
+    <a id="nav-link2" class="nav-link col-md-1 mb-2 mx-auto js-scroll-trigger" href="#article-scroll">
+      <div id="loader2 p-2" class="loader mx-auto mb-1">
         <span></span>
         <span></span>
         <span></span>
@@ -664,6 +675,7 @@
 <div class="footer-copyright text-center">
   <img class="img-footer img-fluid" src="images/backgrounds/wh-shadow-non.png" alt="">
 </div>
+</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
