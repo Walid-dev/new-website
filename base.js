@@ -2,8 +2,10 @@
 
 $('.logo').hide();
 $('.astronaut').hide();
+$('.ufo2').hide();
 $('.logo').fadeIn(3000);
 $('.astronaut').fadeIn(4000);
+$('.ufo2').fadeIn(7000);
 
 $centralButton = $('#touch-center-button');
 $leftButton = $('#touch-left-button');
@@ -57,7 +59,7 @@ $centralButton.each(function( i ) {
 if ( this.style.color !== "aqua" ) {
 this.style.color = "aqua";
 $('.tap-here').hide();
-$('.tap-here2').fadeIn(3000);
+$('.tap-here2').fadeIn(1000);
 $centralButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
 $rightButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
 $samsung.css('border' , '2px solid white');
@@ -69,12 +71,13 @@ $powerIcon.fadeTo(400 , 1);
 $wifiIcon.css('color', '#00ffff');
 $batteryIcon.fadeTo(600 , 1);
 $wifiIcon.fadeTo(400 , 1);
-$screen.css('box-shadow' , '#ffffffb3 0px 0px 25px, blue 0px 0px 20px');
+$samsung.css('box-shadow' , '#ffffffb3 0px 0px 25px, blue 0px 0px 20px');
 $('.phone-network-container').css('background' , '#111010' , 500);
 $('.phone-menu-buttons').css('background' , '#111010' , 500); 
 $('#bb').fadeTo(600 , 1);
 $rightButton.fadeTo(400 , 1);
-$('.ufo').fadeIn(4000);
+$('.ufo').fadeIn(6000);
+$('.astronaut').fadeOut(1100);
 } else {
 
 this.style.color = "blue";
@@ -90,7 +93,7 @@ $powerIcon.fadeTo(600 , .2);
 $batteryIcon.fadeTo(600 , .2);
 $wifiIcon.fadeTo(600 , .2);
 $leftButton.css('color' , 'unset');
-$screen.css('box-shadow' , 'none');
+$samsung.css('box-shadow' , 'none');
 $('#bb').fadeTo(600 , .2);
 $rightButton.fadeTo(300 , .2)
 $('#bb').replaceWith($('<span id="bb" class="app-led-box"><i class="fas fa-home ml-3"></span>' , 400));
@@ -99,6 +102,7 @@ $('.phone-network-container').css('background' , '#101010');
 $('.phone-menu-buttons').css('background' , '#101010');
 $('.ufo').hide();
 $('.tap-here').fadeIn(2500);
+$('.astronaut').fadeIn(1100);
 }
 });
 });
@@ -275,6 +279,8 @@ if ( this.style.color !== "springgreen" && this.style.color !== "green" && this.
         $('.phone-app-gallery figcaption').css('font-size' , '15px');
         $('.box-logiciels-bureautique img').css('width' , '45%');
         $('#btn7').css('width' , 'auto');
+        $('.slide__text').css('width' , '30%');
+        $('.slide__overlay').css('display' , 'block');
         
 
 } else if (this.style.color == "springgreen") {
@@ -285,7 +291,6 @@ if ( this.style.color !== "springgreen" && this.style.color !== "green" && this.
         $('.phone-app-gallery figcaption').css('font-size' , '16px');
         $('.box-logiciels-bureautique img').css('width' , '52%');
         $('#btn7').css('width' , 'auto');
-        $('.tap-here2').hide(600);
 
 } else if (this.style.color == "chartreuse"){
         this.style.color = "#00ffff";
@@ -297,6 +302,9 @@ if ( this.style.color !== "springgreen" && this.style.color !== "green" && this.
         $('.phone-app-gallery figcaption').css('font-size' , '13px');
         $('.box-logiciels-bureautique img').css('width' , '40%');
         $('#btn7').css('width' , '100%');
+        $('.tap-here2').hide();
+        $('.slide__text').css('width' , '70%');
+        $('.slide__overlay').css('display' , 'none');
 
 } else{
         this.style.color = "";
@@ -311,9 +319,16 @@ $(function() {
         function bis() {
                 $('.tap-here').animate({top: '-=10'}, 'slow')
                 .animate({top: '+=10'}, 'slow' , bis);
+
+                $('.tap-here2').animate({top: '-=10'}, 'slow')
+                .animate({top: '+=10'}, 'slow' , bis);
+
+                $('.tap-here3').animate({top: '-=10'}, 'slow')
+                .animate({top: '+=10'}, 'slow' , bis);
         };
         bis();
 });
+
 
 // Fonction taille image
 
@@ -355,7 +370,15 @@ $(window).scroll(function(){
                 'transform' : 'translate(0px , '+ wScroll /1.5+'%)'
         });
 
+        $('.ufo2').css({
+                'transform' : 'translate(0px , '+ wScroll /1.2+'%)'
+        });
+
         $('.astronaut').css({
+                'transform' : 'translate(0px , '+ wScroll /1.1+'%)'
+        });
+
+        $('.tap-here3').css({
                 'transform' : 'translate(0px , '+ wScroll /1.1+'%)'
         });
 
@@ -369,5 +392,45 @@ $(window).scroll(function(){
 
 // Hover Icones Applications UFO Moving
 
+let windowWidth = $(window).width();
+
+$('.screen-content').mousemove(function(event){
+
+        let moveX = (($(window).width() / 2)- event.pageX) *0.4;
+        let moveY = (($(window).height() / 2)- event.pageY) *0.4;
+
+$('.ufo').css('margin-left' , moveX + 'px');
+$('.ufo').css('margin-top' , moveY + 'px');
+
+});
 
 
+$('.bird-box').mousemove(function(event){
+
+        let moveX = (($(window).width() / 2)- event.pageX) *0.1;
+        let moveY = (($(window).height() / 2)- event.pageY) *0.1;
+
+        $('.ufo2').css('margin-left' , moveX + 'px');
+        $('.ufo2').css('margin-top' , moveY + 'px');
+
+});
+
+// Scroll effect click
+
+$(document).ready(function() {
+        $('#nav-link1').on('click', function() { // Au clic sur un élément
+                var page = $(this).attr('href'); // Page cible
+                var speed = 500; // Durée de l'animation (en ms)
+                $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+                return false;
+        });
+});
+
+
+// Scroll effetc Top
+
+$(document).ready(function() {
+        $('#nav-link2').on('click', function() { // Au clic sur un élément
+                $("html, body").animate({scrollTop : 0}, 1200);
+        });
+});

@@ -32,7 +32,7 @@ article strong{
 
 .bird-box{
     position: relative;
-    height: 680px;
+    height: 90vh;
     background-image: url('images/backgrounds/stars-sky.png');
     background-size: cover;
     position: bottom center;
@@ -43,26 +43,31 @@ article strong{
 
 .logo{
     width: 100%;
-    height: 250px;
+    height: 200px;
     background-image: url('images/backgrounds/titre-walid-without-shadow.png');
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
-    top: 45%;
+    top: 48%;
     margin-top: -125px;
     z-index: 3;
 }
 
 
 .moon{
-    width: 150px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     background-image: url('images/backgrounds/moon-transparent.png');
     background-repeat: no-repeat;
     background-position: top left;
     position: absolute;
-    left: 45%;
-    top: 11%;
+    left: 43%;
+    top: 10%;
+    transition: transform ease-out;
+    -webkit-transition: transform ease-out;
+    -moz-transition: transform ease-out;
+    -ms-transition: transform ease-out;
+    -o-transition: transform ease-out;
 }
 
 .uranus{
@@ -85,8 +90,8 @@ article strong{
     background-position: center;
     position: absolute;
     left: 46%;
-    top: 11%;
-    z-index: 1;
+    top: 14%;
+    z-index: 2;
 }
 
 
@@ -97,9 +102,31 @@ article strong{
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    left: 70%;
-    top: -35%;
+    left: 55%;
+    top: 30%;
     z-index: 1;
+    transition: margin ease-in-out;
+    -webkit-transition: margin ease-in-out;
+    -moz-transition: margin ease-in-out;
+    -ms-transition: margin ease-in-out;
+    -o-transition: margin ease-in-out;
+}
+
+.ufo2{
+    width: 80px;
+    height: 60px;
+    background-image: url('images/backgrounds/ufo-trans.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 80%;
+    top: 20%;
+    z-index: 1;
+    transition: margin ease-in-out;
+    -webkit-transition: margin ease-in-out;
+    -moz-transition: margin ease-in-out;
+    -ms-transition: margin ease-in-out;
+    -o-transition: margin ease-in-out;
 }
 
 /** Parallax 2 **/
@@ -110,13 +137,14 @@ article strong{
 
 .parallax2{
     position: relative;
-    height: 320px;
+    height: 430px;
     background-image: url('images/backgrounds/stars-sky.png');
     background-size: cover;
     position: bottom center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow: hidden;
+    z-index: 3;
 }
 
 .tree2{
@@ -181,17 +209,11 @@ article strong{
 
 
 
-
-
-
-
 .tap-here{
-    background-repeat: no-repeat;
-    background-position: center;
     position: absolute;
     top:85%;
     left: 48.6%;
-    font-size: 1.3em;
+    font-size: 1.2em;
     transform: rotate(180deg) !important;
     -webkit-transform: rotate(180deg) !important;
     transform: translate(-50% , -50%);
@@ -202,18 +224,19 @@ article strong{
 }
 
 .tap-here2{
-    font-size: 1.3em;
-    transform: rotate(180deg);
-    background-repeat: no-repeat;
-    background-position: center;
+height: 20px;
+position: absolute;
+top: -40%;
+left: 82%;
+transform: rotate(180deg) !important;
+}
+
+.tap-here3{
     position: absolute;
-    top: 86% !important;
-    left: 82%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
+    bottom: 5%;
+    left: 50%;
+    height: 20px;
+    font-size: 1.5rem;
 }
 
 .bird-box img{

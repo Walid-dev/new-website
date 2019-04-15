@@ -2,17 +2,6 @@
 src: url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
 font-family: 'Open Sans Condensed', sans-serif;
 }
-.slide__text-desc {
-font-family: 'Open Sans Condensed', sans-serif;
-}
-
-*, *:before, *:after {
-box-sizing: border-box;
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
-
 
 svg {
 display: block;
@@ -25,7 +14,10 @@ height: 100%;
 width: 100%;
 margin:auto;
 user-select: none;
-cursor: all-scroll;
+background-image: url("images/screen-icons/app-coding.gif");
+background-repeat: no-repeat;
+background-size: cover;
+z-index: 2;
 }
 
 .slider-box{
@@ -34,6 +26,22 @@ width: 100%;
 height: 100%;
 top: 0;
 left: 0;
+}
+
+.slide__text-desc {
+font-family: 'Open Sans Condensed', sans-serif;
+}
+
+*, *:before, *:after {
+box-sizing: border-box;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+svg {
+display: block;
+overflow: visible;
 }
 
 .slider-control {
@@ -75,24 +83,14 @@ list-style-type: none;
 position: relative;
 display: inline-block;
 vertical-align: top;
-width: 0.8rem;
-height: .8rem;
+width: 0.5rem;
+height: 0.5rem;
 margin: 0 0.5rem;
 border-radius: 50%;
-border: 2px solid #fff;
+border: 1px solid #fff;
 cursor: pointer;
 }
-.slider-pagi__elem:before {
-content: "";
-position: absolute;
-left: 50%;
-top: 50%;
-width: 1rem;
-height: 1rem;
-background: #fff;
-border-radius: 50%;
-transition: transform 0.3s;
-transform: translate(-50%, -50%) scale(0);
+.slider-pagi__elem:before { content: ""; position: absolute; left: 50%; top: 50%; width: .8rem; height: .8rem; background: #fff; border-radius: 50%; transition: transform 0.3s; transform: translate(-50%, -50%) scale(0); -webkit-transition: transform 0.3s; -moz-transition: transform 0.3s; -ms-transition: transform 0.3s; -o-transition: transform 0.3s;
 }
 .slider-pagi__elem.active:before, .slider-pagi__elem:hover:before {
 transform: translate(-50%, -50%) scale(1);
@@ -103,9 +101,7 @@ z-index: 1;
 position: relative;
 height: 100%;
 }
-.slider.animating {
-transition: transform 0.5s;
-will-change: transform;
+.slider.animating { transition: transform 0.5s; will-change: transform; -webkit-transition: transform 0.5s; -moz-transition: transform 0.5s; -ms-transition: transform 0.5s; -o-transition: transform 0.5s;
 }
 .slider.animating .slide__bg {
 transition: transform 0.5s;
@@ -119,10 +115,13 @@ width: 100%;
 height: 100%;
 overflow: hidden;
 }
+
+.slide__overlay{
+    display:none;
+}
+
 .slide.active .slide__overlay,
-.slide.active .slide__text {
-opacity: 1;
-transform: translateX(0);
+.slide.active .slide__text { opacity: 1; transform: translateX(0); -webkit-transform: translateX(0); -moz-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0);
 }
 .slide__bg {
 position: absolute;
@@ -138,7 +137,10 @@ left: 0;
 }
 .slide:nth-child(1) .slide__bg {
 left: 0;
-background-image: url("https://www.solodev.com/assets/flexslider/slide1.jpg");
+background-image: url("images/porftfolio/myportfolio-min.jpg");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
 }
 .slide:nth-child(1) .slide__overlay-path {
 fill: #e99c7e;
@@ -153,7 +155,10 @@ left: 100%;
 }
 .slide:nth-child(2) .slide__bg {
 left: -50%;
-background-image: url("2.jpg");
+background-image: url("images/porftfolio/cutom-min.jpg");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
 }
 .slide:nth-child(2) .slide__overlay-path {
 fill: #303030;
@@ -168,7 +173,7 @@ left: 200%;
 }
 .slide:nth-child(3) .slide__bg {
 left: -100%;
-background-image: url("1.jpg");
+background-image: url("images/porftfolio/avisgo-img-min.jpg");
 }
 .slide:nth-child(3) .slide__overlay-path {
 fill: #29424a;
@@ -183,7 +188,7 @@ left: 300%;
 }
 .slide:nth-child(4) .slide__bg {
 left: -150%;
-background-image: url('images/porftfolio/custom-stranger.jpg');
+background-image: url("images/porftfolio/autour-dun-cafe-img-min.jpg");
 }
 .slide:nth-child(4) .slide__overlay-path {
 fill: #cbc6c3;
@@ -198,7 +203,7 @@ left: 400%;
 }
 .slide:nth-child(5) .slide__bg {
 left: -200%;
-background-image: url('images/porftfolio/avisgo-img-min.jpg');
+background-image: url("images/porftfolio/mon-site-img-min.jpg");
 }
 .slide:nth-child(5) .slide__overlay-path {
 fill: #cbc6c3;
@@ -208,7 +213,37 @@ fill: #cbc6c3;
     background-color: rgba(203, 198, 195, 0.8);
 }
 }
+.slide:nth-child(6) {
+left: 500%;
+}
+.slide:nth-child(6) .slide__bg {
+left: -250%;
+background-image: url("images/porftfolio/webagency-img-min.jpg");
+}
+.slide:nth-child(6) .slide__overlay-path {
+fill: #cbc6c3;
+}
+@media (max-width: 991px) {
+.slide:nth-child(6) .slide__text {
+    background-color: rgba(203, 198, 195, 0.8);
+}
+}
 
+.slide:nth-child(7) {
+    left: 600%;
+    }
+    .slide:nth-child(7) .slide__bg {
+    left: -300%;
+    background-image: url("images/porftfolio/office-strasbourg-img.jpg");
+    }
+    .slide:nth-child(7) .slide__overlay-path {
+    fill: #cbc6c3;
+    }
+    @media (max-width: 991px) {
+    .slide:nth-child(7) .slide__text {
+        background-color: rgba(203, 198, 195, 0.8);
+    }
+    }
 
 .slide__content {
 position: absolute;
@@ -217,16 +252,7 @@ left: 0;
 width: 100%;
 height: 100%;
 }
-.slide__overlay {
-position: absolute;
-bottom: 0;
-left: 0;
-height: 100%;
-min-height: 810px;
-transition: transform 0.5s 0.5s, opacity 0.2s 0.5s;
-will-change: transform, opacity;
-transform: translate3d(-20%, 0, 0);
-opacity: 0;
+.slide__overlay { position: absolute; bottom: 0; left: 0; height: 100%; min-height: 810px; transition: transform 0.5s 0.5s, opacity 0.2s 0.5s; will-change: transform, opacity; transform: translate3d(-20%, 0, 0); opacity: 0; -webkit-transform: translate3d(-20%, 0, 0); -moz-transform: translate3d(-20%, 0, 0); -ms-transform: translate3d(-20%, 0, 0); -o-transform: translate3d(-20%, 0, 0);
 }
 @media (max-width: 991px) {
 .slide__overlay {
@@ -236,16 +262,7 @@ opacity: 0;
 .slide__overlay path {
 opacity: 0.8;
 }
-.slide__text {
-position: absolute;
-width: 35%;
-bottom: 15%;
-left: 12%;
-color: #fff;
-transition: transform 0.5s 0.8s, opacity 0.5s 0.8s;
-will-change: transform, opacity;
-transform: translateY(-50%);
-opacity: 0;
+.slide__text { position: absolute; width: 70%; bottom: 15%; left: 12%; color: #fff; transition: transform 0.5s 0.8s, opacity 0.5s 0.8s; will-change: transform, opacity; transform: translateY(-50%); opacity: 0; -webkit-transition: transform 0.5s 0.8s, opacity 0.5s 0.8s; -moz-transition: transform 0.5s 0.8s, opacity 0.5s 0.8s; -ms-transition: transform 0.5s 0.8s, opacity 0.5s 0.8s; -o-transition: transform 0.5s 0.8s, opacity 0.5s 0.8s;
 }
 @media (max-width: 991px) {
 .slide__text {
@@ -257,22 +274,29 @@ opacity: 0;
     transform: translateY(50%);
     transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
     padding: 0 1rem;
+    -webkit-transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
+    -moz-transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
+    -ms-transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
+    -o-transition: transform 0.5s 0.5s, opacity 0.5s 0.5s;
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
 }
 }
 .slide__text-heading {
 font-family: "Polar", Helvetica, Arial, sans-serif;
-font-size: 2rem;
+font-size: 3rem;
 margin-bottom: 2rem;
 }
 @media (max-width: 991px) {
 .slide__text-heading {
     line-height: 10rem;
-    font-size: 3.5rem;
+    font-size: 2rem;
 }
 }
 .slide__text-desc {
 font-family: "Open Sans", Helvetica, Arial, sans-serif;
-font-size: 1rem;
 margin-bottom: 1.5rem;
 }
 @media (max-width: 991px) {
@@ -287,7 +311,7 @@ position: relative;
 padding: 0.5rem;
 cursor: pointer;
 font-family: "Open Sans", Helvetica, Arial, sans-serif;
-font-size: 1rem;
+font-size: 1.8rem;
 perspective: 1000px;
 }
 @media (max-width: 991px) {
@@ -295,20 +319,7 @@ perspective: 1000px;
     margin: -2rem 0 8rem;
 }
 }
-.slide__text-link:before {
-z-index: -1;
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: #000;
-transform-origin: 50% 100%;
-transform: rotateX(-85deg);
-transition: transform 0.3s;
-will-change: transform;
+.slide__text-link:before { z-index: -1; content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000; transform-origin: 50% 100%; transform: rotateX(-85deg); transition: transform 0.3s; will-change: transform; -webkit-transform: rotateX(-85deg); -moz-transform: rotateX(-85deg); -ms-transform: rotateX(-85deg); -o-transform: rotateX(-85deg);
 }
-.slide__text-link:hover:before {
-transform: rotateX(0);
+.slide__text-link:hover:before { transform: rotateX(0); -webkit-transform: rotateX(0); -moz-transform: rotateX(0); -ms-transform: rotateX(0); -o-transform: rotateX(0);
 }

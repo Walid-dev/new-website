@@ -6,9 +6,9 @@ var $slider = $(".slider"),
     curSlide = 0,
     numOfSlides = $(".slide").length-1,
     animating = false,
-    animTime = 500,
+    animTime = 600,
     autoSlideTimeout,
-    autoSlideDelay = 4600,
+    autoSlideDelay = 6000,
     $pagination = $(".slider-pagi");
 
 function createBullets() {
