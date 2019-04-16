@@ -237,9 +237,8 @@ article strong{
 
 .tap-here{
     position: absolute;
-    top:85%;
-    left: 48.6%;
-    font-size: 1.2em;
+    top: -15%
+    font-size: 1.1em;
     transform: rotate(180deg) !important;
     -webkit-transform: rotate(180deg) !important;
     transform: translate(-50% , -50%);

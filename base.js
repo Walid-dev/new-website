@@ -52,6 +52,23 @@ $('.tap-here2').hide();
 
 $leftButton.prop( "disabled", true );
 
+// Animation tap-here
+
+
+$(function() {
+        function bis() {
+                $('.tap-here').animate({top: '-=10'}, 'slow')
+                .animate({top: '+=10'}, 'slow' , bis);
+
+                $('.tap-here2').animate({top: '-=10'}, 'slow')
+                .animate({top: '+=10'}, 'slow' , bis);
+
+                $('.tap-here3').animate({top: '-=10'}, 'slow')
+                .animate({top: '+=10'}, 'slow' , bis);
+        };
+        bis();
+});
+
 // Bouton principal du Pad
 
 $centralButton.click(function() {
@@ -294,6 +311,7 @@ if ( this.style.color !== "springgreen" && this.style.color !== "green" && this.
         $('.phone-app-gallery figcaption').css('font-size' , '1.025rem');
         $('.box-logiciels-bureautique img').css('width' , '45%');
         $('#btn7').css('width' , 'auto');
+        $('.slide__text').css('width' , '50%');
         
 
 } else if (this.style.color == "springgreen") {
@@ -306,6 +324,7 @@ if ( this.style.color !== "springgreen" && this.style.color !== "green" && this.
         $('.phone-app-gallery figcaption').css('font-size' , '1.075rem');
         $('.box-logiciels-bureautique img').css('width' , '52%');
         $('#btn7').css('width' , 'auto');
+       
 
 } else if (this.style.color == "chartreuse"){
         this.style.color = "#00ffff";
@@ -318,28 +337,13 @@ if ( this.style.color !== "springgreen" && this.style.color !== "green" && this.
         $('.box-logiciels-bureautique img').css('width' , '40%');
         $('#btn7').css('width' , '100%');
         $('.tap-here2').hide();
+        $('.slide__text').css('width' , '60%');
+
 
 } else{
         this.style.color = "";
 }
 });
-});
-
-// Animation tap-here
-
-
-$(function() {
-        function bis() {
-                $('.tap-here').animate({top: '-=10'}, 'slow')
-                .animate({top: '+=10'}, 'slow' , bis);
-
-                $('.tap-here2').animate({top: '-=10'}, 'slow')
-                .animate({top: '+=10'}, 'slow' , bis);
-
-                $('.tap-here3').animate({top: '-=10'}, 'slow')
-                .animate({top: '+=10'}, 'slow' , bis);
-        };
-        bis();
 });
 
 

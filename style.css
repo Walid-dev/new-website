@@ -1079,7 +1079,7 @@ padding: 10px 0;
 
 .box .content h2{
     position: absolute;
-    top: -30px;
+    top: -60px;
     right: 20px;
     margin: 0;
     padding: 0;
@@ -1109,7 +1109,7 @@ padding: 10px 0;
 }
 
 .box:hover .content h2{
-    top: -70px;
+    top: -90px;
 }
 
 .box .content a{
@@ -1171,6 +1171,10 @@ padding: 10px 0;
 
 #service-box2{
     background: linear-gradient(315deg, #fff, rgb(1, 255, 221)) !important;
+}
+
+#service-box3{
+    background: linear-gradient(315deg, #fff, #4fff00);
 }
 
 .services-container .box:nth-child(3){
