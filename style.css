@@ -27,10 +27,6 @@ hr{
     box-shadow: none!important;
 }
 
-.page{
-    margin-bottom: 400px;
-    z-index: 3;
-}
 
 
 /** Propriétés Ecran Principal **/
@@ -40,25 +36,21 @@ hr{
 }
 
 #container-secondaire{
-    padding-top: 100px;
 }
 
 .phone-section{
-    height: 65vh;
     padding-right: 0px;
     padding-left: 0px;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top: 4rem;
 }
 
 .samsung{
     position: relative;
     width: 310px;
     height: 580px;
-    padding-top: 100px;
     background: #0c0c0c;
     border-radius: 30px;
     border: 1px solid #E7E7E5;
@@ -172,8 +164,8 @@ p {
 }
 
 .phone-network-container i {
-    font-size: 15px;
-    line-height: 28px;
+    font-size: 13px;
+    line-height: 32px;
     color: transparent;
     transform: rotateX(360deg);
     -webkit-transform: rotateX(360deg);
@@ -307,7 +299,7 @@ p {
 }
 
 .phone-menu-buttons i{
-    font-size: 22px;
+    font-size: 16px;
 }
 
 #touch-right-button{
@@ -316,7 +308,7 @@ p {
 }
 
 #touch-right-button i {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 /** Applications Pad **/
@@ -870,7 +862,7 @@ padding: 10px 0;
     
     .samsung{
         width: 100% !important;
-        height: auto !important;
+        min-height: 310px;
     }
 
     p {
@@ -1044,5 +1036,129 @@ padding: 10px 0;
 	}
 }
 
-/** Footer **/
+/** Box Services **/
 
+#services-section{
+    min-height: 99vh;
+}
+
+.services-container .box{
+    position: relative;
+    height: 400px;
+    background: linear-gradient(to bottom, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
+    z-index: 3;
+    border: 1px solid #000;
+    cursor: pointer;
+
+}
+
+.content{
+    padding: 20px;
+    position: relative;
+    top: 60%;
+    transform: translateY(-60%);
+    -webkit-transform: translateY(-60%);
+    -moz-transform: translateY(-60%);
+    -ms-transform: translateY(-60%);
+    -o-transform: translateY(-60%);
+}
+
+.box .content h2{
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    margin: 0;
+    padding: 0;
+    font-size: 9em;
+    font-weight: bold;
+    color: rgba(255, 255, 255, .05);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.box .content h3{
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.box .content p{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+.box:hover .content h2{
+    top: -70px;
+}
+
+.box .content a{
+    position: relative;
+    margin: 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    display: inline-block;
+    color: #fff;
+    transform:translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transform:translateY(-40px);
+    -moz-transform:translateY(-40px);
+    -ms-transform:translateY(-40px);
+    -o-transform:translateY(-40px);
+}
+
+.box:hover .content a{
+    transform: translateY(20px);
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+}
+
+.box .content a:hover{
+    color: #000;
+    background: #fff;
+}
+
+.services-container .box:before{
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(to bottom, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
+    transform:skew(2deg, 2deg);
+    z-index: -1;
+    -webkit-transform:skew(2deg, 2deg);
+    -moz-transform:skew(2deg, 2deg);
+    -ms-transform:skew(2deg, 2deg);
+    -o-transform:skew(2deg, 2deg);
+}
+
+.services-container .box:nth-child(1){
+    background: linear-gradient(315deg, #fff, blue);
+}
+
+.services-container .box:nth-child(2){
+    background: linear-gradient(315deg, #fff, rgb(1, 255, 221));
+}
+
+.services-container .box:nth-child(3){
+    background: linear-gradient(315deg, #fff, blue);
+}

@@ -60,9 +60,6 @@ if ( this.style.color !== "aqua" ) {
 this.style.color = "aqua";
 $samsung.animate({ 'width': '450'}, { queue: false, duration: 600 })
 .animate({ 'height': '92vh'}, 600);
-$('.phone-section').css('height' , '95vh');
-$('.phone-container').css('padding-top' , '40px');
-$('.phone-container').css('padding-bottom' , '40px');
 $('.tap-here').hide();
 $('.tap-here2').fadeIn(1000);
 $centralButton.delay(600).css('text-shadow' , '#00ffffb3 0px 0px 30px');
@@ -93,9 +90,6 @@ $imageApp.css('width' , '55px');
 this.style.color = "blue";
 $samsung.animate({ 'width': '310'}, { queue: false, duration: 600 })
 .animate({ 'height': '580'}, 600);
-$('.phone-section').css('height' , '70vh');
-$('.phone-container').css('padding-top' , '20px',);
-$('.phone-container').css('padding-bottom' , '20px',);
 $('.phone-menu-buttons button').css('text-shadow' , 'none');
 $('.tap-here2').hide();
 $imageFondScreen.fadeOut(400);

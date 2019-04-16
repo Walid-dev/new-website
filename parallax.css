@@ -11,6 +11,10 @@
     font-size: 1.65rem;
 }
 
+#content-article2{
+    height: 430px;
+}
+
 article strong{
     color: #00ffff;
 }
