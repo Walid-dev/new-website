@@ -49,8 +49,8 @@ hr{
 
 .samsung{
     position: relative;
-    width: 310px;
-    height: 580px;
+    width: 330px;
+    height: 600px;
     background: #0c0c0c;
     border-radius: 30px;
     border: 1px solid #E7E7E5;
@@ -238,7 +238,7 @@ p {
 }
 
 .phone-hour{
-    font-size: 3em;
+    font-size: 2.6em;
     font-family: 'Titillium Web', sans-serif;
     line-height: 1.2em;
     letter-spacing: 1px;
@@ -252,7 +252,7 @@ p {
 }
 
 .date {
-    font-size: 26px;
+    font-size: 20px;
     font-family: 'Varela Round', sans-serif;
     letter-spacing: 2px;
     opacity: 1;
@@ -506,13 +506,21 @@ position: absolute;
 }
 
 .carousel-text{
-    background: #5F00FF80;
-    padding: 10px 15px;
+    background: linear-gradient(to bottom, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
     border-radius: 10px;
+    border: 1px solid #fff;
 }
 
 .carousel-caption{
     bottom: 25px;
+}
+
+.img-photographie{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -648,6 +656,12 @@ header video {
     font-size: 15px;
     color: white;
     padding: 0 10px;
+}
+
+/** Child5 Tetris**/
+
+#screen-content-child5{
+    background: linear-gradient(to bottom, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
 }
 
 
@@ -1155,8 +1169,8 @@ padding: 10px 0;
     background: linear-gradient(315deg, #fff, blue);
 }
 
-.services-container .box:nth-child(2){
-    background: linear-gradient(315deg, #fff, rgb(1, 255, 221));
+#service-box2{
+    background: linear-gradient(315deg, #fff, rgb(1, 255, 221)) !important;
 }
 
 .services-container .box:nth-child(3){

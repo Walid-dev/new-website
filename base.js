@@ -88,8 +88,8 @@ $imageApp.css('width' , '55px');
 } else {
 
 this.style.color = "blue";
-$samsung.animate({ 'width': '310'}, { queue: false, duration: 600 })
-.animate({ 'height': '580'}, 600);
+$samsung.animate({ 'width': '330'}, { queue: false, duration: 600 })
+.animate({ 'height': '600'}, 600);
 $('.phone-menu-buttons button').css('text-shadow' , 'none');
 $('.tap-here2').hide();
 $imageFondScreen.fadeOut(400);
