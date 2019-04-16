@@ -37,7 +37,6 @@ hr{
 
 
 .phone-container{
-    padding-top: 100px;
 }
 
 #container-secondaire{
@@ -45,7 +44,7 @@ hr{
 }
 
 .phone-section{
-    min-height: 99vh;
+    height: 65vh;
     padding-right: 0px;
     padding-left: 0px;
     background-position: center;
@@ -57,12 +56,12 @@ hr{
 
 .samsung{
     position: relative;
-    width: 450px;
-    min-height: 97vh;
+    width: 310px;
+    height: 580px;
     padding-top: 100px;
     background: #0c0c0c;
     border-radius: 30px;
-    border: 2px solid #E7E7E5;
+    border: 1px solid #E7E7E5;
     overflow: hidden;
     z-index: 3;
     transition: box-shadow .8s ease;
@@ -353,7 +352,7 @@ p {
 
 .phone-app-container{
     position: absolute;
-    top: 52%;
+    top: 47%;
     padding-right: 0px;
     padding-left: 0px;
     opacity: 1;
