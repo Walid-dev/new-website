@@ -1165,16 +1165,27 @@ padding: 10px 0;
     -o-transform:skew(2deg, 2deg);
 }
 
-.services-container .box:nth-child(1){
+#service-box1{
     background: linear-gradient(315deg, #fff, blue);
+    transform: translate(100px, 20px);
+    -webkit-transform: translate(100px, 20px);
+    -moz-transform: translate(100px, 20px);
+    -ms-transform: translate(100px, 20px);
+    -o-transform: translate(100px, 20px);
 }
 
 #service-box2{
     background: linear-gradient(315deg, #fff, rgb(1, 255, 221)) !important;
+    z-index: 4;
 }
 
 #service-box3{
     background: linear-gradient(315deg, #fff, #4fff00);
+    transform: translate(-100px, 20px);
+    -webkit-transform: translate(-100px, 20px);
+    -moz-transform: translate(-100px, 20px);
+    -ms-transform: translate(-100px, 20px);
+    -o-transform: translate(-100px, 20px);
 }
 
 .services-container .box:nth-child(3){
