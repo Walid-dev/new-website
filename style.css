@@ -1167,11 +1167,6 @@ padding: 10px 0;
 
 #service-box1{
     background: linear-gradient(315deg, #fff, blue);
-    transform: translate(100px, 20px);
-    -webkit-transform: translate(100px, 20px);
-    -moz-transform: translate(100px, 20px);
-    -ms-transform: translate(100px, 20px);
-    -o-transform: translate(100px, 20px);
 }
 
 #service-box2{
@@ -1181,13 +1176,100 @@ padding: 10px 0;
 
 #service-box3{
     background: linear-gradient(315deg, #fff, #4fff00);
-    transform: translate(-100px, 20px);
-    -webkit-transform: translate(-100px, 20px);
-    -moz-transform: translate(-100px, 20px);
-    -ms-transform: translate(-100px, 20px);
-    -o-transform: translate(-100px, 20px);
 }
 
 .services-container .box:nth-child(3){
     background: linear-gradient(315deg, #fff, blue);
 }
+
+/** Checkbox button phone pad**/
+
+.checkbox-box{
+    flex-wrap: wrap;
+    border: 3px solid #000;
+    border-radius: 10px;
+    padding: 20px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 240px;
+    background: linear-gradient(0deg, #000000, #0c0c0C);
+    background: black;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.checkbox-box:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: (255, 255, 255, .5);
+    bottom: -50%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.checkbox-box li{
+    position: relative;
+    list-style: none;
+    text-align: center;
+    margin: 15px;
+
+}
+
+.checkbox-box li label{
+    position: relative;
+}
+
+.checkbox-box li label input[type="checkbox"]{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox-box li label .icon-box{
+    width: 60px;
+    height: 60px;
+    background: #101010;
+    display: flex;
+    align-items: center;
+    border: 3px solid #000;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.checkbox-box li label .icon-box .fa , .checkbox-box li label .icon-box .fas, .checkbox-box li label .icon-box .far{
+    font-size: 22px;
+    color: #222;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.checkbox-box li label input[type="checkbox"]:checked ~ .icon-box{
+    background: #000;
+    border: 3px solid aqua;
+    box-shadow: 0 0 10px rgba(33, 156, 243, .5),
+                0 0 20px rgba(33, 156, 243, .5),
+                0 0 30px rgba(33, 156, 243, .5),
+                inset 0 0 10px rgba(33, 156, 243, 1);
+}
+
+.checkbox-box li label input[type="checkbox"]:checked ~ .icon-box .fa , .checkbox-box li label input[type="checkbox"]:checked ~ .icon-box .fas , .checkbox-box li label input[type="checkbox"]:checked ~ .icon-box .far {
+    color: aqua;
+    text-shadow: 0 0 2px rgba(33, 156, 243, 1),
+                 0 0 4px rgba(33, 156, 243, 1);
+}
+
