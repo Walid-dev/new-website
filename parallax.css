@@ -7,12 +7,17 @@
     height: 200vh;
 }
 
+
 .content-article h1{
     font-size: 1.65rem;
 }
 
 #content-article2{
     height: 430px;
+    background: linear-gradient(to bottom, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
+    background: -webkit-linear-gradient(to bottom, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
+    background: -moz-linear-gradient(to bottom, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
+    background: -ms-linear-gradient(to bottom, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
 }
 
 article strong{
@@ -186,7 +191,7 @@ article strong{
     background-repeat: no-repeat;
     background-position: top left;
     position: absolute;
-    left: -75%;
+    left: -60%;
     bottom: 1%;
     z-index: 3;
 }
@@ -198,7 +203,7 @@ article strong{
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    left: -80%;
+    left: -70%;
     bottom: 0%;
     z-index: 2;
 }
@@ -233,11 +238,9 @@ article strong{
 }
 
 
-
-
 .tap-here{
     position: absolute;
-    top: -15%
+    top: -15%;
     font-size: 1.1em;
     transform: rotate(180deg) !important;
     -webkit-transform: rotate(180deg) !important;

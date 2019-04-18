@@ -217,3 +217,25 @@ figure:hover {
 }
 }
 
+/** Fill text Hover**/
+
+.fill-link {
+    position: relative;
+}
+
+.fill-link:before{
+    content: attr(data-text);
+    position: absolute;
+    color: #00c6fb;
+    width: 0%;
+    overflow: hidden;
+    transition: .7s;
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+    -ms-transition: .7s;
+    -o-transition: .7s;
+}
+
+.services-container:hover .fill-link:before{
+    width: 100% !important;
+}

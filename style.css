@@ -14,7 +14,6 @@ body{
     background: -webkit-linear-gradient(to bottom, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
     background: -moz-linear-gradient(to bottom, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
     background: -ms-linear-gradient(to bottom, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
-    background: linear-gradient #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
 }
 
 hr{
@@ -33,6 +32,7 @@ hr{
 
 
 .phone-container{
+   
 }
 
 #container-secondaire{
@@ -45,12 +45,18 @@ hr{
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    background: linear-gradient(to top, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
+    background: -webkit-linear-gradient(to top, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
+    background: -moz-linear-gradient(to top, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
+    background: -ms-linear-gradient(to top, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
 }
 
 .samsung{
     position: relative;
     width: 330px;
     height: 600px;
+    margin-top: 70px;
+    margin-bottom: 45px;
     background: #0c0c0c;
     border-radius: 30px;
     border: 1px solid #E7E7E5;
@@ -361,7 +367,7 @@ p {
 }
 
 .phone-app-gallery figcaption{
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-family: 'Open Sans Condensed', sans-serif;
     color: #fff;
     position: relative;
@@ -678,8 +684,13 @@ header video {
 
 
 .sliding-footer{
-    background: #000;
-    z-index: 2
+    background: linear-gradient(to top, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
+    background: -webkit-linear-gradient(to top, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
+    background: -moz-linear-gradient(to top, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
+    background: -ms-linear-gradient(to top, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
+    height: 270px;
+    z-index: -10;
+
 }
 
 /* Ul social Square effect */
@@ -960,100 +971,24 @@ padding: 10px 0;
     .tap-here2{
         display: none !important;
     }
-  }
-
-  /** End Video **/
-
-  #videoDiv {
-      width: 100%; 
-      height: 100%;
-    }
-
-    #videoBlock {
-        width: 100%; 
-        height: 100%;  
-        display: flex;  
-        justify-content: center; 
-        align-items: center;}
-
-
-/** Tv Screen **/
-
-#monitor {
-	background: #000; 
-	position: relative;
-	border-top: 3px solid #888; 
-	margin: 5%;
-	padding: 2% 2% 4% 2%; 
-	border-radius: 10px; 
-	border-bottom-left-radius: 50% 2%; 
-	border-bottom-right-radius: 50% 2%; 
-	transition: margin-right 1s;
 }
 
-#monitor:after {
-	content: '';
-	display: block;
-	position: absolute;
-	bottom: 3%;
-	left: 36%;
-	height: .5%; 
-	width: 28%;
-	background: #06a8ff; 
-	border-radius: 50%; 
-}
-
-#monitorscreen {
-	position: relative;
-  background-color: #777;
-	background-size: cover; 
-	background-position: top center;
-	height: 0; 
-	padding-bottom: 56.25%; 
-	position: relative;
-	overflow: hidden;
-}
-
-.tv{
-    width: 350px;
-    height: 400px;
-    background-image: url('images/backgrounds/command-tv.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-}
-
-
-@media all and (min-width: 960px) {
-	#monitor {
-		-webkit-animation: tvflicker .2s infinite alternate; 
-		-moz-animation:    tvflicker .5s infinite alternate; 
-		-o-animation:      tvflicker .5s infinite alternate; 
-		animation:         tvflicker .5s infinite alternate; 
-	}
-
-	@-webkit-keyframes tvflicker {
-	  0%   { box-shadow: 0 0 100px 0 rgba(200,235,255,0.4); }
-	  100% { box-shadow: 0 0 95px 0 rgba(200,230,255,0.45); }
-	}
-	@-moz-keyframes tvflicker {
-	  0%   { box-shadow: 0 0 100px 0 rgba(225,235,255,0.4); }
-	  100% { box-shadow: 0 0 60px 0 rgba(200,220,255,0.6); }
-	}
-	@-o-keyframes tvflicker {
-	  0%   { box-shadow: 0 0 100px 0 rgba(225,235,255,0.4); }
-	  100% { box-shadow: 0 0 60px 0 rgba(200,220,255,0.6); }
-	}
-	@keyframes tvflicker {
-	  0%   { box-shadow: 0 0 100px 0 rgba(225,235,255,0.4); }
-	  100% { box-shadow: 0 0 60px 0 rgba(200,220,255,0.6); }
-	}
-}
 
 /** Box Services **/
 
 #services-section{
     min-height: 99vh;
+    margin-bottom: 270px;
+    z-index: 4;
+    transition:.7s;
+    background: linear-gradient(to bottom, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
+    background: -webkit-linear-gradient(to bottom, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
+    background: -moz-linear-gradient(to bottom, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
+    background: -ms-linear-gradient(to bottom, #020a18, #020b1a, #030c1b, #030c1d, #030d1f, #020d24, #010e28, #000e2d, #000d35, #000b3d, #000844, #01044a);
+    -webkit-transition:.7s;
+    -moz-transition:.7s;
+    -ms-transition:.7s;
+    -o-transition:.7s;
 }
 
 .services-container .box{
@@ -1069,21 +1004,20 @@ padding: 10px 0;
 .content{
     padding: 20px;
     position: relative;
-    top: 60%;
-    transform: translateY(-60%);
-    -webkit-transform: translateY(-60%);
-    -moz-transform: translateY(-60%);
-    -ms-transform: translateY(-60%);
-    -o-transform: translateY(-60%);
+    top: 45%;
+    transform: translateY(-45%);
+    -webkit-transform: translateY(-45%);
+    -moz-transform: translateY(-45%);
+    -ms-transform: translateY(-45%);
+    -o-transform: translateY(-45%);
 }
 
 .box .content h2{
     position: absolute;
-    top: -60px;
-    right: 20px;
+    top: 90%;
     margin: 0;
     padding: 0;
-    font-size: 9em;
+    font-size: 1.8em;
     font-weight: bold;
     color: rgba(255, 255, 255, .05);
     transition: 0.5s;
@@ -1096,9 +1030,10 @@ padding: 10px 0;
 .box .content h3{
     margin: 0 0 10px;
     padding: 0;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
     color: #fff;
+    overflow: hidden;
 }
 
 .box .content p{
@@ -1109,7 +1044,7 @@ padding: 10px 0;
 }
 
 .box:hover .content h2{
-    top: -90px;
+    top: -45px;
 }
 
 .box .content a{
@@ -1188,10 +1123,9 @@ padding: 10px 0;
     flex-wrap: wrap;
     border: 3px solid #000;
     border-radius: 10px;
-    padding: 20px 0;
     box-sizing: border-box;
     overflow: hidden;
-    width: 240px;
+    width: 100%;
     background: linear-gradient(0deg, #000000, #0c0c0C);
     background: black;
     -webkit-border-radius: 10px;
@@ -1201,14 +1135,7 @@ padding: 10px 0;
 }
 
 .checkbox-box:before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: (255, 255, 255, .5);
-    bottom: -50%;
-    pointer-events: none;
-    z-index: 1;
+   
 }
 
 .checkbox-box li{
@@ -1230,8 +1157,8 @@ padding: 10px 0;
 }
 
 .checkbox-box li label .icon-box{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background: #101010;
     display: flex;
     align-items: center;
@@ -1271,5 +1198,18 @@ padding: 10px 0;
     color: aqua;
     text-shadow: 0 0 2px rgba(33, 156, 243, 1),
                  0 0 4px rgba(33, 156, 243, 1);
+}
+
+
+.led-clicked{
+    background: #000;
+    border: 2px solid aqua;
+    padding: 12px;
+    border-radius:50%;
+    box-shadow: 0 0 10px rgba(33, 156, 243, .5),                0 0 20px rgba(33, 156, 243, .5),                0 0 30px rgba(33, 156, 243, .5),                inset 0 0 10px rgba(33, 156, 243, 1);
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
 }
 

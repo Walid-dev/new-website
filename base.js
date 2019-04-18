@@ -81,6 +81,7 @@ $('.tap-here').hide();
 $('.tap-here2').fadeIn(1000);
 $centralButton.delay(600).css('text-shadow' , '#00ffffb3 0px 0px 30px');
 $rightButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
+//$('.leds-menu').addClass('led-clicked');
 $samsung.css('border' , '2px solid white');
 $screenContent.delay(600).fadeIn(800);
 $imageFondScreen.delay(600).fadeIn(500);
@@ -99,7 +100,7 @@ $('.ufo').fadeIn(6000);
 $('.astronaut').fadeOut(1100);
 $imageApp.css('width' , '55px');
         $imageApp.css('height' , '45px');
-        $('.phone-app-gallery figcaption').css('font-size' , '0.95rem');
+        $('.phone-app-gallery figcaption').css('font-size' , '0.90rem');
         $('.box-logiciels-bureautique img').css('width' , '40%');
         $('#btn7').css('width' , '100%');
 } else {
@@ -108,12 +109,13 @@ this.style.color = "blue";
 $samsung.animate({ 'width': '330'}, { queue: false, duration: 600 })
 .animate({ 'height': '600'}, 600);
 $('.phone-menu-buttons button').css('text-shadow' , 'none');
+//$('.phone-menu-buttons i').removeClass('led-clicked');
 $('.tap-here2').hide();
 $imageFondScreen.fadeOut(400);
 $screenContent.fadeOut(400);
 $newChildHidden.fadeOut(400);
 $screenBasicChild.fadeOut(400);
-$samsung.css('border' , '2px solid #E1E1DF');
+$samsung.css('border' , '1px solid #E1E1DF');
 $leftButton.prop( "disabled", true );
 $powerIcon.fadeTo(600 , .2);
 $batteryIcon.fadeTo(600 , .2);
@@ -131,10 +133,11 @@ $('.tap-here').fadeIn(2500);
 $('.astronaut').fadeIn(1100);
 $imageApp.css('width' , '55px');
         $imageApp.css('height' , '45px');
-        $('.phone-app-gallery figcaption').css('font-size' , '0.95rem');
+        $('.phone-app-gallery figcaption').css('font-size' , '0.90rem');
         $('.box-logiciels-bureautique img').css('width' , '40%');
         $('#btn7').css('width' , '100%');
 this.style.color = "#00ffff";
+$('.phone-section').css('min-height' , '70vh' );
 }
 });
 });
@@ -152,101 +155,262 @@ this.style.color = "#00ffff";
 
 // Bouttons Applications
 
-$('#btn-icon1').click(function (e) { 
-        e.preventDefault();
-        $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
-        $('#screen-content-child1').fadeIn(300);
-        $imageFondScreen.fadeOut(300);
-        $screenBasicChild.fadeOut(300);
+$(document).ready(function () {
+        let option = { queue: 'tester', duration: 'slow' };
+        $('#btn-icon1').click(function () {
+        $({})
+        .queue(function (next) {
+        $imageFondScreen.fadeOut(0, next);
+        })
+        .queue(function (next) {
+        $screenBasicChild.fadeOut(200, next);
+        })
+
+        .queue(function (next) {
+        $('#screen-content-child1').fadeIn(400, next);
+        });
+        
         $leftButton.css('color' , '#00ffff');
         $('.phone-menu-buttons').css('background' , '#111010');
         $('.phone-network-container').css('background' , '#111010');
         $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon far fa-images ml-3"></i></span>'));
-});
+        });
 
-$('#btn-icon2').click(function (e) { 
-        e.preventDefault();
-        $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
-        $('#screen-content-child2').fadeIn(800);
+        $('#btn-icon2').click(function () {
+                $({})
+                .queue(function (next) {
+                $imageFondScreen.fadeOut(0, next);
+                })
+                .queue(function (next) {
+                $screenBasicChild.fadeOut(200, next);
+                })
         
-        $screenBasicChild.fadeOut(200);
-        $leftButton.css('color' , '#00ffff');
-        $('.phone-menu-buttons').css('background' , 'rgb(13, 13, 13, .2)');
-        $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon fas fa-rocket ml-3"></i></span>'));
-});
+                .queue(function (next) {
+                $('#screen-content-child2').fadeIn(400, next);
+                });
+                
+                $leftButton.css('color' , '#00ffff');
+                $('.phone-menu-buttons').css('background' , 'rgb(13, 13, 13, .2)');
+                $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon fas fa-rocket ml-3"></i></span>'));
+                });
 
-$('#btn-icon3').click(function (e) { 
-        e.preventDefault();
-        $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
-        $('#screen-content-child3').fadeIn(800);
-        $imageFondScreen.fadeOut(600);
-        $screenBasicChild.fadeOut(200);
-        $leftButton.css('color' , '#00ffff');
-        $('.phone-menu-buttons').css('background' , '#111010');
-        $('.phone-network-container').css('background' , '#111010');
-        $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon far fa-user-circle ml-3"></i></span>'));
-});
+                $('#btn-icon3').click(function () {
+                        $({})
+                        .queue(function (next) {
+                        $imageFondScreen.fadeOut(0, next);
+                        })
+                        .queue(function (next) {
+                        $screenBasicChild.fadeOut(200, next);
+                        })
+                
+                        .queue(function (next) {
+                        $('#screen-content-child3').fadeIn(400, next);
+                        });
+                        
+                        $leftButton.css('color' , '#00ffff');
+                        $('.phone-menu-buttons').css('background' , '#111010');
+                        $('.phone-network-container').css('background' , '#111010');
+                        $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon far fa-user-circle ml-3"></i></span>'));
+                        });
 
-$('#btn-icon4').click(function (e) { 
-        e.preventDefault();
-        $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
-        $('#screen-content-child4').fadeIn(800);
-        $imageFondScreen.fadeOut(600);
-        $screenBasicChild.fadeOut(200);
-        $leftButton.css('color' , '#00ffff');
-        $('.phone-menu-buttons').css('background' , '#000');
-        $('.phone-network-container').css('background' , '#000');
-        $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon fas fa-code ml-3"></i></span>'));
-});
+                        $('#btn-icon4').click(function () {
+                                $({})
+                                .queue(function (next) {
+                                $imageFondScreen.fadeOut(0, next);
+                                })
+                                .queue(function (next) {
+                                $screenBasicChild.fadeOut(200, next);
+                                })
+                        
+                                .queue(function (next) {
+                                $('#screen-content-child4').fadeIn(400, next);
+                                });
+                                
+                                $leftButton.css('color' , '#00ffff');
+                                $('.phone-menu-buttons').css('background' , '#000');
+                                $('.phone-network-container').css('background' , '#000');
+                                $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon fas fa-code ml-3"></i></span>'));
+                                });
 
-$('#btn-icon5').click(function (e) { 
-        e.preventDefault();
-        $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
-        $centralButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
-        $('#screen-content-child5').fadeIn(800);
-        $imageFondScreen.fadeOut(600);
-        $screenBasicChild.fadeOut(200);
-        $leftButton.css('color' , '#00ffff');
-        $('.phone-menu-buttons').css('background' , '#000');
-        $('.phone-network-container').css('background' , '#000');
-        $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon fas fa-gamepad ml-3"></i></span>'));
-});
+                        $('#btn-icon5').click(function () {
+                                $({})
+                                .queue(function (next) {
+                                $imageFondScreen.fadeOut(0, next);
+                                })
+                                .queue(function (next) {
+                                $screenBasicChild.fadeOut(200, next);
+                                })
+                        
+                                .queue(function (next) {
+                                $('#screen-content-child5').fadeIn(400, next);
+                                });
+                                
+                                $leftButton.css('color' , '#00ffff');
+                                $('.phone-menu-buttons').css('background' , '#000');
+                                $('.phone-network-container').css('background' , '#000');
+                                $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon fas fa-gamepad ml-3"></i></span>'));
+                                });
 
-$('#btn-icon6').click(function (e) { 
-        e.preventDefault();
-        $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
-        $('#screen-content-child6').fadeIn(800);
-        $imageFondScreen.fadeOut(600);
-        $screenBasicChild.fadeOut(200);
-        $leftButton.css('color' , '#00ffff');
-        $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon fas fa-gamepad ml-3"></i></span>'));
-        $('.phone-menu-buttons').css('background' , '#000');
-        $('.phone-network-container').css('background' , '#000');
-});
+                        $('#btn-icon6').click(function () {
+                                $({})
+                                .queue(function (next) {
+                                $imageFondScreen.fadeOut(0, next);
+                                })
+                                .queue(function (next) {
+                                $screenBasicChild.fadeOut(200, next);
+                                })
+                        
+                                .queue(function (next) {
+                                $('#screen-content-child6').fadeIn(400, next);
+                                });
+                                
+                                $leftButton.css('color' , '#00ffff');
+                                $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon fas fa-gamepad ml-3"></i></span>'));
+                                $('.phone-menu-buttons').css('background' , '#000');
+                                $('.phone-network-container').css('background' , '#000');
+                                });
 
-$('#btn-icon7').click(function (e) { 
-        e.preventDefault();
-        $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
-        $('#screen-content-child7').fadeIn(800);
-        $imageFondScreen.fadeOut(600);
-        $screenBasicChild.fadeOut(200);
-        $leftButton.css('color' , '#00ffff');
-        $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon  ml-3"></i></span>'));
-        $('.phone-menu-buttons').css('background' , '#111010');
-        $('.phone-network-container').css('background' , '#111010');
-});
+                        $('#btn-icon7').click(function () {
+                                $({})
+                                .queue(function (next) {
+                                $imageFondScreen.fadeOut(0, next);
+                                })
+                                .queue(function (next) {
+                                $screenBasicChild.fadeOut(100, next);
+                                })
+                        
+                                .queue(function (next) {
+                                $('#screen-content-child7').fadeIn(400, next);
+                                });
+                                
+                                $leftButton.css('color' , '#00ffff');
+                                $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon  ml-3"></i></span>'));
+                                $('.phone-menu-buttons').css('background' , '#111010');
+                                $('.phone-network-container').css('background' , '#111010');
+                                });
 
-$('#btn-icon8').click(function (e) { 
-        e.preventDefault();
-        $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
-        $('#screen-content-child8').fadeIn(800);
-        $imageFondScreen.fadeOut(600);
-        $screenBasicChild.fadeOut(200);
-        $leftButton.css('color' , '#00ffff');
-        $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon far fa-comments ml-3"></i></span>'));
-        $('.phone-menu-buttons').css('background' , '#111010');
-        $('.phone-network-container').css('background' , '#111010');
-});
+                        $('#btn-icon8').click(function () {
+                                $({})
+                                .queue(function (next) {
+                                $imageFondScreen.fadeOut(0, next);
+                                })
+                                .queue(function (next) {
+                                $screenBasicChild.fadeOut(200, next);
+                                })
+                        
+                                .queue(function (next) {
+                                $('#screen-content-child8').fadeIn(400, next);
+                                });
+                                
+                                $leftButton.css('color' , '#00ffff');
+                                $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon far fa-comments ml-3"></i></span>'));
+                                $('.phone-menu-buttons').css('background' , '#111010');
+                                $('.phone-network-container').css('background' , '#111010');
+                                });
+
+
+
+        });
+
+//$('#btn-icon1').click(function (e) { 
+    //    e.preventDefault();
+      //  $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
+        //$('#screen-content-child1').fadeIn(300);
+        //$imageFondScreen.fadeOut(300);
+        //$screenBasicChild.fadeOut(300);
+       // $leftButton.css('color' , '#00ffff');
+       // $('.phone-menu-buttons').css('background' , '#111010');
+       // $('.phone-network-container').css('background' , '#111010');
+       // $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon far fa-images ml-3"></i></span>'));
+//});
+
+//$('#btn-icon2').click(function (e) { 
+   //     e.preventDefault();
+     //   $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
+       // $('#screen-content-child2').fadeIn(800);
+        
+        //$screenBasicChild.fadeOut(200);
+        //$leftButton.css('color' , '#00ffff');
+        //$('.phone-menu-buttons').css('background' , 'rgb(13, 13, 13, .2)');
+        //$('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon fas fa-rocket ml-3"></i></span>'));
+//});
+
+
+
+
+
+//$('#btn-icon3').click(function (e) { 
+  //      e.preventDefault();
+    //    $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
+      //  $('#screen-content-child3').fadeIn(800);
+        //$imageFondScreen.fadeOut(600);
+        //$screenBasicChild.fadeOut(200);
+        //$leftButton.css('color' , '#00ffff');
+        //$('.phone-menu-buttons').css('background' , '#111010');
+        //$('.phone-network-container').css('background' , '#111010');
+        //$('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon far fa-user-circle ml-3"></i></span>'));
+//});
+
+//$('#btn-icon4').click(function (e) { 
+  //      e.preventDefault();
+    //    $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
+      //  $('#screen-content-child4').fadeIn(800);
+       // $imageFondScreen.fadeOut(600);
+        //$screenBasicChild.fadeOut(200);
+        //$leftButton.css('color' , '#00ffff');
+        //$('.phone-menu-buttons').css('background' , '#000');
+        //$('.phone-network-container').css('background' , '#000');
+        //$('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon fas fa-code ml-3"></i></span>'));
+//});
+
+//$('#btn-icon5').click(function (e) { 
+  //      e.preventDefault();
+    //    $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
+      //  $centralButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
+        //$('#screen-content-child5').fadeIn(800);
+        //$imageFondScreen.fadeOut(600);
+        //$screenBasicChild.fadeOut(200);
+        //$leftButton.css('color' , '#00ffff');
+       // $('.phone-menu-buttons').css('background' , '#000');
+       // $('.phone-network-container').css('background' , '#000');
+       // $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon fas fa-gamepad ml-3"></i></span>'));
+//});
+
+//$('#btn-icon6').click(function (e) { 
+  //      e.preventDefault();
+    //    $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
+     //   $('#screen-content-child6').fadeIn(800);
+     //   $imageFondScreen.fadeOut(600);
+      //  $screenBasicChild.fadeOut(200);
+        //$leftButton.css('color' , '#00ffff');
+        //$('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon fas fa-gamepad ml-3"></i></span>'));
+        //$('.phone-menu-buttons').css('background' , '#000');
+        //$('.phone-network-container').css('background' , '#000');
+//});
+
+//$('#btn-icon7').click(function (e) { 
+  //      e.preventDefault();
+    //    $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
+      //  $('#screen-content-child7').fadeIn(800);
+       // $imageFondScreen.fadeOut(600);
+       // $screenBasicChild.fadeOut(200);
+       // $leftButton.css('color' , '#00ffff');
+       // $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon  ml-3"></i></span>'));
+      //  $('.phone-menu-buttons').css('background' , '#111010');
+      //  $('.phone-network-container').css('background' , '#111010');
+//});
+
+//$('#btn-icon8').click(function (e) { 
+  //      e.preventDefault();
+    //    $leftButton.css('text-shadow' , '#00ffffb3 0px 0px 30px');
+      //  $('#screen-content-child8').fadeIn(800);
+        //$imageFondScreen.fadeOut(600);
+        //$screenBasicChild.fadeOut(200);
+       // $leftButton.css('color' , '#00ffff');
+      //  $('.app-led-box').replaceWith($('<span id="bb" class="app-led-box"><i class="app-icon far fa-comments ml-3"></i></span>'));
+      //  $('.phone-menu-buttons').css('background' , '#111010');
+      //  $('.phone-network-container').css('background' , '#111010');
+//});
 
 
 
@@ -311,12 +475,11 @@ if ( this.style.color !== "springgreen" && this.style.color !== "green" && this.
         $('.phone-app-gallery figcaption').css('font-size' , '1.025rem');
         $('.box-logiciels-bureautique img').css('width' , '45%');
         $('#btn7').css('width' , 'auto');
-        $('.slide__text').css('width' , '50%');
+        $('.slide__text').css('width' , '35%');
         
 
 } else if (this.style.color == "springgreen") {
         this.style.color = "chartreuse";
-        $('.phone-section').css('height' , '95vh');
         $('.phone-container').css('padding-top' , '80px');
         $samsung.animate({ 'width': '100%' , 'height' : '98vh'}, 1000 )
         .animate({ 'width': '-=2'}, 150);
@@ -330,14 +493,16 @@ if ( this.style.color !== "springgreen" && this.style.color !== "green" && this.
         this.style.color = "#00ffff";
         $samsung.animate({ 'width': '450'}, { queue: false, duration: 1000 })
         .animate({ 'height': '92vh'}, 1000);
+        $('.phone-container').css('padding-top' , '0px');
         $phoneIcon.replaceWith($tabletIcon);
         $imageApp.css('width' , '55px');
         $imageApp.css('height' , '45px');
-        $('.phone-app-gallery figcaption').css('font-size' , '0.95rem');
+        $('.phone-app-gallery figcaption').css('font-size' , '0.90rem');
         $('.box-logiciels-bureautique img').css('width' , '40%');
         $('#btn7').css('width' , '100%');
         $('.tap-here2').hide();
         $('.slide__text').css('width' , '60%');
+        $('.phone-section').css('height' , '70vh' );
 
 
 } else{
@@ -376,7 +541,7 @@ $(window).scroll(function(){
         });
 
         $('.kid-running').css({
-                'transform' : 'translate('+wScroll /4.2+'% , 0px)'
+                'transform' : 'translate('+wScroll /4.1+'% , 0px)'
         });
 
         $('.wolf2').css({
