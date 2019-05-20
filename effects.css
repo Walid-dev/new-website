@@ -152,7 +152,7 @@
 }
 
 /** Icone phone hover **/
-
+/**
 figure:hover .figure-caption {
     -webkit-animation: blur-out-expand 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: blur-out-expand 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -179,7 +179,7 @@ figure:hover .figure-caption {
     -webkit-filter: blur(12px) opacity(0%);
             filter: blur(12px) opacity(0%);
 }
-}
+} **/
 
 
 /** Image icon app effect **/
@@ -238,4 +238,71 @@ figure:hover {
 
 .services-container:hover .fill-link:before{
     width: 100% !important;
+}
+
+
+/** Glowing text click me **/
+
+
+.glowing-text{
+    font-size: 2rem;
+    top: 50%;
+    left: 50%;
+    padding: 0;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    color: #111;
+}
+
+.glowing-text span{
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    animation: glowing-text 2s linear infinite;
+    -webkit-animation: glowing-text 2s linear infinite;
+}
+
+.glowing-text span:nth-child(1){
+    animation-delay: .25s ;
+}
+
+.glowing-text span:nth-child(2){
+    animation-delay: .5S;
+}
+
+.glowing-text span:nth-child(3){
+    animation-delay: .75s;
+}
+
+.glowing-text span:nth-child(4){
+    animation-delay:1s ;
+}
+
+.glowing-text span:nth-child(5){
+    animation-delay: 1.25s;
+}
+
+.glowing-text span:nth-child(6){
+    animation-delay:1.5s ;
+}
+
+@keyframes glowing-text{
+    0%, 100%{
+        color: #fff;
+        filter: blur(2px)    ;
+        -webkit-filter: blur(2px)    ;
+        text-shadow: 0 0 10px aqua,
+                    0 0 20px aqua,
+                    0 0 40px aqua;
+}
+    0%, 95%{
+        color: #111;
+        filter: blur(0px)    ;
+        -webkit-filter: blur(0px)    ;
+        text-shadow: 0 0 10px none;
+}
 }

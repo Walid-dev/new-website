@@ -502,7 +502,6 @@ if ( this.style.color !== "springgreen" && this.style.color !== "green" && this.
         $('#btn7').css('width' , '100%');
         $('.tap-here2').hide();
         $('.slide__text').css('width' , '60%');
-        $('.phone-section').css('height' , '70vh' );
 
 
 } else{

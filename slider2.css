@@ -10,7 +10,7 @@ height: 100%;
 width: 100%;
 margin:auto;
 user-select: none;
-background-image: url("images/screen-icons/app-coding.gif");
+background: #000;
 background-repeat: no-repeat;
 background-size: cover;
 z-index: 2;
