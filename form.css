@@ -1,26 +1,31 @@
 /** CSS Formulaire de Contact **/
 
-#form-container{
-    padding: 70px 30px;
-    color: white;
-    z-index: 2;
+#form-container {
+  padding: 70px 30px;
+  color: white;
+  z-index: 2;
 }
 
-#btn-form{
-    border-radius: 2px;
-    padding: 8px 14px;
-    font-size: 16px;
-    background: #ff03b52b;
-    color: #fff;
+#btn-form {
+  border-radius: 2px;
+  padding: 8px 14px;
+  font-size: 16px;
+  background: #ff03b52b;
+  color: #fff;
 }
 
-.form-control{
-    background: #ff03b52b;
-    color: white;
-    font-size: 14px;
-    border: none;
+.form-control {
+  background: #ff03b52b;
+  color: white;
+  font-size: 14px;
+  border: none;
 }
 
-.form-control:focus{
-    
+.form-control:focus {
+}
+
+@media (max-width: 991px) {
+  textarea.form-control {
+    height: 110px;
+  }
 }
