@@ -128,10 +128,7 @@ $centralButton.click(function() {
       $("#bb").fadeTo(600, 0.2);
       $rightButton.fadeTo(300, 0.2);
       $("#bb").replaceWith(
-        $(
-          '<span id="bb" class="app-led-box"><i class="fas fa-home ml-3"></span>',
-          400
-        )
+        $('<span id="bb" class="app-led-box"><i class="fas fa-home ml-3"></span>', 400)
       );
       $("#bb").fadeOut(400);
       $(".phone-network-container").css("background", "#101010");
@@ -310,9 +307,7 @@ $(document).ready(function() {
 
     $leftButton.css("color", "#00ffff");
     $(".app-led-box").replaceWith(
-      $(
-        '<span id="bb" class="app-led-box"><i class="app-icon  ml-3"></i></span>'
-      )
+      $('<span id="bb" class="app-led-box"><i class="app-icon  ml-3"></i></span>')
     );
     $(".phone-menu-buttons").css("background", "#111010");
     $(".phone-network-container").css("background", "#111010");
@@ -641,4 +636,21 @@ $(function() {
   bis();
 });
 
-// Footer effect
+// Video play video onclick
+
+var vid = document.getElementById("earth-video");
+
+document.getElementById("btn-icon2").onclick = function() {
+  function playVid() {
+    vid.play();
+  }
+
+  document.getElementById("touch-left-button").onclick = function() {
+    function pauseVid() {
+      vid.pause();
+    }
+    pauseVid();
+  };
+
+  playVid();
+};

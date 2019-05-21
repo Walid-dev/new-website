@@ -274,7 +274,6 @@ p {
 .phone-network-container {
   position: absolute;
   top: 0;
-  height: 42px;
   background: rgb(13, 13, 13, 0.2);
   padding-top: 6px;
   opacity: 1;
@@ -688,8 +687,8 @@ header .overlay {
 
 @media (pointer: coarse) and (hover: none) {
   header {
-    background: url("images/backgrounds/img-bkg-jumb1.jpg") black no-repeat
-      center center scroll;
+    background: url("images/backgrounds/img-bkg-jumb1.jpg") black no-repeat center center
+      scroll;
   }
   header video {
     display: none;
@@ -1458,3 +1457,5 @@ header .overlay {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+
+/** Music App **/
