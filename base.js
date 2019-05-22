@@ -54,23 +54,6 @@ $leftButton.prop("disabled", true);
 
 // Animation tap-here
 
-$(function() {
-  function bis() {
-    $(".tap-here")
-      .animate({ top: "-=10" }, "slow")
-      .animate({ top: "+=10" }, "slow", bis);
-
-    $(".tap-here2")
-      .animate({ top: "-=10" }, "slow")
-      .animate({ top: "+=10" }, "slow", bis);
-
-    $(".tap-here3")
-      .animate({ top: "-=10" }, "slow")
-      .animate({ top: "+=10" }, "slow", bis);
-  }
-  bis();
-});
-
 // Bouton principal du Pad
 
 $centralButton.click(function() {
@@ -78,8 +61,8 @@ $centralButton.click(function() {
     if (this.style.color !== "aqua") {
       this.style.color = "aqua";
       $samsung
-        .animate({ width: "450" }, { queue: false, duration: 600 })
-        .animate({ height: "92vh" }, 600);
+        .animate({ width: "450" }, { queue: false, duration: 800 })
+        .animate({ height: "92vh" }, 800);
       $(".tap-here").hide();
       $(".tap-here2").fadeIn(1000);
       $centralButton.delay(600).css("text-shadow", "#00ffffb3 0px 0px 30px");
@@ -94,18 +77,21 @@ $centralButton.click(function() {
       $wifiIcon.css("color", "#00ffff");
       $batteryIcon.fadeTo(600, 1);
       $wifiIcon.fadeTo(400, 1);
-      $samsung.css("box-shadow", "#ffffffb3 0px 0px 25px, blue 0px 0px 20px");
+      $samsung.css(
+        "box-shadow",
+        "rgba(255, 255, 255, 0.7) 0px 0px 65px, blue 0px 0px 50px"
+      );
       $(".phone-network-container").css("background", "#111010", 500);
       $(".phone-menu-buttons").css("background", "#111010", 500);
       $("#bb").fadeTo(600, 1);
       $rightButton.fadeTo(400, 1);
       $(".ufo").fadeIn(6000);
-      $(".astronaut").fadeOut(1100);
       $imageApp.css("width", "55px");
       $imageApp.css("height", "45px");
       $(".phone-app-gallery figcaption").css("font-size", "0.90rem");
       $(".box-logiciels-bureautique img").css("width", "40%");
       $("#btn7").css("width", "100%");
+      $(".tap-here").hide();
     } else {
       this.style.color = "blue";
       $samsung
@@ -113,7 +99,6 @@ $centralButton.click(function() {
         .animate({ height: "600" }, 600);
       $(".phone-menu-buttons button").css("text-shadow", "none");
       //$('.phone-menu-buttons i').removeClass('led-clicked');
-      $(".tap-here2").hide();
       $imageFondScreen.fadeOut(400);
       $screenContent.fadeOut(400);
       $newChildHidden.fadeOut(400);
@@ -135,13 +120,12 @@ $centralButton.click(function() {
       $(".phone-menu-buttons").css("background", "#101010");
       $(".ufo").hide();
       $(".tap-here").fadeIn(2500);
-      $(".astronaut").fadeIn(1100);
+      $(".tap-here2").hide();
       $imageApp.css("width", "55px");
       $imageApp.css("height", "45px");
       $(".phone-app-gallery figcaption").css("font-size", "0.90rem");
       $(".box-logiciels-bureautique img").css("width", "40%");
       $("#btn7").css("width", "100%");
-      this.style.color = "#00ffff";
       $(".phone-section").css("min-height", "70vh");
     }
   });
@@ -481,23 +465,22 @@ $rightButton.click(function() {
       this.style.color !== "chartreuse"
     ) {
       this.style.color = "springgreen";
-      $samsung.animate({ width: "85%" }, 1000);
+      $samsung.animate({ width: "85%", height: "96vh" }, 1000);
       $(".fa-tablet-alt").replaceWith($desktopIcon);
       $imageApp.css("width", "60px");
       $imageApp.css("height", "55px");
       $(".phone-app-gallery figcaption").css("font-size", "1.025rem");
       $(".box-logiciels-bureautique img").css("width", "45%");
       $("#btn7").css("width", "auto");
+      $(".tap-here2").css("left", "82%");
     } else if (this.style.color == "springgreen") {
       this.style.color = "chartreuse";
-      $(".phone-container").css("padding-top", "80px");
-      $samsung
-        .animate({ width: "100%", height: "98vh" }, 1000)
-        .animate({ width: "-=2" }, 150);
+      $samsung.animate({ width: "100%" }, 1000).animate({ width: "-=2" }, 150);
       $($desktopIcon).replaceWith($phoneIcon);
       $(".phone-app-gallery figcaption").css("font-size", "1.075rem");
       $(".box-logiciels-bureautique img").css("width", "52%");
       $("#btn7").css("width", "auto");
+      $(".tap-here2").css("left", "82%");
     } else if (this.style.color == "chartreuse") {
       this.style.color = "#00ffff";
       $samsung
@@ -528,7 +511,6 @@ $rightButton.click(function() {
 
 $(window).scroll(function() {
   let wScroll = $(this).scrollTop();
-  console.log(wScroll);
 
   $(".logo").css({
     transform: "translate(0px , -" + wScroll / 40 + "%)"

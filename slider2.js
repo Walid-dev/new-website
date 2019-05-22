@@ -1,3 +1,5 @@
+var stopCreatesBullets = true;
+
 document.getElementById("btn-icon1").onclick = function() {
   var $slider = $(".slider"),
     $slideBGs = $(".slide__bg"),
@@ -7,19 +9,27 @@ document.getElementById("btn-icon1").onclick = function() {
     animating = false,
     animTime = 600,
     autoSlideTimeout,
-    autoSlideDelay = 6000,
+    autoSlideDelay = 4000,
     $pagination = $(".slider-pagi");
 
-  function createBullets() {
-    for (var i = 0; i < numOfSlides + 1; i++) {
-      var $li = $("<li class='slider-pagi__elem'></li>");
-      $li.addClass("slider-pagi__elem-" + i).data("page", i);
-      if (!i) $li.addClass("active");
-      $pagination.append($li);
+  function stopBulletsPropagation() {
+    if (stopCreatesBullets) {
+      function createBullets() {
+        for (var i = 0; i < numOfSlides + 1; i++) {
+          var $li = $("<li class='slider-pagi__elem'></li>");
+          $li.addClass("slider-pagi__elem-" + i).data("page", i);
+          if (!i) $li.addClass("active");
+          $pagination.append($li);
+          stopCreatesBullets = false;
+        }
+      }
+    } else {
+      return;
     }
+    createBullets();
   }
 
-  createBullets();
+  stopBulletsPropagation();
 
   function manageControls() {
     $(".slider-control").removeClass("inactive");

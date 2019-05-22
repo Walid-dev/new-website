@@ -289,24 +289,29 @@ article strong {
 
 .tap-here {
   position: absolute;
-  top: -15%;
-  font-size: 1.1em;
-  transform: rotate(180deg) !important;
-  -webkit-transform: rotate(180deg) !important;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: rotate(180deg) !important;
-  -ms-transform: rotate(180deg) !important;
-  -o-transform: rotate(180deg) !important;
+  top: -22%;
+  left: 50%;
+  z-index: -2;
+  transform: translateX(-51px);
+  -webkit-transform: translateX(-51px);
+  -moz-transform: translateX(-51px);
+  -ms-transform: translateX(-51px);
+  -o-transform: translateX(-51px);
+}
+
+.tap-here img {
+  width: 100px;
 }
 
 .tap-here2 {
-  height: 20px;
   position: absolute;
-  top: -40%;
-  left: 82%;
-  font-size: 1.2em;
-  transform: rotate(180deg) !important;
+  z-index: -2;
+  left: 80%;
+  top: 20px;
+}
+
+.tap-here2 img {
+  width: 45px;
 }
 
 .bird-box img {
