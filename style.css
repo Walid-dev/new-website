@@ -168,7 +168,7 @@ hr {
   position: relative;
   width: 330px;
   height: 600px;
-  margin-top: 300px;
+  margin-top: 330px;
   margin-bottom: 45px;
   background: #0c0c0c;
   border-radius: 30px;
@@ -255,7 +255,6 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top left;
-  background-attachment: fixed;
   position: absolute;
   top: 0;
   left: 0;
