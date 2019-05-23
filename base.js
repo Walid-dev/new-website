@@ -155,7 +155,6 @@ $centralButton.click(function() {
       $(".phone-app-gallery figcaption").css("font-size", "0.90rem");
       $(".box-logiciels-bureautique img").css("width", "40%");
       $("#btn7").css("width", "100%");
-      $(".phone-section").css("min-height", "70vh");
       $(".tap-here3").hide();
       $(".tap-here2").hide();
       $(".thanks-gif")
@@ -602,7 +601,7 @@ $(window).scroll(function() {
   });
 
   $samsung.css({
-    transform: "translate(0px , -" + wScroll / 28 + "%)"
+    transform: "translate(0px , -" + wScroll / 24 + "%)"
   });
 
   function redimensionnement() {
