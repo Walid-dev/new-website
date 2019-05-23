@@ -327,14 +327,30 @@ article strong {
 .tap-here3 {
   position: absolute;
   z-index: -2;
-  left: 15%;
-  top: 20px;
+  left: 14%;
+  top: 14px;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
 }
 
 .tap-here3 img {
   width: 45px;
 }
 
-.bird-box img {
-  max-width: 100%;
+.thanks-gif {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.thanks-gif img {
+  width: 135px;
 }

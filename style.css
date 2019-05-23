@@ -168,13 +168,15 @@ hr {
   position: relative;
   width: 330px;
   height: 600px;
-  margin-top: 120px;
+  margin-top: 300px;
   margin-bottom: 45px;
   background: #0c0c0c;
   border-radius: 30px;
   border: 1px solid #e7e7e5;
   overflow: hidden;
   z-index: 3;
+  cursor: pointer;
+  box-shadow: rgb(172, 180, 207) 0px 0px 6px, rgba(35, 35, 255, 0.32) 0px 0px 8px;
   transition: box-shadow 0.8s ease;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
@@ -249,24 +251,20 @@ p {
 /** Image de fond d'écran **/
 
 .screen #image-fond {
+  background-image: url("images/backgrounds/wolf-sky.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-attachment: fixed;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: fill;
-  background-position: top center;
   opacity: 1;
-  border-radius: px;
-  transition: 0.7s;
-  -webkit-transition: 0.7s;
-  -moz-transition: 0.7s;
-  -ms-transition: 0.7s;
-  -o-transition: 0.7s;
-  -webkit-border-radius: ;
-  -moz-border-radius: ;
-  -ms-border-radius: ;
-  -o-border-radius: ;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
 }
 
 /** Barre Haute notifications Ecran **/
@@ -345,6 +343,11 @@ p {
   z-index: 1;
   position: absolute;
   top: 25%;
+  transform: translateY(-25%);
+  -webkit-transform: translateY(-25%);
+  -moz-transform: translateY(-25%);
+  -ms-transform: translateY(-25%);
+  -o-transform: translateY(-25%);
 }
 
 .phone-hour {
@@ -452,11 +455,13 @@ p {
 
 .phone-app-container {
   position: absolute;
-  top: 47%;
-  padding-right: 0px;
-  padding-left: 0px;
+  top: 70%;
   opacity: 1;
-  padding: 20px 0;
+  transform: translateY(-70%);
+  -webkit-transform: translateY(-70%);
+  -moz-transform: translateY(-70%);
+  -ms-transform: translateY(-70%);
+  -o-transform: translateY(-70%);
 }
 
 .row-app {
@@ -489,7 +494,6 @@ p {
 #btn7 {
   background: transparent;
   border: none;
-  cursor: pointer;
   margin-left: 50%;
   transform: translate(-50%);
   width: 100%;
@@ -799,6 +803,7 @@ header .overlay {
   background-size: cover;
   height: 100%;
   margin-bottom: 0px;
+  overflow-y: scroll;
 }
 
 .sliding-footer {
@@ -1371,100 +1376,3 @@ header .overlay {
 .services-container .box:nth-child(3) {
   background: linear-gradient(315deg, #fff, blue);
 }
-
-/** Checkbox button phone pad**/
-
-.checkbox-box {
-  flex-wrap: wrap;
-  border: 3px solid #000;
-  border-radius: 10px;
-  box-sizing: border-box;
-  overflow: hidden;
-  width: 100%;
-  background: linear-gradient(0deg, #000000, #0c0c0c);
-  background: black;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-}
-
-.checkbox-box:before {
-}
-
-.checkbox-box li {
-  position: relative;
-  list-style: none;
-  text-align: center;
-  margin: 15px;
-}
-
-.checkbox-box li label {
-  position: relative;
-}
-
-.checkbox-box li label input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.checkbox-box li label .icon-box {
-  width: 50px;
-  height: 50px;
-  background: #101010;
-  display: flex;
-  align-items: center;
-  border: 3px solid #000;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
-}
-
-.checkbox-box li label .icon-box .fa,
-.checkbox-box li label .icon-box .fas,
-.checkbox-box li label .icon-box .far {
-  font-size: 22px;
-  color: #222;
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
-}
-
-.checkbox-box li label input[type="checkbox"]:checked ~ .icon-box {
-  background: #000;
-  border: 3px solid aqua;
-  box-shadow: 0 0 10px rgba(33, 156, 243, 0.5), 0 0 20px rgba(33, 156, 243, 0.5),
-    0 0 30px rgba(33, 156, 243, 0.5), inset 0 0 10px rgba(33, 156, 243, 1);
-}
-
-.checkbox-box li label input[type="checkbox"]:checked ~ .icon-box .fa,
-.checkbox-box li label input[type="checkbox"]:checked ~ .icon-box .fas,
-.checkbox-box li label input[type="checkbox"]:checked ~ .icon-box .far {
-  color: aqua;
-  text-shadow: 0 0 2px rgba(33, 156, 243, 1), 0 0 4px rgba(33, 156, 243, 1);
-}
-
-.led-clicked {
-  background: #000;
-  border: 2px solid aqua;
-  padding: 12px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(33, 156, 243, 0.5), 0 0 20px rgba(33, 156, 243, 0.5),
-    0 0 30px rgba(33, 156, 243, 0.5), inset 0 0 10px rgba(33, 156, 243, 1);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-}
-
-/** Music App **/

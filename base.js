@@ -28,6 +28,10 @@ $tabletIcon = $('<i class="fas fa-tablet-alt"></i>');
 $screenContent = $(".screen-content");
 $appLedBox = $(".app-led-box");
 $appIcon = $(".app-icon");
+$(".ufo").hide();
+$(".tap-here2").hide();
+$(".tap-here3").hide();
+$(".thanks-gif").hide();
 
 // Contenu masqué écran off
 
@@ -45,9 +49,6 @@ $imageFondScreen.hide();
 $appLedBox.hide();
 $screenBasicChild.hide();
 $screenContent.hide();
-$(".ufo").hide();
-$(".tap-here2").hide();
-$(".tap-here3").hide();
 
 // Bouton désactivés Ecran Off
 
@@ -55,27 +56,38 @@ $leftButton.prop("disabled", true);
 
 // Animation tap-here
 
+$("#loader-arrow").hide();
+$("#loader-arrow")
+  .fadeIn(8000)
+  .delay(200)
+  .fadeOut(3000);
+
 // Bouton principal du Pad
 
 $centralButton.click(function() {
   $centralButton.each(function(i) {
     if (this.style.color !== "aqua") {
       this.style.color = "aqua";
+      $("#central-menu-led").css("font-weight", "bold");
       $samsung
         .animate({ width: "450" }, { queue: false, duration: 800 })
         .animate({ height: "92vh" }, 800);
       $(".tap-here").hide();
-      $(".tap-here2")
-        .show(500)
-        .delay(10000)
-        .fadeOut(500);
       $centralButton.delay(600).css("text-shadow", "#00ffffb3 0px 0px 30px");
       $rightButton.css("text-shadow", "#00ffffb3 0px 0px 30px");
       //$('.leds-menu').addClass('led-clicked');
       $samsung.css("border", "2px solid white");
-      $screenContent.delay(600).fadeIn(800);
-      $imageFondScreen.delay(600).fadeIn(500);
-      $screenBasicChild.delay(600).show(1000);
+      $({})
+        .queue(function(next) {
+          $screenContent.fadeIn(0, next);
+        })
+        .queue(function(next) {
+          $imageFondScreen.fadeIn(400, next);
+        })
+
+        .queue(function(next) {
+          $screenBasicChild.fadeIn(600, next);
+        });
       $leftButton.prop("disabled", false);
       $powerIcon.fadeTo(400, 1);
       $wifiIcon.css("color", "#00ffff");
@@ -96,17 +108,32 @@ $centralButton.click(function() {
       $(".box-logiciels-bureautique img").css("width", "40%");
       $("#btn7").css("width", "100%");
       $(".tap-here").hide();
+      $(".thanks-gif").hide();
     } else {
       this.style.color = "blue";
       $samsung
         .animate({ width: "330" }, { queue: false, duration: 600 })
         .animate({ height: "600" }, 600);
       $(".phone-menu-buttons button").css("text-shadow", "none");
-      //$('.phone-menu-buttons i').removeClass('led-clicked');
-      $imageFondScreen.fadeOut(400);
-      $screenContent.fadeOut(400);
-      $newChildHidden.fadeOut(400);
-      $screenBasicChild.fadeOut(400);
+      $({})
+        .queue(function(next) {
+          $imageFondScreen.fadeOut(0, next);
+        })
+        .queue(function(next) {
+          $screenContent.fadeOut(200, next);
+        })
+
+        .queue(function(next) {
+          $newChildHidden.fadeOut(400, next);
+        })
+
+        .queue(function(next) {
+          $screenBasicChild.fadeOut(600, next);
+        });
+      // $imageFondScreen.fadeOut(400);
+      // $screenContent.fadeOut(400);
+      // $newChildHidden.fadeOut(400);
+      // $screenBasicChild.fadeOut(400);
       $samsung.css("border", "1px solid #E1E1DF");
       $leftButton.prop("disabled", true);
       $powerIcon.fadeTo(600, 0.2);
@@ -123,8 +150,6 @@ $centralButton.click(function() {
       $(".phone-network-container").css("background", "#101010");
       $(".phone-menu-buttons").css("background", "#101010");
       $(".ufo").hide();
-      $(".tap-here").fadeIn(2500);
-      $(".tap-here2").hide();
       $imageApp.css("width", "55px");
       $imageApp.css("height", "45px");
       $(".phone-app-gallery figcaption").css("font-size", "0.90rem");
@@ -132,6 +157,11 @@ $centralButton.click(function() {
       $("#btn7").css("width", "100%");
       $(".phone-section").css("min-height", "70vh");
       $(".tap-here3").hide();
+      $(".tap-here2").hide();
+      $(".thanks-gif")
+        .show()
+        .delay(6000)
+        .fadeOut(500);
     }
   });
 });
@@ -150,11 +180,11 @@ $(document).ready(function() {
         $imageFondScreen.fadeOut(0, next);
       })
       .queue(function(next) {
-        $screenBasicChild.fadeOut(200, next);
+        $screenBasicChild.fadeOut(100, next);
       })
 
       .queue(function(next) {
-        $("#screen-content-child1").fadeIn(400, next);
+        $("#screen-content-child1").fadeIn(150, next);
       });
 
     $leftButton.css("color", "#00ffff");
@@ -173,11 +203,11 @@ $(document).ready(function() {
         $imageFondScreen.fadeOut(0, next);
       })
       .queue(function(next) {
-        $screenBasicChild.fadeOut(200, next);
+        $screenBasicChild.fadeOut(100, next);
       })
 
       .queue(function(next) {
-        $("#screen-content-child2").fadeIn(400, next);
+        $("#screen-content-child2").fadeIn(150, next);
       });
 
     $leftButton.css("color", "#00ffff");
@@ -195,11 +225,11 @@ $(document).ready(function() {
         $imageFondScreen.fadeOut(0, next);
       })
       .queue(function(next) {
-        $screenBasicChild.fadeOut(200, next);
+        $screenBasicChild.fadeOut(100, next);
       })
 
       .queue(function(next) {
-        $("#screen-content-child3").fadeIn(400, next);
+        $("#screen-content-child3").fadeIn(150, next);
       });
 
     $leftButton.css("color", "#00ffff");
@@ -218,11 +248,11 @@ $(document).ready(function() {
         $imageFondScreen.fadeOut(0, next);
       })
       .queue(function(next) {
-        $screenBasicChild.fadeOut(200, next);
+        $screenBasicChild.fadeOut(100, next);
       })
 
       .queue(function(next) {
-        $("#screen-content-child4").fadeIn(400, next);
+        $("#screen-content-child4").fadeIn(150, next);
       });
 
     $leftButton.css("color", "#00ffff");
@@ -241,11 +271,11 @@ $(document).ready(function() {
         $imageFondScreen.fadeOut(0, next);
       })
       .queue(function(next) {
-        $screenBasicChild.fadeOut(200, next);
+        $screenBasicChild.fadeOut(100, next);
       })
 
       .queue(function(next) {
-        $("#screen-content-child5").fadeIn(400, next);
+        $("#screen-content-child5").fadeIn(150, next);
       });
 
     $leftButton.css("color", "#00ffff");
@@ -264,11 +294,11 @@ $(document).ready(function() {
         $imageFondScreen.fadeOut(0, next);
       })
       .queue(function(next) {
-        $screenBasicChild.fadeOut(200, next);
+        $screenBasicChild.fadeOut(100, next);
       })
 
       .queue(function(next) {
-        $("#screen-content-child6").fadeIn(400, next);
+        $("#screen-content-child6").fadeIn(150, next);
       });
 
     $leftButton.css("color", "#00ffff");
@@ -291,7 +321,7 @@ $(document).ready(function() {
       })
 
       .queue(function(next) {
-        $("#screen-content-child7").fadeIn(400, next);
+        $("#screen-content-child7").fadeIn(150, next);
       });
 
     $leftButton.css("color", "#00ffff");
@@ -308,11 +338,11 @@ $(document).ready(function() {
         $imageFondScreen.fadeOut(0, next);
       })
       .queue(function(next) {
-        $screenBasicChild.fadeOut(200, next);
+        $screenBasicChild.fadeOut(100, next);
       })
 
       .queue(function(next) {
-        $("#screen-content-child8").fadeIn(400, next);
+        $("#screen-content-child8").fadeIn(150, next);
       });
 
     $leftButton.css("color", "#00ffff");
@@ -427,6 +457,18 @@ $(document).ready(function() {
 $leftButton.click(function(e) {
   e.preventDefault();
   $leftButton.css("text-shadow", "none");
+  $({})
+    .queue(function(next) {
+      $newChildHidden.fadeOut(0, next);
+    })
+    .queue(function(next) {
+      $imageFondScreen.fadeIn(150, next);
+    })
+
+    .queue(function(next) {
+      $screenBasicChild.fadeIn(200, next);
+    });
+
   $screenBasicChild.fadeIn(300);
   $imageFondScreen.fadeIn(300);
   $newChildHidden.fadeOut(300);
@@ -478,6 +520,10 @@ $rightButton.click(function() {
       $(".phone-app-gallery figcaption").css("font-size", "1.025rem");
       $(".box-logiciels-bureautique img").css("width", "45%");
       $("#btn7").css("width", "auto");
+      $(".tap-here2").css("left", "82%");
+      $(".phone-network-container").css("background", "rgba(8, 8, 8, 0.29)", 500);
+      $(".phone-menu-buttons").css("background", "rgba(8, 8, 8, 0.29)", 500);
+      $("#image-fond").css("filter", "none");
     } else if (this.style.color == "springgreen") {
       this.style.color = "chartreuse";
       $samsung.animate({ width: "100%" }, 1000).animate({ width: "-=2" }, 150);
@@ -485,6 +531,7 @@ $rightButton.click(function() {
       $(".phone-app-gallery figcaption").css("font-size", "1.075rem");
       $(".box-logiciels-bureautique img").css("width", "52%");
       $("#btn7").css("width", "auto");
+      $(".slide__text").css("width", "40%");
     } else if (this.style.color == "chartreuse") {
       this.style.color = "#00ffff";
       $samsung
@@ -497,7 +544,10 @@ $rightButton.click(function() {
       $(".phone-app-gallery figcaption").css("font-size", "0.90rem");
       $(".box-logiciels-bureautique img").css("width", "40%");
       $("#btn7").css("width", "100%");
-      $(".slide__text").css("width", "60%");
+      $(".slide__text").css("width", "50%");
+      $(".phone-network-container").css("background", "#101010", 500);
+      $(".phone-menu-buttons").css("background", "#101010", 500);
+      $("#image-fond").css("filter", "blur(10px)");
     } else {
       this.style.color = "";
     }
@@ -662,12 +712,26 @@ let checkClicked = true;
 
 $(".icon-buttons").click(function() {
   if (checkClicked) {
-    $(".tap-here3")
-      .show(500)
-      .delay(10000)
-      .fadeOut(500);
+    $(".tap-here2")
+      .fadeIn(2000)
+      .delay(3000)
+      .fadeOut(2000);
+    $("#icon-arrow-tap-here").hide();
     return (checkClicked = false);
   } else {
-    console.log("no");
+  }
+});
+
+let displayTapHere3 = true;
+
+$rightButton.click(function() {
+  if (displayTapHere3) {
+    $(".tap-here3")
+      .delay(3000)
+      .fadeIn(3000)
+      .delay(4000)
+      .fadeOut(2000);
+    return (displayTapHere3 = false);
+  } else {
   }
 });
