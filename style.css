@@ -1086,16 +1086,29 @@ header .overlay {
   }
 
   .wolf2 {
-    left: -165%;
-  }
-
-  .uranus {
-    top: 5%;
-    left: 5%;
+    left: -172%;
   }
 
   .ufo {
     top: -45%;
+  }
+
+  .astronaut {
+    top: 12%;
+  }
+
+  .kid-running {
+    left: -80%;
+  }
+
+  .logo {
+    width: 100%;
+    height: 100px;
+    background-image: url("images/backgrounds/titre-walid-small.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 55%;
+    z-index: 3;
   }
 
   #btn7 {
@@ -1116,10 +1129,6 @@ header .overlay {
 
   #touch-right-button {
     pointer-events: none;
-  }
-
-  .astronaut {
-    top: 20%;
   }
 
   .tap-here2 {

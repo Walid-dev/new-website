@@ -47,6 +47,7 @@ $screenBasicChild.hide();
 $screenContent.hide();
 $(".ufo").hide();
 $(".tap-here2").hide();
+$(".tap-here3").hide();
 
 // Bouton désactivés Ecran Off
 
@@ -64,7 +65,10 @@ $centralButton.click(function() {
         .animate({ width: "450" }, { queue: false, duration: 800 })
         .animate({ height: "92vh" }, 800);
       $(".tap-here").hide();
-      $(".tap-here2").fadeIn(1000);
+      $(".tap-here2")
+        .show(500)
+        .delay(10000)
+        .fadeOut(500);
       $centralButton.delay(600).css("text-shadow", "#00ffffb3 0px 0px 30px");
       $rightButton.css("text-shadow", "#00ffffb3 0px 0px 30px");
       //$('.leds-menu').addClass('led-clicked');
@@ -127,6 +131,7 @@ $centralButton.click(function() {
       $(".box-logiciels-bureautique img").css("width", "40%");
       $("#btn7").css("width", "100%");
       $(".phone-section").css("min-height", "70vh");
+      $(".tap-here3").hide();
     }
   });
 });
@@ -431,6 +436,7 @@ $leftButton.click(function(e) {
   $(".app-led-box").replaceWith(
     $('<span id="bb" class="app-led-box"><i class="fas fa-home ml-3"></span>')
   );
+  $(".tap-here3").hide();
 });
 
 // Fonction Affichage Heure
@@ -472,7 +478,6 @@ $rightButton.click(function() {
       $(".phone-app-gallery figcaption").css("font-size", "1.025rem");
       $(".box-logiciels-bureautique img").css("width", "45%");
       $("#btn7").css("width", "auto");
-      $(".tap-here2").css("left", "82%");
     } else if (this.style.color == "springgreen") {
       this.style.color = "chartreuse";
       $samsung.animate({ width: "100%" }, 1000).animate({ width: "-=2" }, 150);
@@ -480,7 +485,6 @@ $rightButton.click(function() {
       $(".phone-app-gallery figcaption").css("font-size", "1.075rem");
       $(".box-logiciels-bureautique img").css("width", "52%");
       $("#btn7").css("width", "auto");
-      $(".tap-here2").css("left", "82%");
     } else if (this.style.color == "chartreuse") {
       this.style.color = "#00ffff";
       $samsung
@@ -493,7 +497,6 @@ $rightButton.click(function() {
       $(".phone-app-gallery figcaption").css("font-size", "0.90rem");
       $(".box-logiciels-bureautique img").css("width", "40%");
       $("#btn7").css("width", "100%");
-      $(".tap-here2").hide();
       $(".slide__text").css("width", "60%");
     } else {
       this.style.color = "";
@@ -548,13 +551,23 @@ $(window).scroll(function() {
     transform: "translate(0px , " + wScroll / 1.165 + "%)"
   });
 
-  $(".tap-here3").css({
-    transform: "translate(0px , " + wScroll / 1.1 + "%)"
-  });
-
   $samsung.css({
     transform: "translate(0px , -" + wScroll / 28 + "%)"
   });
+
+  function redimensionnement() {
+    var result = document.getElementById("result");
+    if ("matchMedia" in window) {
+      // Détection
+      if (window.matchMedia("(max-width:600px)").matches) {
+        $(".wolf2").css("display", "none");
+        $(".astronaut").css({});
+        wScroll = null;
+      } else {
+        console.log("laptop");
+      }
+    }
+  }
 });
 
 // Hover Icones Applications UFO Moving
@@ -636,3 +649,25 @@ document.getElementById("btn-icon2").onclick = function() {
 
   playVid();
 };
+
+// Displays Tape here 3
+
+function navigateRight() {
+  if (animating) return;
+  if (curSlide < numOfSlides) curSlide++;
+  changeSlides();
+}
+
+let checkClicked = true;
+
+$(".icon-buttons").click(function() {
+  if (checkClicked) {
+    $(".tap-here3")
+      .show(500)
+      .delay(10000)
+      .fadeOut(500);
+    return (checkClicked = false);
+  } else {
+    console.log("no");
+  }
+});

@@ -60,19 +60,11 @@ svg {
 }
 .slider-control.left {
   left: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.5) 0%,
-    transparent 100%
-  );
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
 }
 .slider-control.right {
   right: 0;
-  background: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(0, 0, 0, 0.5) 100%
-  );
+  background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 .slider-pagi {
@@ -346,8 +338,9 @@ svg {
 }
 @media (max-width: 991px) {
   .slide__text-heading {
-    line-height: 10rem;
-    font-size: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    padding-top: 12px;
   }
 }
 .slide__text-desc {
@@ -356,7 +349,6 @@ svg {
 }
 @media (max-width: 991px) {
   .slide__text-desc {
-    display: none;
   }
 }
 .slide__text-link {
