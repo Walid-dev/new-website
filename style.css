@@ -109,7 +109,7 @@ hr {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 200vh;
+  height: 180vh;
   box-shadow: 0 0 5px rgba(33, 156, 243, 0.5), 0 0 10px rgba(33, 156, 243, 0.5),
     0 0 20px rgba(33, 156, 243, 0.5), 0 0 40px rgba(33, 156, 243, 0.5);
   /** background: linear-gradient(
@@ -267,7 +267,7 @@ p {
 /** Image de fond d'écran **/
 
 .screen #image-fond {
-  background-image: url("images/backgrounds/wolf-sky.jpg");
+  background-image: url("");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top left;
@@ -1166,6 +1166,7 @@ header .overlay {
 
 #services-section {
   min-height: 99vh;
+  margin-bottom: 270px;
   z-index: 4;
   transition: 0.7s;
   box-shadow: 0 0 5px rgba(33, 156, 243, 0.5), 0 0 10px rgba(33, 156, 243, 0.5),
@@ -1388,4 +1389,98 @@ header .overlay {
 
 .services-container .box:nth-child(3) {
   background: linear-gradient(315deg, #fff, blue);
+}
+
+/** Section languages et frameworks **/
+
+#stack {
+  min-height: 70vh;
+  z-index: 4;
+  transition: 0.7s;
+  box-shadow: 0 0 5px rgba(33, 156, 243, 0.5), 0 0 10px rgba(33, 156, 243, 0.5),
+    0 0 20px rgba(33, 156, 243, 0.5), 0 0 40px rgba(33, 156, 243, 0.5);
+  background: linear-gradient(
+    to bottom,
+    #020a18,
+    #020b1a,
+    #030c1b,
+    #030c1d,
+    #030d1f,
+    #020d24,
+    #010e28,
+    #000e2d,
+    #000d35,
+    #000b3d,
+    #000844,
+    #01044a
+  );
+  background: -webkit-linear-gradient(
+    to bottom,
+    #020a18,
+    #020b1a,
+    #030c1b,
+    #030c1d,
+    #030d1f,
+    #020d24,
+    #010e28,
+    #000e2d,
+    #000d35,
+    #000b3d,
+    #000844,
+    #01044a
+  );
+  background: -moz-linear-gradient(
+    to bottom,
+    #020a18,
+    #020b1a,
+    #030c1b,
+    #030c1d,
+    #030d1f,
+    #020d24,
+    #010e28,
+    #000e2d,
+    #000d35,
+    #000b3d,
+    #000844,
+    #01044a
+  );
+  background: -ms-linear-gradient(
+    to bottom,
+    #020a18,
+    #020b1a,
+    #030c1b,
+    #030c1d,
+    #030d1f,
+    #020d24,
+    #010e28,
+    #000e2d,
+    #000d35,
+    #000b3d,
+    #000844,
+    #01044a
+  );
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+}
+
+/** Section Stack **/
+
+.stack-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 50vh;
+}
+
+.stack-images {
+  width: 70px;
+  height: 70px;
+}
+
+.stack-images-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

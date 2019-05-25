@@ -76,7 +76,7 @@ $centralButton.click(function() {
       $centralButton.delay(600).css("text-shadow", "#00ffffb3 0px 0px 30px");
       $rightButton.css("text-shadow", "#00ffffb3 0px 0px 30px");
       //$('.leds-menu').addClass('led-clicked');
-      $samsung.css("border", "2px solid white");
+      $samsung.css("border", "2px solid white").css("background", "transparent");
       $({})
         .queue(function(next) {
           $screenContent.fadeIn(0, next);
@@ -97,8 +97,8 @@ $centralButton.click(function() {
         "box-shadow",
         "rgba(255, 255, 255, 0.7) 0px 0px 65px, blue 0px 0px 50px"
       );
-      $(".phone-network-container").css("background", "#111010", 500);
-      $(".phone-menu-buttons").css("background", "#111010", 500);
+      $(".phone-network-container").css("background", "#000", 500);
+      $(".phone-menu-buttons").css("background", "#000", 500);
       $("#bb").fadeTo(600, 1);
       $rightButton.fadeTo(400, 1);
       $(".ufo").fadeIn(6000);
@@ -134,7 +134,7 @@ $centralButton.click(function() {
       // $screenContent.fadeOut(400);
       // $newChildHidden.fadeOut(400);
       // $screenBasicChild.fadeOut(400);
-      $samsung.css("border", "1px solid #E1E1DF");
+      $samsung.css("border", "1px solid #E1E1DF").css("background", "#0c0c0c");
       $leftButton.prop("disabled", true);
       $powerIcon.fadeTo(600, 0.2);
       $batteryIcon.fadeTo(600, 0.2);
@@ -187,8 +187,8 @@ $(document).ready(function() {
       });
 
     $leftButton.css("color", "#00ffff");
-    $(".phone-menu-buttons").css("background", "#111010");
-    $(".phone-network-container").css("background", "#111010");
+    $(".phone-menu-buttons").css("background", "#000");
+    $(".phone-network-container").css("background", "#000");
     $(".app-led-box").replaceWith(
       $(
         '<span id="bb" class="app-led-box"><i class="app-icon far fa-images ml-3"></i></span>'
@@ -232,8 +232,8 @@ $(document).ready(function() {
       });
 
     $leftButton.css("color", "#00ffff");
-    $(".phone-menu-buttons").css("background", "#111010");
-    $(".phone-network-container").css("background", "#111010");
+    $(".phone-menu-buttons").css("background", "#000");
+    $(".phone-network-container").css("background", "#000");
     $(".app-led-box").replaceWith(
       $(
         '<span id="bb" class="app-led-box"><i class="app-icon far fa-user-circle ml-3"></i></span>'
@@ -327,8 +327,8 @@ $(document).ready(function() {
     $(".app-led-box").replaceWith(
       $('<span id="bb" class="app-led-box"><i class="app-icon  ml-3"></i></span>')
     );
-    $(".phone-menu-buttons").css("background", "#111010");
-    $(".phone-network-container").css("background", "#111010");
+    $(".phone-menu-buttons").css("background", "000");
+    $(".phone-network-container").css("background", "#000");
   });
 
   $("#btn-icon8").click(function() {
@@ -350,8 +350,8 @@ $(document).ready(function() {
         '<span id="bb" class="app-led-box"><i class="app-icon far fa-comments ml-3"></i></span>'
       )
     );
-    $(".phone-menu-buttons").css("background", "#111010");
-    $(".phone-network-container").css("background", "#111010");
+    $(".phone-menu-buttons").css("background", "#000");
+    $(".phone-network-container").css("background", "#000");
   });
 });
 
@@ -472,8 +472,8 @@ $leftButton.click(function(e) {
   $imageFondScreen.fadeIn(300);
   $newChildHidden.fadeOut(300);
   $leftButton.css("color", "unset");
-  $(".phone-network-container").css("background", "rgba(13, 13, 13, 0.2)");
-  $(".phone-menu-buttons").css("background", "rgba(13, 13, 13, 0.2)");
+  $(".phone-network-container").css("background", "#000");
+  $(".phone-menu-buttons").css("background", "#000");
   $(".app-led-box").replaceWith(
     $('<span id="bb" class="app-led-box"><i class="fas fa-home ml-3"></span>')
   );
@@ -520,10 +520,12 @@ $rightButton.click(function() {
       $(".box-logiciels-bureautique img").css("width", "45%");
       $("#btn7").css("width", "auto");
       $(".tap-here2").css("left", "82%");
-      $(".phone-network-container").css("background", "rgba(8, 8, 8, 0.29)", 500);
-      $(".phone-menu-buttons").css("background", "rgba(8, 8, 8, 0.29)", 500);
+      $(".phone-network-container").css("background", "#000", 500);
+      $(".phone-menu-buttons").css("background", "#000", 500);
       $("#image-fond").css("filter", "none");
     } else if (this.style.color == "springgreen") {
+      $(".phone-network-container").css("background", "#000", 500);
+      $(".phone-menu-buttons").css("background", "#000", 500);
       this.style.color = "chartreuse";
       $samsung.animate({ width: "100%" }, 1000).animate({ width: "-=2" }, 150);
       $($desktopIcon).replaceWith($phoneIcon);
@@ -544,8 +546,8 @@ $rightButton.click(function() {
       $(".box-logiciels-bureautique img").css("width", "40%");
       $("#btn7").css("width", "100%");
       $(".slide__text").css("width", "50%");
-      $(".phone-network-container").css("background", "#101010", 500);
-      $(".phone-menu-buttons").css("background", "#101010", 500);
+      $(".phone-network-container").css("background", "#000", 500);
+      $(".phone-menu-buttons").css("background", "#000", 500);
       $("#image-fond").css("filter", "blur(10px)");
     } else {
       this.style.color = "";
@@ -564,6 +566,24 @@ $rightButton.click(function() {
 $(window).scroll(function() {
   let wScroll = $(this).scrollTop();
 
+  function gaga() {
+    if (wScroll > 0 && wScroll < 510) {
+      $(".astronaut").fadeIn(200);
+    }
+    if (wScroll > 510 && wScroll < 1055) {
+      $(".astronaut").fadeOut(200);
+    }
+    if (wScroll > 1055 && wScroll < 2447) {
+      $(".astronaut").fadeIn(200);
+    }
+    if (wScroll > 2447) {
+      $(".astronaut").fadeOut(200);
+    } else {
+    }
+  }
+
+  gaga();
+
   $(".logo").css({
     transform: "translate(0px , -" + wScroll / 40 + "%)"
   });
@@ -577,11 +597,11 @@ $(window).scroll(function() {
   });
 
   $(".kid-running").css({
-    transform: "translate(" + wScroll / 4.1 + "% , 0px)"
+    transform: "translate(" + wScroll / 6 + "% , 0px)"
   });
 
   $(".wolf2").css({
-    transform: "translate(" + wScroll / 2.2 + "% , 0px)"
+    transform: "translate(" + wScroll / 3.5 + "% , 0px)"
   });
 
   $(".ufo").css({
@@ -601,7 +621,7 @@ $(window).scroll(function() {
   });
 
   $samsung.css({
-    transform: "translate(0px , -" + wScroll / 24 + "%)"
+    transform: "translate(0px , -" + wScroll / 32 + "%)"
   });
 
   function redimensionnement() {
